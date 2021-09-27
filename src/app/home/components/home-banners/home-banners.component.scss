@@ -1,0 +1,12 @@
+@import '/src/styles/variables';
+
+.hero-banner {
+  margin-bottom: 2rem;
+}
+
+.hero-link {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  background-color: $color-pale-blue;
+}

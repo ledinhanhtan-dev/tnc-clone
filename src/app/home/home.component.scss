@@ -1,0 +1,15 @@
+@import '/src/styles/variables';
+
+.container {
+  @include container;
+  height: 100%;
+  padding: 2rem 0;
+}
+
+:host {
+  display: block;
+}
+
+app-block {
+  margin-top: 4rem;
+}

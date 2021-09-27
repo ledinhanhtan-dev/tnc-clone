@@ -1,0 +1,8 @@
+@import "/src/styles/variables";
+
+.container {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

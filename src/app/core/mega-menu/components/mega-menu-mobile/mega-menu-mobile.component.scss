@@ -1,0 +1,58 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+  color: $color-black;
+  background-color: $color-pale-blue;
+  font-weight: 700;
+}
+
+.menu-item {
+  background-color: $color-white;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+.cat-entry {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  text-transform: uppercase;
+
+  text-align: left;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: $color-accent-blue;
+  }
+}
+
+.cat-entry.active + .cat-menu {
+  display: block;
+}
+
+.cat-menu {
+  display: none;
+  border-top: 3px solid $color-pale-blue;
+}
+
+.cat-title {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: $color-accent-blue;
+  display: block;
+  width: max-content;
+  padding: 0.6rem 1rem;
+}
+
+.cat-item {
+  & > a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    background-color: $color-pale-blue;
+  }
+
+  &:hover {
+    color: $color-accent-blue;
+  }
+}

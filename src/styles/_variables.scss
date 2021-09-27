@@ -1,0 +1,51 @@
+// Typography
+$font-primary: 'Chakra Petch', sans-serif;
+
+// Colors
+$color-white-1: rgba(255, 255, 255, 0.1);
+$color-white-2: rgba(255, 255, 255, 0.2);
+$color-white-3: rgba(255, 255, 255, 0.3);
+$color-white-4: rgba(255, 255, 255, 0.4);
+$color-white-5: rgba(255, 255, 255, 0.5);
+$color-white-6: rgba(255, 255, 255, 0.6);
+$color-white-7: rgba(255, 255, 255, 0.7);
+$color-white-8: rgba(255, 255, 255, 0.8);
+$color-white-9: rgba(255, 255, 255, 0.9);
+
+$color-accent-orange: #ff8e02;
+$color-accent-blue: #005ec4;
+$color-primary: #29324e;
+$color-yellow: #fff200;
+$color-black: #262626;
+$color-white: #ffffff;
+$color-red: #f9495f;
+
+$color-pale-blue: #f0f3fc;
+$color-border: #dddfe6;
+
+// Transition durations
+$duration-100: 100ms;
+$duration-200: 200ms;
+
+// Breakpoints
+$mobile-sm: 450px;
+$mobile-md: 480px;
+$mobile-lg: 640px;
+
+$tablet: 768px;
+
+$desktop-sm: 960px;
+$desktop-md: 1280px;
+$desktop-lg: 1440px;
+
+//  Mixins
+@mixin container {
+  margin: auto;
+  max-width: 1110px;
+}
+
+@mixin respond($break-point) {
+  @media only screen and (max-width: $break-point) {
+    @content;
+  }
+}

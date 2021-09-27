@@ -1,0 +1,58 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+}
+
+.header {
+  position: relative;
+}
+
+.title {
+  z-index: 1;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: $color-primary;
+  text-transform: uppercase;
+  position: relative;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  &::before,
+  &::after {
+    width: 33%;
+    z-index: -1;
+    height: 12px;
+    background-color: rgba($color-primary, 0.15);
+    position: absolute;
+    content: '';
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+.content {
+  margin-top: 2rem;
+}
+
+.read-more {
+  padding: 2rem 0;
+  text-align: center;
+
+  & > a {
+    font-weight: 700;
+    padding: 0.75rem 5rem;
+    background-color: $color-accent-blue;
+    display: inline-block;
+    color: $color-white;
+  }
+}

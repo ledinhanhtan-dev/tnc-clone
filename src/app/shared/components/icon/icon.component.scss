@@ -1,0 +1,33 @@
+svg {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// FIX:
+.xs {
+  width: 22px;
+  height: 26px;
+}
+
+.sm {
+  width: 25px;
+  height: 30px;
+}
+
+.md {
+  width: 28px;
+  height: 32px;
+}
+
+.lg {
+  height: 35px;
+  width: 35px;
+}
+
+.xl {
+  height: 40px;
+  width: 40px;
+}

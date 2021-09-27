@@ -1,0 +1,19 @@
+<ul class="mega-menu">
+  <li *ngFor="let cat of categories" class="menu-item">
+    <a [href]="cat.link" class="menu-item-title">{{ cat.title }}</a>
+
+    <ul class="cat-menu">
+      <h4 class="cat-title">
+        <a [href]="cat.link">{{ cat.title }}</a>
+      </h4>
+
+      <li *ngFor="let item of cat.items" class="cat-item">
+        <a [href]="item.itemLink">{{ item.itemTitle }}</a>
+      </li>
+
+      <div class="cat-image">
+        <img [alt]="cat.title" [src]="cat.imagePath" />
+      </div>
+    </ul>
+  </li>
+</ul>

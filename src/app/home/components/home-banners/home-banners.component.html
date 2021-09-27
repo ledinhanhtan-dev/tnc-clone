@@ -1,0 +1,19 @@
+<div class="hero-banner">
+  <swiper [config]="heroSwiperConfig">
+    <ng-template swiperSlide *ngFor="let banner of heroBanners">
+      <a [href]="banner.link" class="hero-link">
+        <img [src]="banner.image" [alt]="banner.alt" />
+      </a>
+    </ng-template>
+  </swiper>
+</div>
+
+<div class="sub-banner">
+  <swiper [config]="subSwiperConfig">
+    <ng-template swiperSlide *ngFor="let banner of subBanners">
+      <a [href]="banner.link">
+        <img [src]="banner.image" [alt]="banner.alt" />
+      </a>
+    </ng-template>
+  </swiper>
+</div>

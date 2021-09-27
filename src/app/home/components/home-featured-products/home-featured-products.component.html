@@ -1,0 +1,10 @@
+<a [href]="featuredProducts[0].link" class="main">
+  <img [src]="featuredProducts[0].image" [alt]="featuredProducts[0].alt" />
+</a>
+<a
+  class="sub"
+  [href]="product.link"
+  *ngFor="let product of featuredProducts.slice(1)"
+>
+  <img [src]="product.image" [alt]="product.alt" />
+</a>

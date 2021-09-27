@@ -1,0 +1,15 @@
+@import '/src/styles/variables';
+
+app-header-bottom {
+  @include respond($tablet) {
+    display: none;
+  }
+}
+
+app-header-bottom-mobile {
+  display: none;
+
+  @include respond($tablet) {
+    display: block;
+  }
+}

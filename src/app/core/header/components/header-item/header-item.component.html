@@ -1,0 +1,9 @@
+<a href="#" [ngClass]="flashy ? 'flashy' : ''" *ngIf="type === 'link'">
+  <app-icon size="xs" [iconId]="iconId"></app-icon>
+  {{ title | uppercase }}
+</a>
+
+<button *ngIf="type === 'button'">
+  <app-icon size="xs" [iconId]="iconId"></app-icon>
+  {{ title | uppercase }}
+</button>

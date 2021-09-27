@@ -1,0 +1,19 @@
+:host {
+  gap: 2rem;
+  display: grid;
+  grid-template-areas:
+    'sub sub main main'
+    'sub sub main main';
+
+  & > a {
+    transition: transform 200ms ease;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+}
+
+.main {
+  grid-area: main;
+}

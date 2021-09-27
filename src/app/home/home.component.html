@@ -1,0 +1,45 @@
+<div class="container">
+  <app-home-banners></app-home-banners>
+
+  <app-block title="Danh mục sản phẩm">
+    <app-home-categories></app-home-categories>
+  </app-block>
+
+  <app-block title="Sản phẩm giảm giá" link="#" [readmore]="true">
+    <app-products-swiper
+      [products]="homeProducts.discountProducts"
+    ></app-products-swiper>
+  </app-block>
+
+  <app-block title="Sản phẩm nổi bật" link="#" [readmore]="true">
+    <app-home-featured-products></app-home-featured-products>
+  </app-block>
+
+  <app-block title="Sản phẩm mới về" link="#" [readmore]="true">
+    <app-products-swiper
+      [products]="homeProducts.discountProducts"
+    ></app-products-swiper>
+  </app-block>
+
+  <app-block title="Sản phẩm bán chạy" link="#" [readmore]="true">
+    <app-products-swiper
+      [products]="homeProducts.discountProducts"
+    ></app-products-swiper>
+  </app-block>
+
+  <app-block title="TNC Channel" link="#" [readmore]="true">
+    <app-home-channel></app-home-channel>
+  </app-block>
+
+  <app-block title="Giới thiệu về TNC" link="#">
+    <app-home-intro></app-home-intro>
+  </app-block>
+
+  <app-block title="Các thương hiệu" link="#">
+    <app-home-brands></app-home-brands>
+  </app-block>
+
+  <app-block title="Đánh giá từ khách hàng" link="#">
+    <app-home-feedbacks></app-home-feedbacks>
+  </app-block>
+</div>

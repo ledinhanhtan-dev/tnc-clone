@@ -1,0 +1,49 @@
+@import '~swiper/css';
+@import '~swiper/css/pagination';
+@import '~swiper/css/navigation';
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide > a {
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  opacity: 0.6;
+  color: white;
+  padding: 0.75rem 1.4rem;
+  background-color: #99a0ad;
+
+  &::after {
+    font-size: 1.5rem;
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba($color-primary, 0.3);
+  border-radius: 0;
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-primary;
+}

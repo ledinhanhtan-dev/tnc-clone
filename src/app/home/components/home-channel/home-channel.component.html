@@ -1,0 +1,25 @@
+<div class="one">
+  <div class="channel">
+    <div class="image">
+      <img
+        [src]="homeChannels[0].image"
+        [alt]="homeChannels[0].alt"
+        class="thumbnail"
+      />
+      <app-youtube-button></app-youtube-button>
+    </div>
+    <a [href]="homeChannels[0].link" class="title">{{
+      homeChannels[0].title
+    }}</a>
+  </div>
+</div>
+
+<div class="four">
+  <div class="channel" *ngFor="let channel of homeChannels.slice(1)">
+    <div class="image">
+      <app-youtube-button size="sm"></app-youtube-button>
+      <img [src]="channel.image" [alt]="channel.alt" class="thumbnail" />
+    </div>
+    <a [href]="channel.link" class="title">{{ channel.title }}</a>
+  </div>
+</div>

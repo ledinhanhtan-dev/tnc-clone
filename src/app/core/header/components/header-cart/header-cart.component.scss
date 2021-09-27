@@ -1,0 +1,21 @@
+@import "/src/styles/variables";
+
+:host {
+  gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: $color-white;
+  background-color: $color-primary;
+  padding: 0.6rem;
+}
+
+app-icon {
+  margin-top: -4px;
+}
+
+.cart-amount {
+  background-color: $color-yellow;
+  color: $color-primary;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+}

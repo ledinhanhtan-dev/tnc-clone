@@ -1,0 +1,33 @@
+@import '/src/styles/variables';
+
+.container {
+  @include container;
+}
+
+:host {
+  display: block;
+  background-color: $color-pale-blue;
+}
+
+.menu-btn {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.menu-entry {
+  color: $color-primary;
+}
+
+.menu {
+  color: $color-white;
+  background-color: $color-primary;
+
+  & > li:not(li:last-child) {
+    border-bottom: 1px solid $color-white-4;
+  }
+}

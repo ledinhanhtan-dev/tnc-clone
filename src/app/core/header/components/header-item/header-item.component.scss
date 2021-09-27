@@ -1,0 +1,25 @@
+@import '/src/styles/variables';
+
+a,
+button {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.6rem;
+  font-weight: 600;
+}
+
+.flashy {
+  color: $color-accent-orange;
+  animation: flashy-title 1000ms ease infinite;
+}
+
+@keyframes flashy-title {
+  from {
+    color: $color-white;
+  }
+
+  to {
+    color: $color-accent-orange;
+  }
+}

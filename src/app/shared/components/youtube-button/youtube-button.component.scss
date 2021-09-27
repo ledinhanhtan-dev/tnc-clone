@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  position: absolute;
+
+  &:hover {
+    .background {
+      fill: red;
+    }
+  }
+}
+
+.background {
+  fill: #99a0ad;
+  transition: all 150ms ease;
+}
+
+.sm {
+  width: 50px;
+  height: unset;
+}
+
+.md {
+  width: 70px;
+  height: unset;
+}

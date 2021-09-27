@@ -1,0 +1,18 @@
+<ul>
+  <li class="menu-item" *ngFor="let cat of categories">
+    <button class="cat-entry" (click)="onToggleActive($event)">
+      {{ cat.title }}
+    </button>
+
+    <ul class="cat-menu">
+      <li (click)="onToggleActiveFromCatMenu($event)">
+        <a [href]="cat.link" class="cat-title">{{ cat.title }}</a>
+      </li>
+      <li class="cat-item" *ngFor="let item of cat.items">
+        <a [href]="item.itemLink">
+          {{ item.itemTitle }}
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>

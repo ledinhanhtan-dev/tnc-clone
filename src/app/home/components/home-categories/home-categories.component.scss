@@ -1,0 +1,63 @@
+@import '/src/styles/variables';
+
+:host {
+  display: grid;
+  gap: 1.5rem 1.8rem;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.category {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  background-color: $color-primary;
+  padding: 0.6rem 1rem;
+  position: relative;
+  height: 100%;
+  height: 130px;
+
+  &:hover {
+    .shape {
+      transform: translateX(42.5%);
+    }
+
+    .image {
+      transform: translateX(5%);
+    }
+  }
+}
+
+.title {
+  font-weight: 700;
+  color: $color-white;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  width: 120px;
+
+  position: absolute;
+  z-index: 11;
+}
+
+.image {
+  right: 0;
+  z-index: 10;
+  height: 100px;
+  position: absolute;
+  transform: translateX(20%);
+  transition: all $duration-200 ease-in-out;
+}
+
+.shape {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+  transition: all $duration-200 ease-in-out;
+  transform: translateX(55%);
+}

@@ -1,0 +1,39 @@
+@import '/src/styles/variables';
+
+.container {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // Holding the Mega menu
+  position: relative;
+}
+
+:host {
+  display: block;
+  color: $color-primary;
+  background-color: $color-pale-blue;
+}
+
+.left {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+
+  & > a:last-child {
+    margin-left: 0.2rem;
+  }
+}
+
+.mega-menu-entry:hover ~ .mega-menu,
+.mega-menu:hover {
+  display: block;
+}

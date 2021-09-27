@@ -1,0 +1,9 @@
+<div class="header">
+  <span class="title">{{ title }}</span>
+</div>
+<div class="content">
+  <ng-content></ng-content>
+</div>
+<div class="read-more" *ngIf="readmore">
+  <a [href]="link">XEM THÊM</a>
+</div>

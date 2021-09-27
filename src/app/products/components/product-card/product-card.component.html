@@ -1,0 +1,22 @@
+<div class="thumbnail">
+  <div class="percent">
+    <span>-{{ percent }}%</span>
+  </div>
+  <a [href]="product.link">
+    <img [src]="product.thumbnail" alt="" />
+  </a>
+</div>
+<div class="content">
+  <div class="title">
+    <a [href]="product.link">{{ product.name }}</a>
+  </div>
+  <div class="rating">
+    <p class="rating-text">{{ product.rating }} đánh giá</p>
+  </div>
+  <div class="price">
+    <span class="price-sale">{{ product.price | price }} đ</span>
+    <span class="price-old">{{ product.oldPrice | price }} đ</span>
+  </div>
+
+  <button class="add-to-cart">MUA NGAY</button>
+</div>

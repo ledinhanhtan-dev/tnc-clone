@@ -1,0 +1,45 @@
+@import '/src/styles/variables';
+
+.container {
+  @include container;
+}
+
+:host {
+  width: 100%;
+  display: block;
+  background-color: $color-black;
+  color: $color-white;
+  padding: 3rem;
+
+  @include respond($desktop-sm) {
+    padding: 2rem 1rem;
+  }
+}
+
+.footer-links {
+  display: flex;
+  margin-bottom: 3.5rem;
+
+  & > * {
+    flex: 25%;
+  }
+
+  @include respond($desktop-sm) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.footer-info {
+  .title {
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: $color-white;
+    margin-bottom: 1.25rem;
+  }
+
+  p {
+    margin-bottom: 0.75rem;
+    color: $color-white-9;
+  }
+}
