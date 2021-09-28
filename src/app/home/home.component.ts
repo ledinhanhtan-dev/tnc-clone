@@ -1,7 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { HomeProducts } from 'app/products/models/home-products.model';
-import { ProductsService } from 'app/products/services/products.service';
-import { Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { HomeProducts } from 'app/product/models/home-products.model';
+import { ProductService } from 'app/product/services/product.service';
 
 @Component({
   selector: 'app-home',
@@ -11,12 +10,12 @@ import { Subscription } from 'rxjs';
 export class HomeComponent implements OnInit {
   homeProducts: HomeProducts = { isFetched: false, discountProducts: [] };
 
-  constructor(private readonly productsService: ProductsService) {}
+  constructor(private readonly productService: ProductService) {}
 
   ngOnInit(): void {
     if (this.homeProducts.isFetched) return;
 
-    this.productsService
+    this.productService
       .fetchHomeProduct()
       .subscribe(homeProducts => (this.homeProducts = homeProducts));
   }
