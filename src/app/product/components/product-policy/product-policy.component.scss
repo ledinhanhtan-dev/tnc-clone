@@ -1,0 +1,24 @@
+@import '/src/styles/variables';
+
+:host {
+  gap: 2rem;
+  margin-top: 2.5rem;
+  justify-content: space-between;
+  color: $color-primary;
+  display: flex;
+}
+
+.item {
+  width: 25%;
+  height: 100px;
+  background-color: $color-pale-blue;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  & > p {
+    max-width: 120px;
+    font-size: 0.875rem;
+    margin-left: 1.5rem;
+  }
+}

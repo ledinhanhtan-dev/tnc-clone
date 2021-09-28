@@ -15,6 +15,7 @@ import { ProductRatingComponent } from './components/product-rating/product-rati
 import { ProductActionsComponent } from './components/product-actions/product-actions.component';
 import { SharedModule } from '@shared/shared.module';
 import { ProductQuantityComponent } from './components/product-quantity/product-quantity.component';
+import { ProductPolicyComponent } from './components/product-policy/product-policy.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProductQuantityComponent } from './components/product-quantity/product-
     ProductRatingComponent,
     ProductActionsComponent,
     ProductQuantityComponent,
+    ProductPolicyComponent,
   ],
   imports: [CommonModule, SharedModule, SwiperModule, ProductRoutingModule],
   exports: [ProductsSwiperComponent],
