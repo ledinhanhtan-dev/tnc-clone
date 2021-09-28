@@ -8,23 +8,16 @@ import { Subscription } from 'rxjs';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit, OnDestroy {
-  homeProductsSub!: Subscription;
-  homeProducts!: HomeProducts;
+export class HomeComponent implements OnInit {
+  homeProducts: HomeProducts = { isFetched: false, discountProducts: [] };
 
   constructor(private readonly productsService: ProductsService) {}
 
   ngOnInit(): void {
-    this.homeProductsSub = this.productsService.homeProduct$.subscribe(
-      homeProducts => {
-        console.log(homeProducts);
+    if (this.homeProducts.isFetched) return;
 
-        this.homeProducts = homeProducts;
-      }
-    );
-  }
-
-  ngOnDestroy(): void {
-    if (this.homeProductsSub) this.homeProductsSub.unsubscribe();
+    this.productsService
+      .fetchHomeProduct()
+      .subscribe(homeProducts => (this.homeProducts = homeProducts));
   }
 }

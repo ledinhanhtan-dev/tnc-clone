@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
-import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeResolver } from './home/resolvers/home.resolver';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, resolve: [HomeResolver] },
+  {
+    path: '',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+  },
+  {
+    path: 'product',
+    loadChildren: () =>
+      import('./products/products.module').then(m => m.ProductsModule),
+  },
 ];
 
 @NgModule({

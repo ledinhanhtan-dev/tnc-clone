@@ -7,13 +7,7 @@ import { FooterModule } from './footer/footer.module';
 import { HeaderModule } from './header/header.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    HeaderModule,
-    HttpClientModule,
-    MegaMenuModule,
-    FooterModule,
-  ],
+  imports: [CommonModule, HeaderModule, HttpClientModule, FooterModule],
   exports: [HeaderModule, FooterComponent],
 })
 export class CoreModule {}
