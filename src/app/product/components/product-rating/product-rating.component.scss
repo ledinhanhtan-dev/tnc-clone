@@ -12,6 +12,7 @@
 }
 
 app-icon {
+  cursor: pointer;
   color: lighten($color-primary, 70%);
 
   &.active {
