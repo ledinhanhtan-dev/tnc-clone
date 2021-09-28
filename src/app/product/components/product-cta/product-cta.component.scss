@@ -1,0 +1,50 @@
+@import '/src/styles/variables';
+
+:host {
+  gap: 2rem;
+  display: flex;
+}
+
+.btn {
+  width: 100%;
+  font-weight: 700;
+  padding: 0.6rem 0;
+  border: 1px solid $color-accent-blue;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+
+  &-atc {
+    color: $color-accent-blue;
+
+    app-icon {
+      margin-top: -5px;
+    }
+
+    &:hover {
+      color: $color-accent-orange;
+      border-color: inherit;
+    }
+  }
+
+  &-buy {
+    color: $color-white;
+    background-color: $color-accent-blue;
+
+    &:hover {
+      background-color: lighten($color-accent-blue, 10%);
+      border-color: lighten($color-accent-blue, 10%);
+    }
+  }
+}
+
+:host.toolbar {
+  gap: 0.5rem;
+  flex-direction: row-reverse;
+
+  .btn {
+    padding: 0rem;
+    width: 175px;
+  }
+}

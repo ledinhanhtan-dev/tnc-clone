@@ -16,6 +16,8 @@ import { ProductActionsComponent } from './components/product-actions/product-ac
 import { SharedModule } from '@shared/shared.module';
 import { ProductQuantityComponent } from './components/product-quantity/product-quantity.component';
 import { ProductPolicyComponent } from './components/product-policy/product-policy.component';
+import { ProductTopToolbarComponent } from './components/product-top-toolbar/product-top-toolbar.component';
+import { ProductCtaComponent } from './components/product-cta/product-cta.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ProductPolicyComponent } from './components/product-policy/product-poli
     ProductActionsComponent,
     ProductQuantityComponent,
     ProductPolicyComponent,
+    ProductTopToolbarComponent,
+    ProductCtaComponent,
   ],
   imports: [CommonModule, SharedModule, SwiperModule, ProductRoutingModule],
   exports: [ProductsSwiperComponent],

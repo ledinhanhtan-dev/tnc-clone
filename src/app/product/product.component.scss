@@ -1,5 +1,9 @@
 @import '/src/styles/variables';
 
+:host {
+  display: block;
+}
+
 .container {
   @include container;
   padding-top: 2rem;

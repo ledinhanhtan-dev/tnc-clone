@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="data">
+    <div class="name">{{ name }}</div>
+    <div class="price">
+      <p>Tổng chi phí</p>
+      <h3>{{ price | price }} đ</h3>
+    </div>
+    <app-product-cta [toolbar]="true"></app-product-cta>
+  </div>
+  <div class="navigation">
+    <div class="tab active">Chi tiết sản phẩm</div>
+    <div class="tab">Thông số kỹ thuật</div>
+    <div class="tab">Video</div>
+    <div class="tab">Review sản phẩm</div>
+    <div class="to-top" (click)="toTop()">
+      <app-icon iconId="chevron-up" size="xxs"></app-icon>
+      Lên đầu trang
+    </div>
+  </div>
+</div>

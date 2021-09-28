@@ -1,4 +1,10 @@
 <!-- Resolver, next behavior subject -->
+<app-product-top-toolbar
+  *ngIf="product"
+  [name]="product.name"
+  [price]="product.price"
+></app-product-top-toolbar>
+
 <div class="container" *ngIf="product">
   <div class="content">
     <app-product-gallery [images]="product.images"></app-product-gallery>
