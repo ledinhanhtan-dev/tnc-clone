@@ -3,8 +3,17 @@
 :host {
   width: 50%;
   max-width: 540px;
-  display: block;
   height: min-content;
+  position: relative;
+  display: block;
+}
+
+.brand {
+  z-index: 10;
+  position: absolute;
+  max-width: 80px;
+  left: 0.5rem;
+  top: 0.5rem;
 }
 
 .main {

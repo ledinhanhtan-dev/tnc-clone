@@ -3,17 +3,20 @@
 :host {
   gap: 1rem;
   display: flex;
+  align-items: center;
 }
 
 .stars {
-  gap: 1rem;
+  gap: 0.8rem;
   display: flex;
 }
 
-.star {
-  width: 20px;
-  height: 20px;
-  background-color: $color-pale-blue;
+app-icon {
+  color: lighten($color-primary, 70%);
+
+  &.active {
+    color: $color-star;
+  }
 }
 
 .value {

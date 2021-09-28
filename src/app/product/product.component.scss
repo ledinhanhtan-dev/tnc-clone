@@ -2,10 +2,16 @@
 
 .container {
   @include container;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
 }
 
 .content {
   display: flex;
   margin-top: 2rem;
   gap: 2rem;
+}
+
+app-block {
+  margin-top: 4rem;
 }

@@ -1,3 +1,7 @@
+<a href="#" class="brand">
+  <img src="http://localhost:3000/image/brand/msi-sm.png" />
+</a>
+
 <swiper [config]="mainGalleryConfig" class="main" slideClass="main" #topSlider>
   <ng-template swiperSlide *ngFor="let image of images">
     <img [src]="image" alt="" class="image" />

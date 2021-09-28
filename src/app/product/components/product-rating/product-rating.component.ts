@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./product-rating.component.scss'],
 })
 export class ProductRatingComponent implements OnInit {
-  @Input() value: number = 0;
+  @Input() value!: number;
 
   constructor() {}
 

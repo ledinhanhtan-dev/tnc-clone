@@ -1,0 +1,42 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+}
+
+.tabs {
+  display: flex;
+  background-color: $color-pale-blue;
+}
+
+.tab {
+  font-weight: 700;
+  padding: 10px 22px;
+  font-size: 1.125rem;
+  transition: all 200ms;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    color: $color-white;
+    background-color: $color-accent-blue;
+  }
+}
+
+.contents {
+  margin-top: 2rem;
+}
+
+.content {
+  height: 500px;
+  font-size: 3rem;
+  font-weight: 600;
+  justify-content: center;
+  background-color: whitesmoke;
+  align-items: center;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+}

@@ -1,8 +1,9 @@
 <div class="stars">
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
+  <app-icon
+    size="xxs"
+    iconId="star"
+    *ngFor="let index of [1, 2, 3, 4, 5]"
+    [ngClass]="index <= value ? 'active' : ''"
+  ></app-icon>
 </div>
 <div class="value">{{ value }} đánh giá</div>
