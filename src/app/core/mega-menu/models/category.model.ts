@@ -13,7 +13,7 @@ export interface Category {
 const pcCat: Category = {
   title: 'Xây dựng cấu hình PC',
   link: '#',
-  imagePath: 'http://localhost:3000/image/category-pc.png',
+  imagePath: 'http://localhost:3000/image/category/category-pc.png',
   items: [
     { itemTitle: 'PRO GAMING PC', itemLink: '#' },
     { itemTitle: 'PRO WORKSTATION', itemLink: '#' },
@@ -27,7 +27,7 @@ const pcCat: Category = {
 const laptopCat: Category = {
   title: 'Laptops',
   link: '#',
-  imagePath: 'http://localhost:3000/image/category-laptop.png',
+  imagePath: 'http://localhost:3000/image/category/category-laptop.png',
   items: [
     { itemTitle: 'Gaming Laptop', itemLink: '#' },
     { itemTitle: 'Laptop Văn Phòng', itemLink: '#' },
@@ -37,7 +37,7 @@ const laptopCat: Category = {
 const hardwareCat: Category = {
   title: 'Link kiện máy tính',
   link: '#',
-  imagePath: 'http://localhost:3000/image/category-hardware.png',
+  imagePath: 'http://localhost:3000/image/category/category-hardware.png',
   items: [
     { itemTitle: 'CPU - Bộ vi xử lý', itemLink: '#' },
     { itemTitle: 'Case - Vỏ máy tính', itemLink: '#' },
@@ -54,7 +54,7 @@ const hardwareCat: Category = {
 const monitorCat: Category = {
   title: 'Màn hình máy tính',
   link: '#',
-  imagePath: 'http://localhost:3000/image/category-monitor.png',
+  imagePath: 'http://localhost:3000/image/category/category-monitor.png',
   items: [
     { itemTitle: 'Màn Hình Gaming', itemLink: '#' },
     { itemTitle: 'Màn Hình Đồ Họa', itemLink: '#' },
@@ -65,7 +65,7 @@ const monitorCat: Category = {
 const gearCat: Category = {
   title: 'Gaming Gears',
   link: '#',
-  imagePath: 'http://localhost:3000/image/category-gear.png',
+  imagePath: 'http://localhost:3000/image/category/category-gear.png',
   items: [
     { itemTitle: 'Bàn Phím Cơ', itemLink: '#' },
     { itemTitle: 'Bàn Di Chuột', itemLink: '#' },
@@ -80,7 +80,7 @@ const gearCat: Category = {
 const accessoryCat: Category = {
   title: 'Phụ Kiện - Tản Nhiệt PC',
   link: '#',
-  imagePath: 'http://localhost:3000/image/category-accessory.png',
+  imagePath: 'http://localhost:3000/image/category/category-accessory.png',
   items: [
     { itemTitle: 'Tản nhiệt khí cho PC', itemLink: '#' },
     { itemTitle: 'Tản nước All-in-one', itemLink: '#' },
@@ -93,7 +93,7 @@ const accessoryCat: Category = {
 const officeCat: Category = {
   title: 'Thiết Bị Văn Phòng',
   link: '#',
-  imagePath: 'http://localhost:3000/image/category-office.png',
+  imagePath: 'http://localhost:3000/image/category/category-office.png',
   items: [
     { itemTitle: 'Loa máy tính', itemLink: '#' },
     { itemTitle: 'Phần mềm bản quyền', itemLink: '#' },
@@ -108,7 +108,7 @@ const officeCat: Category = {
 const networkCat: Category = {
   title: 'Thiết Bị Mạng',
   link: '#',
-  imagePath: 'http://localhost:3000/image/category-network.png',
+  imagePath: 'http://localhost:3000/image/category/category-network.png',
   items: [
     { itemTitle: 'Router Wifi', itemLink: '#' },
     { itemTitle: 'Card Wifi', itemLink: '#' },

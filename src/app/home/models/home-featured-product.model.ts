@@ -6,27 +6,27 @@ export interface HomeFeaturedProduct {
 
 export const homeFeaturedProducts: HomeFeaturedProduct[] = [
   {
-    image: 'http://localhost:3000/image/featured-product-1.jpg',
+    image: 'http://localhost:3000/image/featured/featured-product-1.jpg',
     alt: '',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/featured-product-2.jpg',
+    image: 'http://localhost:3000/image/featured/featured-product-2.jpg',
     alt: '',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/featured-product-3.jpg',
+    image: 'http://localhost:3000/image/featured/featured-product-3.jpg',
     alt: '',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/featured-product-4.jpg',
+    image: 'http://localhost:3000/image/featured/featured-product-4.jpg',
     alt: '',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/featured-product-5.jpg',
+    image: 'http://localhost:3000/image/featured/featured-product-5.jpg',
     alt: '',
     link: '#',
   },

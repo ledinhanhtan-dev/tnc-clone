@@ -1,8 +1,15 @@
 export interface Product {
-  thumbnail: string;
+  idName: string;
+
   name: string;
   link: string;
-  rating: number;
   price: number;
-  oldPrice: number;
+  priceOld: number;
+
+  thumbnail: string;
+  images: string[];
+  rating: number;
+  guarantee: number;
+  shortDescriptions: string[];
+  available: boolean;
 }

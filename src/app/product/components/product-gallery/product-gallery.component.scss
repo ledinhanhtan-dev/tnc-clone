@@ -1,0 +1,42 @@
+@import '/src/styles/variables';
+
+:host {
+  width: 50%;
+  display: block;
+  height: min-content;
+}
+
+.main {
+  border: 1px solid $color-border;
+
+  .image {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+.sub {
+  margin-top: 2rem;
+
+  .image-wrapper {
+    border: 1px solid $color-border !important;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .image {
+    width: 100%;
+  }
+}
+
+.swiper-slide {
+  display: none;
+  height: 100%;
+}
+
+.empty {
+  background-color: transparent;
+  height: 100px;
+}

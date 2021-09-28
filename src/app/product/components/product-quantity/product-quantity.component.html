@@ -1,0 +1,16 @@
+<span class="label">Số lượng</span>
+<div class="quantity">
+  <input
+    type="number"
+    class="input"
+    min="1"
+    [defaultValue]="1"
+    name="quantity"
+  />
+  <input type="hidden" name="product-id" />
+
+  <div class="actions">
+    <button class="btn btn-add" type="button">+</button>
+    <button class="btn btn-sub" type="button">-</button>
+  </div>
+</div>

@@ -16,8 +16,6 @@ export class ProductService {
   }
 
   fetchProduct(id: string): Observable<Product> {
-    console.log(PRODUCTS_API + id);
-
     return this.http.get<Product>(PRODUCTS_API + id);
   }
 }

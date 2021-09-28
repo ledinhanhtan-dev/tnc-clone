@@ -1,0 +1,36 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.name {
+  color: $color-accent-blue;
+}
+
+.rating-guarantee {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.guarantee {
+  font-weight: 600;
+  color: $color-accent-orange;
+  text-transform: capitalize;
+  font-size: 0.875rem;
+}
+
+.short-descriptions {
+  margin-top: 1.5rem;
+
+  & > p {
+    margin-top: 0.5rem;
+  }
+
+  .note {
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+}

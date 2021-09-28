@@ -13,7 +13,7 @@ export class ProductCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    const { price, oldPrice } = this.product;
-    this.percent = Math.floor(((oldPrice - price) / oldPrice) * 100);
+    const { price, priceOld } = this.product;
+    this.percent = Math.floor(((priceOld - price) / priceOld) * 100);
   }
 }

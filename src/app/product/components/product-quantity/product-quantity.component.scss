@@ -1,0 +1,46 @@
+@import '/src/styles/variables';
+
+$local-border-color: #e6f2ff;
+
+:host {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.quantity {
+  display: flex;
+  margin-left: 1.5rem;
+}
+
+.input {
+  width: 50px;
+  height: 44px;
+  border: 1px solid $local-border-color;
+  color: $color-accent-blue;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.actions {
+  border: 1px solid $local-border-color;
+  border-left: 0px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.25rem;
+  height: 20px;
+  width: 24px;
+
+  &-add {
+    border-bottom: 1px solid $local-border-color;
+  }
+}

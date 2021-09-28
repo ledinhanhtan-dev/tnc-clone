@@ -1,7 +1,11 @@
-@import "./variables";
+@import './variables';
 
 body {
   font-family: $font-primary;
+}
+
+h1 {
+  font-size: 1.5rem;
 }
 
 h4 {
@@ -9,5 +13,5 @@ h4 {
 }
 
 p {
-  font-weight: 300;
+  font-weight: 400;
 }

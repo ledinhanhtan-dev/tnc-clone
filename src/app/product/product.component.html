@@ -1,4 +1,10 @@
-<div class="container">
-  <div class="content"></div>
-  <div class="info"></div>
+<!-- Resolver, next behavior subject -->
+<div class="container" *ngIf="product">
+  <div class="content">
+    <app-product-gallery [images]="product.images"></app-product-gallery>
+    <app-product-detail [product]="product"></app-product-detail>
+  </div>
+  <div class="info">
+    <app-product-info></app-product-info>
+  </div>
 </div>

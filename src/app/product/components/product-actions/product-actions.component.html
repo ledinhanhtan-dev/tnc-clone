@@ -1,0 +1,29 @@
+<!-- Good candidate for using pipe -->
+<div class="data">
+  <div class="status-quantity">
+    <div [class]="data.available ? 'status' : 'status unavailable'">
+      <div class="status-circle"></div>
+      <span class="status-text">{{
+        data.available ? 'CÒN HÀNG' : 'HẾT HÀNG'
+      }}</span>
+    </div>
+
+    <app-product-quantity></app-product-quantity>
+  </div>
+
+  <div class="prices">
+    <p class="price-old">{{ data.priceOld | price }} đ</p>
+    <p class="price">{{ data.price | price }} đ</p>
+  </div>
+</div>
+
+<div class="cta">
+  <button class="btn btn-atc" type="button">
+    <app-icon iconId="cart" size="xs"></app-icon>
+    <span> THÊM VÀO GIỎ </span>
+  </button>
+  <button class="btn btn-buy" type="button">
+    <app-icon iconId="plus" size="xs"></app-icon>
+    <span> MUA HÀNG </span>
+  </button>
+</div>

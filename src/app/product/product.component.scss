@@ -3,3 +3,9 @@
 .container {
   @include container;
 }
+
+.content {
+  display: flex;
+  margin-top: 2rem;
+  gap: 2rem;
+}

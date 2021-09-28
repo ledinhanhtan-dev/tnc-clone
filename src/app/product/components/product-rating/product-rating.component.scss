@@ -1,0 +1,23 @@
+@import '/src/styles/variables';
+
+:host {
+  gap: 1rem;
+  display: flex;
+}
+
+.stars {
+  gap: 1rem;
+  display: flex;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+  background-color: $color-pale-blue;
+}
+
+.value {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: $color-gray;
+}

@@ -1,0 +1,100 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+  margin-top: 100px;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: $color-green;
+
+  &-circle {
+    content: '';
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: $color-green;
+  }
+
+  &-text {
+    margin-left: 0.5rem;
+  }
+}
+
+app-product-quantity {
+  margin-top: 0.5rem;
+}
+
+.status.unavailable {
+  color: $color-red;
+
+  .status-circle {
+    background-color: $color-red;
+  }
+}
+
+.prices {
+  text-align: right;
+}
+
+.price-old {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: line-through;
+  color: $color-gray;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 2rem;
+  color: $color-red;
+  margin-top: 0.25rem;
+}
+
+.cta {
+  gap: 2rem;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.btn {
+  width: 100%;
+  font-weight: 700;
+  padding: 0.6rem 0;
+  border: 1px solid $color-accent-blue;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+
+  &-atc {
+    color: $color-accent-blue;
+
+    app-icon {
+      margin-top: -5px;
+    }
+
+    &:hover {
+      color: $color-accent-orange;
+      border-color: inherit;
+    }
+  }
+
+  &-buy {
+    color: $color-white;
+    background-color: $color-accent-blue;
+
+    &:hover {
+      background-color: lighten($color-accent-blue, 10%);
+      border-color: lighten($color-accent-blue, 10%);
+    }
+  }
+}
