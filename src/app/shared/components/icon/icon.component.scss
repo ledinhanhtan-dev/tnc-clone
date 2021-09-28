@@ -7,32 +7,32 @@ svg {
 }
 
 // FIX:
-.xxs {
-  width: 18px;
-  height: 17px;
-}
-
 .xs {
-  width: 22px;
-  height: 26px;
+  width: 14px;
+  height: 15px;
 }
 
 .sm {
-  width: 25px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
 }
 
 .md {
-  width: 28px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
 }
 
 .lg {
-  height: 35px;
-  width: 35px;
+  height: 28px;
+  width: 28px;
 }
 
 .xl {
+  width: 32px;
+  height: 32px;
+}
+
+.max {
   height: 60px;
   width: 60px;
 }

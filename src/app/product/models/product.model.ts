@@ -8,7 +8,8 @@ export interface Product {
 
   thumbnail: string;
   images: string[];
-  rating: number;
+  ratingScore: number;
+  ratingCount: number;
   guarantee: number;
   shortDescriptions: string[];
   available: boolean;

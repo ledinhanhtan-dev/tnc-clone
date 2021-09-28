@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-type Size = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'max';
 
 @Component({
   selector: 'app-icon',

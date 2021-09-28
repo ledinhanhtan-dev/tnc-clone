@@ -2,18 +2,23 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  OnDestroy,
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { ProductInfoService } from 'app/product/services/product-info.service';
+import { Subscription } from 'rxjs';
 
+type Div = HTMLDivElement;
 @Component({
   selector: 'app-product-info',
   templateUrl: './product-info.component.html',
   styleUrls: ['./product-info.component.scss'],
 })
-export class ProductInfoComponent implements OnInit, AfterViewInit {
+export class ProductInfoComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('contents') private contentsRef!: ElementRef;
   @ViewChild('tabs') private tabsRef!: ElementRef;
+  private indexSub!: Subscription;
   private contents!: NodeList;
   private tabs!: NodeList;
 
@@ -24,34 +29,36 @@ export class ProductInfoComponent implements OnInit, AfterViewInit {
     'Review sản phẩm',
   ];
 
-  constructor() {}
+  constructor(private readonly productInfoService: ProductInfoService) {}
 
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.tabs = (this.tabsRef.nativeElement as HTMLDivElement).querySelectorAll(
-      '.tab'
+    this.tabs = (this.tabsRef.nativeElement as Div).querySelectorAll('.tab');
+
+    this.contents = (this.contentsRef.nativeElement as Div).querySelectorAll(
+      '.content'
     );
 
-    (this.tabs[0] as HTMLDivElement).classList.add('active');
+    this.indexSub = this.productInfoService.activeIndex$.subscribe(
+      activeIndex => {
+        this.tabs.forEach(tab => (tab as Div).classList.remove('active'));
+        this.contents.forEach(content =>
+          (content as Div).classList.remove('active')
+        );
 
-    this.contents = (
-      this.contentsRef.nativeElement as HTMLDivElement
-    ).querySelectorAll('.content');
+        (this.tabs[activeIndex] as Div).classList.add('active');
+        (this.contents[activeIndex] as Div).classList.add('active');
+      }
+    );
+  }
+
+  ngOnDestroy(): void {
+    if (this.indexSub) this.indexSub.unsubscribe();
   }
 
   onSelectTab(e: MouseEvent) {
-    this.tabs.forEach(tab => {
-      (tab as HTMLDivElement).classList.remove('active');
-    });
-
-    this.contents.forEach(content => {
-      (content as HTMLDivElement).classList.remove('active');
-    });
-
-    (e.target as HTMLDivElement).classList.add('active');
-
-    const index = (e.target as HTMLDivElement).dataset.index!;
-    (this.contents[+index] as HTMLDivElement).classList.add('active');
+    const index = (e.target as Div).dataset.index!;
+    this.productInfoService.activeIndex$.next(+index);
   }
 }

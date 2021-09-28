@@ -10,9 +10,13 @@
   <div class="title">
     <a [href]="product.link">{{ product.name }}</a>
   </div>
-  <div class="rating">
-    <p class="rating-text">{{ product.rating }} đánh giá</p>
-  </div>
+
+  <app-product-rating
+    size="small"
+    [score]="product.ratingScore"
+    [count]="product.ratingCount"
+  ></app-product-rating>
+
   <div class="price">
     <span class="price-sale">{{ product.price | price }} đ</span>
     <span class="price-old">{{ product.priceOld | price }} đ</span>

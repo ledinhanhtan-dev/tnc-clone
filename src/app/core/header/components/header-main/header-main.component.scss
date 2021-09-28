@@ -1,8 +1,14 @@
-@import "/src/styles/variables";
+@import '/src/styles/variables';
 
 .container {
   @include container;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.logo {
+  & > img {
+    height: 72px;
+  }
 }

@@ -7,13 +7,17 @@
     </div>
     <app-product-cta [toolbar]="true"></app-product-cta>
   </div>
-  <div class="navigation">
-    <div class="tab active">Chi tiết sản phẩm</div>
-    <div class="tab">Thông số kỹ thuật</div>
-    <div class="tab">Video</div>
-    <div class="tab">Review sản phẩm</div>
+  <div class="navigation" #navigation>
+    <div
+      class="tab active"
+      [attr.data-index]="i"
+      (click)="onSelectTab($event)"
+      *ngFor="let title of titles; let i = index"
+    >
+      {{ title }}
+    </div>
     <div class="to-top" (click)="toTop()">
-      <app-icon iconId="chevron-up" size="xxs"></app-icon>
+      <app-icon iconId="chevron-up" size="xs"></app-icon>
       Lên đầu trang
     </div>
   </div>

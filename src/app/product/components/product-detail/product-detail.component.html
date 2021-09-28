@@ -1,7 +1,10 @@
 <h1 class="name">{{ product.name }}</h1>
 
 <div class="rating-guarantee">
-  <app-product-rating [value]="product.rating"></app-product-rating>
+  <app-product-rating
+    [score]="product.ratingScore"
+    [count]="product.ratingCount"
+  ></app-product-rating>
   <p class="guarantee">Bảo hành {{ product.guarantee }} tháng</p>
 </div>
 

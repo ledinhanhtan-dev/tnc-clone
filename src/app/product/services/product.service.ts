@@ -11,6 +11,7 @@ import { Product } from '../models/product.model';
 export class ProductService {
   constructor(private readonly http: HttpClient) {}
 
+  // Should be api core
   fetchHomeProduct(): Observable<HomeProducts> {
     return this.http.get<HomeProducts>(PRODUCTS_API + 'home');
   }

@@ -8,11 +8,12 @@ import { ProductComponent } from './product.component';
 import { SwiperModule } from 'swiper/angular';
 import { PricePipe } from './pipes/price.pipe';
 import { components } from './components';
+import { ProductInfoService } from './services/product-info.service';
 
 @NgModule({
   declarations: [...components, PricePipe, ProductComponent],
   imports: [CommonModule, SharedModule, SwiperModule, ProductRoutingModule],
   exports: [ProductsSwiperComponent],
-  providers: [ProductService],
+  providers: [ProductService, ProductInfoService],
 })
 export class ProductModule {}
