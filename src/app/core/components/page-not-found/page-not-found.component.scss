@@ -1,0 +1,28 @@
+@import '/src/styles/variables';
+
+.container {
+  @include container;
+
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > * {
+    position: absolute;
+  }
+}
+
+.error {
+  user-select: none;
+  color: rgba($color-pale-blue, 0.7);
+  font-size: 30rem;
+  font-weight: 300;
+}
+
+.not-found {
+  color: $color-accent-blue;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
