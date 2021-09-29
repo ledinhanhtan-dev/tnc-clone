@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { HomeProducts } from 'app/product/models/home-products.model';
-import { ProductService } from 'app/product/services/product.service';
 
 @Component({
   selector: 'app-home',
@@ -10,13 +10,9 @@ import { ProductService } from 'app/product/services/product.service';
 export class HomeComponent implements OnInit {
   homeProducts: HomeProducts = { isFetched: false, discountProducts: [] };
 
-  constructor(private readonly productService: ProductService) {}
+  constructor(private readonly route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    if (this.homeProducts.isFetched) return;
-
-    this.productService
-      .fetchHomeProduct()
-      .subscribe(homeProducts => (this.homeProducts = homeProducts));
+    this.route.data.subscribe(data => (this.homeProducts = data[0]));
   }
 }

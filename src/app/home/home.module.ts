@@ -7,11 +7,13 @@ import { HomeComponent } from './home.component';
 import { SwiperModule } from 'swiper/angular';
 import { RouterModule, Routes } from '@angular/router';
 import { components } from './components';
+import { HomeResolver } from './resolver/home.resolver';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    resolve: [HomeResolver],
   },
 ];
 
