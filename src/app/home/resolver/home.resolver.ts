@@ -13,6 +13,8 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root',
 })
 export class HomeResolver implements Resolve<HomeProducts> {
+  homeProductsCache!: HomeProducts;
+
   constructor(private readonly productService: ProductService) {}
 
   resolve(

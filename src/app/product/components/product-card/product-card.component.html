@@ -2,13 +2,14 @@
   <div class="percent">
     <span>-{{ percent }}%</span>
   </div>
-  <a [href]="product.link">
+
+  <a [routerLink]="['/product', product.idName]">
     <img [src]="product.thumbnail" alt="" />
   </a>
 </div>
 <div class="content">
   <div class="title">
-    <a [href]="product.link">{{ product.name }}</a>
+    <a [routerLink]="['/product', product.idName]">{{ product.name }}</a>
   </div>
 
   <app-product-rating
