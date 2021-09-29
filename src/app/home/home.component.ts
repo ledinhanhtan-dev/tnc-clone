@@ -8,11 +8,15 @@ import { HomeProducts } from 'app/product/models/home-products.model';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  homeProducts: HomeProducts = { isFetched: false, discountProducts: [] };
+  homeProducts!: HomeProducts;
 
   constructor(private readonly route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.data.subscribe(data => (this.homeProducts = data[0]));
+    this.route.data.subscribe(data => {
+      console.log(data[0]);
+
+      this.homeProducts = data[0];
+    });
   }
 }
