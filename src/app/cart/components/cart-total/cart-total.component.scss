@@ -1,0 +1,86 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+  padding: 1.25rem 1.5rem;
+  background-color: $color-pale-blue;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.8rem;
+}
+
+.quantity,
+.total,
+.vat {
+  font-weight: 600;
+  margin-top: 0.4rem;
+  justify-content: space-between;
+  align-items: baseline;
+  display: flex;
+}
+
+.count {
+  font-weight: 700;
+  color: $color-accent-blue;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: $color-red;
+}
+
+.vat {
+  font-weight: 400;
+  font-size: 0.875rem;
+  justify-content: flex-end;
+  color: $color-black;
+}
+
+.actions {
+  margin-top: 1rem;
+}
+
+.btn {
+  width: 100%;
+  font-weight: 700;
+  padding: 0.7rem 0;
+  border: 1px solid transparent;
+  text-align: center;
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &-to-cart {
+    color: $color-white;
+    background-color: $color-accent-blue;
+
+    &:hover {
+      background-color: lighten($color-accent-blue, 7%);
+    }
+  }
+
+  &-delete-cart {
+    color: $color-white;
+    background-color: #ed1b24;
+
+    &:hover {
+      background-color: lighten(#ed1b24, 7%);
+    }
+  }
+
+  &-to-others {
+    color: $color-accent-blue;
+    background-color: $color-white;
+    border-color: $color-accent-blue;
+
+    &:hover {
+      color: lighten($color-accent-blue, 7%);
+    }
+  }
+}

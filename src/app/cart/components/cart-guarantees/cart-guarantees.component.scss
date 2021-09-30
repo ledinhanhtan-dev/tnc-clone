@@ -1,0 +1,29 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+}
+
+.item {
+  font-weight: 300;
+  padding: 0 1.5rem;
+  font-size: 0.875rem;
+  align-items: center;
+  display: flex;
+
+  margin-bottom: 0.5rem;
+
+  app-icon {
+    color: $color-green;
+    margin-right: 0.5rem;
+  }
+}
+
+.payments {
+  display: flex;
+  padding: 0 1rem;
+
+  & > * {
+    cursor: pointer;
+  }
+}
