@@ -5,8 +5,8 @@
   align-items: center;
   border: 1px solid $color-border;
   padding: 0.625rem 1rem;
-  gap: 2rem;
   width: 100%;
+  gap: 2rem;
 }
 
 // Image
@@ -19,7 +19,7 @@
 // Description
 
 .description {
-  max-width: 320px;
+  max-width: 350px;
   margin-right: auto;
 }
 
@@ -48,19 +48,19 @@
   align-items: center;
 
   &-input {
+    border: 0;
     width: 26px;
     height: 22px;
     font-weight: 700;
-    border: 0;
-    text-align: center;
     color: $color-accent-blue;
+    text-align: center;
   }
 
   &-btn {
-    background-color: $color-border;
     width: 22px;
     font-weight: 600;
     color: $color-primary;
+    background-color: $color-border;
   }
 }
 
