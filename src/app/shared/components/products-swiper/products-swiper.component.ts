@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Product } from 'app/product/models/product.model';
+import { Product } from '@core/models/product.model';
 import { Pagination, SwiperOptions } from 'swiper';
 
 import SwiperCore from 'swiper';

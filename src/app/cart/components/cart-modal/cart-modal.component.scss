@@ -28,7 +28,7 @@
 
 .modal {
   height: 90%;
-  width: 980px;
+  width: 1000px;
   z-index: 9999;
   border-radius: 4px;
   padding: 1rem 1.5rem;
@@ -52,11 +52,12 @@
 .body {
   gap: 2rem;
   margin: 1.5rem 0;
+  color: $color-primary;
   justify-content: space-between;
   display: flex;
 }
 
-.items {
+.products {
   width: 62%;
 
   & > *:not(:last-child) {

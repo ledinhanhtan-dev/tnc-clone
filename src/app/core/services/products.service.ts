@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { PRODUCTS_API } from '@core/constants/api.constant';
-import { HomeProducts } from 'app/product/models/home-products.model';
-import { Product } from 'app/product/models/product.model';
+import { HomeProducts } from '@core/models/home-products.model';
+import { Product } from '@core/models/product.model';
 import { Observable } from 'rxjs';
 
 @Injectable({

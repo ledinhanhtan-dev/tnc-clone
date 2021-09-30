@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HomeProducts } from 'app/product/models/home-products.model';
+import { HomeProducts } from '@core/models/home-products.model';
 
 @Component({
   selector: 'app-home',

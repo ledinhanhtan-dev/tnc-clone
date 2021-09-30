@@ -5,8 +5,8 @@ import {
   RouterStateSnapshot,
   ActivatedRouteSnapshot,
 } from '@angular/router';
+import { HomeProducts } from '@core/models/home-products.model';
 import { ProductsService } from '@core/services/products.service';
-import { HomeProducts } from 'app/product/models/home-products.model';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 

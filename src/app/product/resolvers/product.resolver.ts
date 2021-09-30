@@ -5,10 +5,10 @@ import {
   ActivatedRouteSnapshot,
   Router,
 } from '@angular/router';
+import { Product } from '@core/models/product.model';
 import { ProductsService } from '@core/services/products.service';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { Product } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root',
