@@ -38,4 +38,9 @@ export class CartTotalComponent implements OnInit, OnDestroy {
 
     this.cartService.deleteCart();
   }
+
+  onGoToOthers() {
+    this.cartService.closeModal();
+    this.router.navigate(['/']);
+  }
 }
