@@ -3,21 +3,19 @@
 
 <div class="modal">
   <div class="header">
-    <div class="title">Bạn đang có 14 sản phẩm trong giỏ hàng</div>
+    <div class="title">
+      Bạn đang có {{ cart.length }} sản phẩm trong giỏ hàng
+    </div>
     <button type="button" (click)="onCloseModal()">
       <app-icon iconId="close" size="sm"></app-icon>
     </button>
   </div>
   <div class="body">
     <div class="products">
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
+      <app-cart-item
+        *ngFor="let item of cart"
+        [cartItem]="item"
+      ></app-cart-item>
     </div>
     <div class="info">
       <app-cart-total></app-cart-total>

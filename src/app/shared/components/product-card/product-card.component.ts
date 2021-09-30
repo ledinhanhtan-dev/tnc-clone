@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '@core/models/product.model';
+import { CartService } from '@core/services/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -10,10 +11,14 @@ export class ProductCardComponent implements OnInit {
   @Input() product!: Product;
   percent!: number;
 
-  constructor() {}
+  constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
     const { price, priceOld } = this.product;
     this.percent = Math.floor(((priceOld - price) / priceOld) * 100);
+  }
+
+  addToCart() {
+    this.cartService.addToCart(this.product);
   }
 }

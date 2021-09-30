@@ -2,12 +2,12 @@
 
 <div class="quantity">
   Số lượng sản phẩm
-  <span class="count">14</span>
+  <span class="count">{{ totalQuantity }}</span>
 </div>
 
 <div class="total">
   Tổng chi phí
-  <span class="price">84.329.000 đ</span>
+  <span class="price">{{ totalPrice | price }} đ</span>
 </div>
 
 <div class="vat">Đã bao gồm VAT (nếu có)</div>
