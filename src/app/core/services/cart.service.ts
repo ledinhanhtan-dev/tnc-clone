@@ -35,12 +35,10 @@ export class CartService {
   addToCart(product: Product) {
     const cart = this.cart$.value;
 
-    console.log(product.idName);
+    console.log(product.id);
 
     // Existing cart item: increase quantity
-    const index = cart.findIndex(
-      item => item.product.idName === product.idName
-    );
+    const index = cart.findIndex(item => item.product.id === product.id);
 
     if (index !== -1) {
       this.increaseQuantity(index);

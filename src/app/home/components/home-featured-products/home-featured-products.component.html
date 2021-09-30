@@ -1,9 +1,9 @@
-<a [routerLink]="['/product', featuredProducts[0].idName]" class="one">
+<a [routerLink]="['/product', featuredProducts[0].id]" class="one">
   <img [src]="featuredProducts[0].image" [alt]="featuredProducts[0].alt" />
 </a>
 <a
   class="four"
-  [routerLink]="['/product', product.idName]"
+  [routerLink]="['/product', product.id]"
   *ngFor="let product of featuredProducts.slice(1)"
 >
   <img [src]="product.image" [alt]="product.alt" />
