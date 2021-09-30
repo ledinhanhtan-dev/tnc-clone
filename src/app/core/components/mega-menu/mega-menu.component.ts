@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { categories, Category } from '@core/models/category.model';
+import { CATEGORIES, Category } from '@core/constants/category.constant';
 
 @Component({
   selector: 'app-mega-menu',
@@ -7,7 +7,7 @@ import { categories, Category } from '@core/models/category.model';
   styleUrls: ['./mega-menu.component.scss'],
 })
 export class MegaMenuComponent implements OnInit {
-  categories: Category[] = categories;
+  categories: Category[] = CATEGORIES;
 
   constructor() {}
 

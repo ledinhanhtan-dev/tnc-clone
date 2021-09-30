@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FooterLinks, linksGroups } from '@core/models/footer-links.model';
+import {
+  FooterLinks,
+  LINKS_GROUP,
+} from '@core/constants/footer-links.constant';
 
 @Component({
   selector: 'app-footer-top',
@@ -7,7 +10,7 @@ import { FooterLinks, linksGroups } from '@core/models/footer-links.model';
   styleUrls: ['./footer-top.component.scss'],
 })
 export class FooterTopComponent implements OnInit {
-  groups: FooterLinks[] = linksGroups;
+  groups: FooterLinks[] = LINKS_GROUP;
 
   constructor() {}
 

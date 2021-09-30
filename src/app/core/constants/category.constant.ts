@@ -116,4 +116,4 @@ const networkCat: Category = {
 };
 
 // prettier-ignore
-export const categories: Category[] = [pcCat, laptopCat, hardwareCat, monitorCat, gearCat, accessoryCat, officeCat, networkCat];
+export const CATEGORIES: Category[] = [pcCat, laptopCat, hardwareCat, monitorCat, gearCat, accessoryCat, officeCat, networkCat];

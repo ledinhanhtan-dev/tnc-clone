@@ -53,7 +53,7 @@ const socialInfo: FooterLinks = {
   ],
 };
 
-export const linksGroups: FooterLinks[] = [
+export const LINKS_GROUP: FooterLinks[] = [
   generalInfo,
   generalPolicy,
   promotionInfo,

@@ -20,8 +20,6 @@ export class HeaderBottomMobileComponent implements OnInit {
   }
 
   toggleCatOpen() {
-    console.log('GOT');
-
     this.catOpen$.next(!this.catOpen$.value);
   }
 }

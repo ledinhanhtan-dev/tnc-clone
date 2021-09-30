@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FooterLinks } from '@core/models/footer-links.model';
+import { FooterLinks } from '@core/constants/footer-links.constant';
 
 @Component({
   selector: 'app-footer-links',
