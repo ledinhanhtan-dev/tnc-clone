@@ -4,7 +4,15 @@ import {
   HomeBanner,
   subBanners,
 } from 'app/home/models/home-banner.model';
-import { SwiperOptions } from 'swiper';
+import SwiperCore, {
+  Autoplay,
+  Navigation,
+  Pagination,
+  SwiperOptions,
+} from 'swiper';
+
+SwiperCore.use([Navigation, Pagination, Autoplay]);
+
 @Component({
   selector: 'app-home-banners',
   templateUrl: './home-banners.component.html',
