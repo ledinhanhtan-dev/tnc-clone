@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { FooterComponent } from './footer/footer.component';
-import { FooterModule } from './footer/footer.module';
-import { HeaderModule } from './header/header.module';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { SharedModule } from '@shared/shared.module';
+import { RouterModule } from '@angular/router';
 
+import * as fromComponents from './components';
 @NgModule({
-  imports: [CommonModule, HeaderModule, HttpClientModule, FooterModule],
-  exports: [HeaderModule, FooterComponent],
-  declarations: [PageNotFoundComponent],
+  declarations: [fromComponents.components],
+  imports: [CommonModule, SharedModule, HttpClientModule, RouterModule],
+  exports: [
+    fromComponents.HeaderComponent,
+    fromComponents.FooterComponent,
+    fromComponents.PageNotFoundComponent,
+  ],
 })
 export class CoreModule {}

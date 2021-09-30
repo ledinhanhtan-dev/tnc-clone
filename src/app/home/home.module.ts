@@ -24,6 +24,7 @@ const routes: Routes = [
     CommonModule,
     SharedModule,
     SwiperModule,
+    // FIX: lazy loading wrong implementation
     ProductModule,
     RouterModule.forChild(routes),
   ],
