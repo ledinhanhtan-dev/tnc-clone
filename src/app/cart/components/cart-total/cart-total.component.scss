@@ -56,6 +56,12 @@
     margin-bottom: 1rem;
   }
 
+  &.disable {
+    pointer-events: none;
+    cursor: default;
+    background-color: $color-gray;
+  }
+
   &-to-cart {
     color: $color-white;
     background-color: $color-accent-blue;

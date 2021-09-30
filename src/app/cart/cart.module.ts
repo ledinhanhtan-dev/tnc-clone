@@ -7,6 +7,9 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { CartTotalComponent } from './components/cart-total/cart-total.component';
 import { SharedModule } from '@shared/shared.module';
 import { CartGuaranteesComponent } from './components/cart-guarantees/cart-guarantees.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [{ path: '', component: CartComponent }];
 
 @NgModule({
   declarations: [
@@ -16,7 +19,7 @@ import { CartGuaranteesComponent } from './components/cart-guarantees/cart-guara
     CartTotalComponent,
     CartGuaranteesComponent,
   ],
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
   exports: [CartModalComponent],
   providers: [CartService],
 })

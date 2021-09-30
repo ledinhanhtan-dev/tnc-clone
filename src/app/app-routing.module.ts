@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./product/product.module').then(m => m.ProductModule),
   },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then(m => m.CartModule),
+  },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: 'not-found' },
 ];

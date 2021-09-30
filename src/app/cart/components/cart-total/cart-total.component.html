@@ -13,7 +13,12 @@
 <div class="vat">Đã bao gồm VAT (nếu có)</div>
 
 <div class="actions">
-  <a class="btn btn-to-cart">ĐÉN GIỎ HÀNG</a>
-  <button class="btn btn-delete-cart">XÓA GIỎ HÀNG</button>
+  <a
+    class="btn btn-to-cart"
+    [ngClass]="totalQuantity === 0 ? 'disable' : ''"
+    (click)="onGoToCart()"
+    >ĐẾN GIỎ HÀNG</a
+  >
+  <button class="btn btn-delete-cart" routeLink="/">XÓA GIỎ HÀNG</button>
   <a class="btn btn-to-others">XEM SẢN PHẨM KHÁC</a>
 </div>
