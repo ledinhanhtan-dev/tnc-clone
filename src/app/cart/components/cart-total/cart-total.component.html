@@ -19,6 +19,8 @@
     (click)="onGoToCart()"
     >ĐẾN GIỎ HÀNG</a
   >
-  <button class="btn btn-delete-cart" routeLink="/">XÓA GIỎ HÀNG</button>
+  <button class="btn btn-delete-cart" (click)="onDeleteCart()">
+    XÓA GIỎ HÀNG
+  </button>
   <a class="btn btn-to-others">XEM SẢN PHẨM KHÁC</a>
 </div>

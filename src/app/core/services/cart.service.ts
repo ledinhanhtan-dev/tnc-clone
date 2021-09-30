@@ -12,39 +12,22 @@ export class CartService {
 
   constructor() {}
 
-  openModal() {
-    this.active$.next(true);
-  }
-
-  closeModal() {
-    this.active$.next(false);
-  }
-
-  getTotalQuantity(): number {
-    let totalQty = 0;
-    this.cart$.value.forEach(item => (totalQty += item.quantity));
-    return totalQty;
-  }
-
-  getTotalPrice(): number {
-    let totalPrice = 0;
-    this.cart$.value.forEach(item => (totalPrice += item.calcTotal()));
-    return totalPrice;
-  }
-
   addToCart(product: Product) {
+    const index = this.cart$.value.findIndex(
+      item => item.product.id === product.id
+    );
+
+    if (index !== -1) this.increaseExistingItemQty(index);
+    else this.addNewItem(product);
+  }
+
+  private increaseExistingItemQty(index: number) {
+    this.increaseQuantity(index);
+    this.openModal();
+  }
+
+  private addNewItem(product: Product) {
     const cart = this.cart$.value;
-
-    console.log(product.id);
-
-    // Existing cart item: increase quantity
-    const index = cart.findIndex(item => item.product.id === product.id);
-
-    if (index !== -1) {
-      this.increaseQuantity(index);
-      this.openModal();
-      return;
-    }
 
     const cartItem = new CartItem({
       index: this.cart$.value.length,
@@ -82,6 +65,30 @@ export class CartService {
     this.cart$.next(cart);
 
     return cart[index].calcTotal();
+  }
+
+  deleteCart() {
+    this.cart$.next([]);
+  }
+
+  openModal() {
+    this.active$.next(true);
+  }
+
+  closeModal() {
+    this.active$.next(false);
+  }
+
+  getTotalQuantity(): number {
+    let totalQty = 0;
+    this.cart$.value.forEach(item => (totalQty += item.quantity));
+    return totalQty;
+  }
+
+  getTotalPrice(): number {
+    let totalPrice = 0;
+    this.cart$.value.forEach(item => (totalPrice += item.calcTotal()));
+    return totalPrice;
   }
 
   private reIndexItems(cart: CartItem[]) {
