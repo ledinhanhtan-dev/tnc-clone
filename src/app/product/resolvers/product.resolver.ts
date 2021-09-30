@@ -5,16 +5,19 @@ import {
   ActivatedRouteSnapshot,
   Router,
 } from '@angular/router';
+import { ProductsService } from '@core/services/products.service';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Product } from '../models/product.model';
-import { ProductService } from '../services/product.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductResolver implements Resolve<Product | boolean> {
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(
+    private productsService: ProductsService,
+    private router: Router
+  ) {}
 
   resolve(
     route: ActivatedRouteSnapshot,
@@ -22,9 +25,9 @@ export class ProductResolver implements Resolve<Product | boolean> {
   ): Observable<Product | boolean> {
     const idName: string = route.params.id;
 
-    return this.productService.fetchProduct(idName).pipe(
+    return this.productsService.fetchProduct(idName).pipe(
       catchError(error => {
-        this.router.navigate(['page-not-found']);
+        this.router.navigate(['not-found']);
         return of(false);
       })
     );
