@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from '@core/components/page-not-found/page-not-
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
   },
   {
