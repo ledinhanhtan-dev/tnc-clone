@@ -7,7 +7,7 @@
 
 <div class="container" *ngIf="product">
   <div class="content">
-    <app-product-gallery [images]="product.images"></app-product-gallery>
+    <app-product-gallery [product]="product"></app-product-gallery>
     <app-product-detail [product]="product"></app-product-detail>
   </div>
 
@@ -18,6 +18,6 @@
   </app-block>
 
   <app-block title="Sản phẩm liên quan">
-    <app-products-swiper [products]="[product]"></app-products-swiper>
+    <app-products-swiper [products]="relatedProduct"></app-products-swiper>
   </app-block>
 </div>

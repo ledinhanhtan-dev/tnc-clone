@@ -1,16 +1,19 @@
-export interface Product {
-  id: string;
+import { Category } from './category.model';
+import { Brand } from './brand.model';
 
+export interface Product {
+  id: number;
   name: string;
-  link: string;
+  slug: string;
   price: number;
   priceOld: number;
-
   thumbnail: string;
   images: string[];
-  ratingScore: number;
-  ratingCount: number;
+  shortDesc: string[];
+  rating: { score: number; count: number };
   guarantee: number;
-  shortDescriptions: string[];
-  available: boolean;
+  inStock: boolean;
+
+  brand: Brand;
+  category: Category;
 }

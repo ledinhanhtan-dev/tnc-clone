@@ -2,14 +2,14 @@
 
 <div class="rating-guarantee">
   <app-product-rating
-    [score]="product.ratingScore"
-    [count]="product.ratingCount"
+    [score]="product.rating.score"
+    [count]="product.rating.count"
   ></app-product-rating>
   <p class="guarantee">Bảo hành {{ product.guarantee }} tháng</p>
 </div>
 
-<div class="short-descriptions">
-  <p *ngFor="let desc of product.shortDescriptions">- {{ desc }}</p>
+<div class="short-desc">
+  <p *ngFor="let desc of product.shortDesc">- {{ desc }}</p>
   <p class="note">*Quý khách mua lẻ vui lòng mua với giá niêm yết</p>
 </div>
 
@@ -17,6 +17,6 @@
   [data]="{
     price: product.price,
     priceOld: product.priceOld,
-    available: product.available
+    available: product.inStock
   }"
 ></app-product-actions>

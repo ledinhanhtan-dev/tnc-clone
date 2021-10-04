@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CartService {
   readonly cart$ = new BehaviorSubject<CartItem[]>([]);
-  readonly active$ = new BehaviorSubject<boolean>(true);
+  readonly active$ = new BehaviorSubject<boolean>(false);
 
   constructor() {}
 

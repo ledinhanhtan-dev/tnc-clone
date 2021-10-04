@@ -18,4 +18,8 @@ export class ProductsService {
   fetchProduct(id: string): Observable<Product> {
     return this.http.get<Product>(PRODUCTS_API + id);
   }
+
+  fetchRelatedProduct(catId: number): Observable<Product[]> {
+    return this.http.get<Product[]>(PRODUCTS_API + catId + '/category');
+  }
 }

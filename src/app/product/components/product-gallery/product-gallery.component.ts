@@ -9,6 +9,7 @@ import {
 import { Controller, Navigation, SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 import SwiperCore from 'swiper';
+import { Product } from '@core/models/product.model';
 
 SwiperCore.use([Navigation, Controller]);
 
@@ -21,7 +22,7 @@ export class ProductGalleryComponent implements OnInit, AfterViewInit {
   @ViewChild('topSlider') topSlider!: SwiperComponent;
   @ViewChild('thumbsSlider') thumbsSlider!: SwiperComponent;
   @Input()
-  images: string[] = [];
+  product!: Product;
 
   mainGalleryConfig: SwiperOptions = {
     slidesPerView: 1,

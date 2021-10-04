@@ -1,15 +1,15 @@
-<a href="#" class="brand">
-  <img src="http://localhost:3000/image/brand/msi-sm.png" />
+<a [routerLink]="['/brand', product.brand.slug]" class="brand">
+  <img [src]="product.brand.image" />
 </a>
 
 <swiper [config]="mainGalleryConfig" class="main" slideClass="main" #topSlider>
-  <ng-template swiperSlide *ngFor="let image of images">
+  <ng-template swiperSlide *ngFor="let image of product.images">
     <img [src]="image" alt="" class="image" />
   </ng-template>
 </swiper>
 
 <swiper #thumbsSlider [config]="subGalleryConfig" class="sub">
-  <ng-template swiperSlide *ngFor="let image of images">
+  <ng-template swiperSlide *ngFor="let image of product.images">
     <div class="image-wrapper">
       <img [src]="image" alt="" class="image" />
     </div>
