@@ -3,12 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { PRODUCTS_API } from '@core/constants/api.constant';
 import { HomeProducts } from '@core/models/home-products.model';
 import { Product } from '@core/models/product.model';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductsService {
+  activeInfoIndex$ = new BehaviorSubject<number>(0);
+
   constructor(private readonly http: HttpClient) {}
 
   fetchHomeProducts(): Observable<HomeProducts> {

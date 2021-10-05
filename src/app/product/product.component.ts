@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Product } from '@core/models/product.model';
-import { ProductsService } from '@core/services/products.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ProductsService } from 'app/product/services/products.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent implements OnInit, OnDestroy {
   product!: Product;
   relatedProduct: Product[] = [];
 
@@ -26,4 +26,6 @@ export class ProductComponent implements OnInit {
         .subscribe(products => (this.relatedProduct = products));
     });
   }
+
+  ngOnDestroy(): void {}
 }

@@ -1,6 +1,6 @@
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { CartService } from '@core/services/cart.service';
 import { Subscription } from 'rxjs';
+import { CartService } from '@cart/services/cart.service';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header-cart',

@@ -6,7 +6,7 @@ import {
   ActivatedRouteSnapshot,
 } from '@angular/router';
 import { HomeProducts } from '@core/models/home-products.model';
-import { ProductsService } from '@core/services/products.service';
+import { ProductsService } from 'app/product/services/products.service';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 

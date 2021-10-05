@@ -1,8 +1,7 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { CartService } from '@cart/services/cart.service';
 import { Cart } from '@core/models/cart.model';
-import { CartService } from '@core/services/cart.service';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-cart-total',

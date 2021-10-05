@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from '@core/services/cart.service';
+import { CartService } from '@cart/services/cart.service';
 
 @Component({
   selector: 'app-root',

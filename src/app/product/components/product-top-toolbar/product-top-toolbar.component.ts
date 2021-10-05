@@ -1,15 +1,15 @@
 import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  HostBinding,
-  HostListener,
   Input,
-  OnDestroy,
   OnInit,
+  Component,
+  AfterViewInit,
+  HostListener,
+  HostBinding,
+  ElementRef,
+  OnDestroy,
   ViewChild,
 } from '@angular/core';
-import { ProductInfoService } from 'app/product/services/product-info.service';
+import { ProductsService } from 'app/product/services/products.service';
 import { Subscription } from 'rxjs';
 
 type Div = HTMLDivElement;
@@ -38,7 +38,7 @@ export class ProductTopToolbarComponent
     'Review sản phẩm',
   ];
 
-  constructor(private readonly productInfoService: ProductInfoService) {}
+  constructor(private readonly productsService: ProductsService) {}
 
   ngOnInit(): void {}
 
@@ -47,10 +47,10 @@ export class ProductTopToolbarComponent
       '.tab'
     );
 
-    this.indexSub = this.productInfoService.activeIndex$.subscribe(
-      activeIndex => {
+    this.indexSub = this.productsService.activeInfoIndex$.subscribe(
+      activeInfoIndex => {
         this.tabs.forEach(tab => (tab as Div).classList.remove('active'));
-        (this.tabs[activeIndex] as Div).classList.add('active');
+        (this.tabs[activeInfoIndex] as Div).classList.add('active');
       }
     );
   }
@@ -61,7 +61,7 @@ export class ProductTopToolbarComponent
 
   onSelectTab(e: MouseEvent) {
     const index = (e.target as Div).dataset.index!;
-    this.productInfoService.activeIndex$.next(+index);
+    this.productsService.activeInfoIndex$.next(+index);
   }
 
   @HostListener('window:scroll', [])

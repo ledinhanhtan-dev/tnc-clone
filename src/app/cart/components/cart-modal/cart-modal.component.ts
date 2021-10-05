@@ -1,8 +1,7 @@
-import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
-import { CartItemComponent } from '../cart-item/cart-item.component';
-import { Cart } from '@core/models/cart.model';
-import { CartService } from '@core/services/cart.service';
 import { Subscription } from 'rxjs';
+import { Cart } from '@core/models/cart.model';
+import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
+import { CartService } from '@cart/services/cart.service';
 
 @Component({
   selector: 'app-cart-modal',

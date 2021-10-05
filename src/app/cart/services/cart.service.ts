@@ -1,12 +1,11 @@
-import { HttpClient } from '@angular/common/http';
+import { tap } from 'rxjs/operators';
+import { BehaviorSubject } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { CART_API } from '@core/constants/api.constant';
 import { EMPTY_CART } from '@core/constants/cart.constant';
-import { Cart } from '@core/models/cart.model';
-import { Product } from '@core/models/product.model';
 import { CookieService } from 'ngx-cookie-service';
-import { BehaviorSubject } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { Cart } from '@core/models/cart.model';
 
 @Injectable({
   providedIn: 'root',

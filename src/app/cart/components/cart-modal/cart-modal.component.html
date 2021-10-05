@@ -2,7 +2,9 @@
 
 <div class="modal">
   <div class="header">
-    <div class="title">Bạn đang có {{ 1 }} sản phẩm trong giỏ hàng</div>
+    <div class="title">
+      Bạn đang có {{ cart.totalQuantity }} sản phẩm trong giỏ hàng
+    </div>
     <button type="button" (click)="onCloseModal()">
       <app-icon iconId="close" size="sm"></app-icon>
     </button>
