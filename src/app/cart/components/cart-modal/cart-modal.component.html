@@ -1,17 +1,14 @@
-<!-- FIX: backdrop click -->
 <div class="backdrop" (click)="onCloseModal()"></div>
 
 <div class="modal">
   <div class="header">
-    <div class="title">
-      Bạn đang có {{ cart.totalQuantity }} sản phẩm trong giỏ hàng
-    </div>
+    <div class="title">Bạn đang có {{ 1 }} sản phẩm trong giỏ hàng</div>
     <button type="button" (click)="onCloseModal()">
       <app-icon iconId="close" size="sm"></app-icon>
     </button>
   </div>
   <div class="body">
-    <div class="products">
+    <div class="cart-items">
       <div class="empty" *ngIf="cart.totalQuantity === 0">
         Bạn đang không có sản phẩm nào <br />
         trong giỏ hàng
@@ -22,7 +19,7 @@
       ></app-cart-item>
     </div>
     <div class="info">
-      <app-cart-total></app-cart-total>
+      <app-cart-total [cart]="cart"></app-cart-total>
       <app-cart-guarantees></app-cart-guarantees>
     </div>
   </div>

@@ -18,9 +18,17 @@ export class CartItemComponent implements OnInit {
     this.total = this.cartItem.quantity * this.cartItem.product.price;
   }
 
-  increase() {}
+  addQuantity() {
+    this.cartService.increaseItemQty(this.cartItem.id);
+  }
 
-  decrease() {}
+  subQuantity() {
+    if (this.cartItem.quantity <= 1)
+      this.cartService.removeFromCart(this.cartItem.id);
+    else this.cartService.decreaseItemQty(this.cartItem.id);
+  }
 
-  remove() {}
+  remove() {
+    this.cartService.removeFromCart(this.cartItem.id);
+  }
 }

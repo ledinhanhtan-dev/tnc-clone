@@ -14,7 +14,7 @@
 
 <div class="actions">
   <div class="qty">
-    <button type="button" class="qty-btn qty-btn-sub" (click)="decrease()">
+    <button type="button" class="qty-btn qty-btn-sub" (click)="subQuantity()">
       -
     </button>
     <input
@@ -23,7 +23,7 @@
       class="qty-input"
       [value]="cartItem.quantity"
     />
-    <button class="qty-btn qty-btn-add" type="button" (click)="increase()">
+    <button class="qty-btn qty-btn-add" type="button" (click)="addQuantity()">
       +
     </button>
   </div>

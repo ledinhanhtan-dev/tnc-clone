@@ -1,5 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Cart } from '@core/models/cart.model';
 import { CartService } from '@core/services/cart.service';
 import { Subscription } from 'rxjs';
 
@@ -8,30 +9,24 @@ import { Subscription } from 'rxjs';
   templateUrl: './cart-total.component.html',
   styleUrls: ['./cart-total.component.scss'],
 })
-export class CartTotalComponent implements OnInit, OnDestroy {
-  private cartSub!: Subscription;
-  totalQuantity: number = 0;
-  totalPrice: number = 0;
+export class CartTotalComponent implements OnInit {
+  @Input() cart!: Cart;
 
   constructor(private cartService: CartService, private router: Router) {}
 
-  ngOnInit(): void {
-    this.cartSub = this.cartService.cart$.subscribe(() => {});
-  }
-
-  ngOnDestroy(): void {
-    if (this.cartSub) this.cartSub.unsubscribe();
-  }
+  ngOnInit(): void {}
 
   onGoToCart() {
-    if (this.totalQuantity === 0) return;
+    if (this.cart.totalQuantity === 0) return;
 
     this.cartService.closeModal();
     this.router.navigate(['/cart']);
   }
 
   onDeleteCart() {
-    if (this.totalQuantity === 0) return;
+    if (this.cart.totalQuantity === 0) return;
+
+    this.cartService.deleteCart();
   }
 
   onGoToOthers() {

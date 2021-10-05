@@ -42,7 +42,9 @@ export class ProductGalleryComponent implements OnInit, AfterViewInit {
 
   constructor(private cdr: ChangeDetectorRef) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.product);
+  }
 
   ngAfterViewInit(): void {
     this.topSlider.swiperRef.controller.control = this.thumbsSlider.swiperRef;

@@ -25,7 +25,7 @@ export class CartModalComponent implements OnInit, OnDestroy {
     );
 
     this.cartSub = this.cartService.cart$.subscribe(cart => {
-      console.log(cart);
+      console.log(cart.cartItems);
 
       this.cart = cart;
     });

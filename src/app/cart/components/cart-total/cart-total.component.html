@@ -2,12 +2,12 @@
 
 <div class="quantity">
   Số lượng sản phẩm
-  <span class="count">{{ totalQuantity }}</span>
+  <span class="count">{{ cart.totalQuantity }}</span>
 </div>
 
 <div class="total">
   Tổng chi phí
-  <span class="price">{{ totalPrice | price }} đ</span>
+  <span class="price">{{ cart.totalPrice | price }} đ</span>
 </div>
 
 <div class="vat">Đã bao gồm VAT (nếu có)</div>
@@ -16,7 +16,7 @@
   <button
     type="button"
     class="btn btn-to-cart"
-    [ngClass]="totalQuantity === 0 ? 'disable' : ''"
+    [ngClass]="cart.totalQuantity === 0 ? 'disable' : ''"
     (click)="onGoToCart()"
   >
     ĐẾN GIỎ HÀNG
