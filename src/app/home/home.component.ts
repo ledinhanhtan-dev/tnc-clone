@@ -13,10 +13,6 @@ export class HomeComponent implements OnInit {
   constructor(private readonly route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.data.subscribe(data => {
-      console.log(data[0]);
-
-      this.homeProducts = data[0];
-    });
+    this.route.data.subscribe(data => (this.homeProducts = data[0]));
   }
 }

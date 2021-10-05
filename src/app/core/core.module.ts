@@ -5,6 +5,7 @@ import { SharedModule } from '@shared/shared.module';
 import { RouterModule } from '@angular/router';
 
 import * as fromComponents from './components';
+import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [fromComponents.components],
   imports: [CommonModule, SharedModule, HttpClientModule, RouterModule],
@@ -13,5 +14,6 @@ import * as fromComponents from './components';
     fromComponents.FooterComponent,
     fromComponents.PageNotFoundComponent,
   ],
+  providers: [CookieService],
 })
 export class CoreModule {}

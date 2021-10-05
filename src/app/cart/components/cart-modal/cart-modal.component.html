@@ -4,7 +4,7 @@
 <div class="modal">
   <div class="header">
     <div class="title">
-      Bạn đang có {{ cart.length }} sản phẩm trong giỏ hàng
+      Bạn đang có {{ cart.totalQuantity }} sản phẩm trong giỏ hàng
     </div>
     <button type="button" (click)="onCloseModal()">
       <app-icon iconId="close" size="sm"></app-icon>
@@ -12,12 +12,12 @@
   </div>
   <div class="body">
     <div class="products">
-      <div class="empty" *ngIf="cart.length === 0">
+      <div class="empty" *ngIf="cart.totalQuantity === 0">
         Bạn đang không có sản phẩm nào <br />
         trong giỏ hàng
       </div>
       <app-cart-item
-        *ngFor="let item of cart"
+        *ngFor="let item of cart.cartItems"
         [cartItem]="item"
       ></app-cart-item>
     </div>

@@ -1,74 +1,34 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CartItem } from '@core/models/cart-item.model';
+import { CART_API } from '@core/constants/api.constant';
+import { EMPTY_CART } from '@core/constants/cart.constant';
+import { Cart } from '@core/models/cart.model';
 import { Product } from '@core/models/product.model';
+import { CookieService } from 'ngx-cookie-service';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  readonly cart$ = new BehaviorSubject<CartItem[]>([]);
+  readonly cart$ = new BehaviorSubject<Cart>(EMPTY_CART);
   readonly active$ = new BehaviorSubject<boolean>(false);
 
-  constructor() {}
+  constructor(private http: HttpClient, private cookieService: CookieService) {}
 
-  addToCart(product: Product) {
-    const index = this.cart$.value.findIndex(
-      item => item.product.id === product.id
-    );
+  fetchCartData() {
+    const sessionId = this.cookieService.get('sessionId');
 
-    if (index !== -1) this.increaseExistingItemQty(index);
-    else this.addNewItem(product);
-  }
-
-  private increaseExistingItemQty(index: number) {
-    this.increaseQuantity(index);
-    this.openModal();
-  }
-
-  private addNewItem(product: Product) {
-    const cart = this.cart$.value;
-
-    const cartItem = new CartItem({
-      index: this.cart$.value.length,
-      quantity: 1,
-      product,
-    });
-
-    cart.push(cartItem);
-
-    this.cart$.next(cart);
-    this.openModal();
-  }
-
-  removeFromCart(index: number) {
-    let cart = this.cart$.value;
-    cart.splice(index, 1);
-    cart = this.reIndexItems(cart);
-
-    this.cart$.next(cart);
-  }
-
-  increaseQuantity(index: number): number {
-    const cart = this.cart$.value;
-    cart[index].quantity += 1;
-
-    this.cart$.next(cart);
-
-    return cart[index].calcTotal();
-  }
-
-  decreaseQuantity(index: number): number {
-    const cart = this.cart$.value;
-    cart[index].quantity -= 1;
-
-    this.cart$.next(cart);
-
-    return cart[index].calcTotal();
-  }
-
-  deleteCart() {
-    this.cart$.next([]);
+    if (!sessionId) {
+      this.http.get<Cart>(CART_API + 'new').subscribe(cart => {
+        this.cookieService.set('sessionId', cart.sessionId);
+        this.cart$.next(cart);
+      });
+    } else {
+      this.http
+        .get<Cart>(CART_API, { withCredentials: true })
+        .subscribe(cart => this.cart$.next(cart));
+    }
   }
 
   openModal() {
@@ -77,25 +37,5 @@ export class CartService {
 
   closeModal() {
     this.active$.next(false);
-  }
-
-  getTotalQuantity(): number {
-    let totalQty = 0;
-    this.cart$.value.forEach(item => (totalQty += item.quantity));
-    return totalQty;
-  }
-
-  getTotalPrice(): number {
-    let totalPrice = 0;
-    this.cart$.value.forEach(item => (totalPrice += item.calcTotal()));
-    return totalPrice;
-  }
-
-  private reIndexItems(cart: CartItem[]) {
-    for (const [index, item] of cart.entries()) {
-      item.index = index;
-    }
-
-    return cart;
   }
 }

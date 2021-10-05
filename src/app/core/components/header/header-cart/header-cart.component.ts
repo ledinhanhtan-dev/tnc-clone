@@ -19,7 +19,7 @@ export class HeaderCartComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.totalSub = this.cartService.cart$.subscribe(
-      () => (this.total = this.cartService.getTotalQuantity())
+      cart => (this.total = cart.totalQuantity)
     );
   }
 

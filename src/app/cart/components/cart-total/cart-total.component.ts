@@ -16,10 +16,7 @@ export class CartTotalComponent implements OnInit, OnDestroy {
   constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {
-    this.cartSub = this.cartService.cart$.subscribe(() => {
-      this.totalPrice = this.cartService.getTotalPrice();
-      this.totalQuantity = this.cartService.getTotalQuantity();
-    });
+    this.cartSub = this.cartService.cart$.subscribe(() => {});
   }
 
   ngOnDestroy(): void {
@@ -35,8 +32,6 @@ export class CartTotalComponent implements OnInit, OnDestroy {
 
   onDeleteCart() {
     if (this.totalQuantity === 0) return;
-
-    this.cartService.deleteCart();
   }
 
   onGoToOthers() {

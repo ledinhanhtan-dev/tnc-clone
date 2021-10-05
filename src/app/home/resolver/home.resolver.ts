@@ -24,12 +24,8 @@ export class HomeResolver implements Resolve<HomeProducts> {
   ): Observable<HomeProducts> {
     if (this.cache) return of(this.cache);
 
-    return this.productsService.fetchHomeProducts().pipe(
-      tap(homeProducts => {
-        console.log(homeProducts);
-
-        this.cache = homeProducts;
-      })
-    );
+    return this.productsService
+      .fetchHomeProducts()
+      .pipe(tap(homeProducts => (this.cache = homeProducts)));
   }
 }

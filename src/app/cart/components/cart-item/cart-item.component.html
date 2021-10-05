@@ -6,7 +6,9 @@
 </div>
 
 <div class="description">
-  <a href="#" class="name">{{ cartItem.product.name }}</a>
+  <a [routerLink]="['/product', cartItem.product.slug]" class="name">{{
+    cartItem.product.name
+  }}</a>
   <p class="total">{{ total | price }} đ</p>
 </div>
 
