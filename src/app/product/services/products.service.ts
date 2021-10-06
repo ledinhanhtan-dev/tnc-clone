@@ -10,6 +10,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class ProductsService {
   activeInfoIndex$ = new BehaviorSubject<number>(0);
+  quantity$ = new BehaviorSubject<number>(1);
 
   constructor(private readonly http: HttpClient) {}
 

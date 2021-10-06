@@ -31,9 +31,13 @@ export class CartService {
     }
   }
 
-  addToCart(productId: number) {
+  addToCart(productId: number, quantity: number = 1) {
     this.http
-      .get<Cart>(CART_API + 'add/' + productId, { withCredentials: true })
+      .post<Cart>(
+        CART_API + 'add/' + productId,
+        { quantity },
+        { withCredentials: true }
+      )
       .pipe(tap(() => this.active$.next(true)))
       .subscribe(cart => this.cart$.next(cart));
   }

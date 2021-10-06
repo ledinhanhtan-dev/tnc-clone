@@ -4,6 +4,7 @@ import { SharedModule } from '@shared/shared.module';
 import { ProductRoutingModule } from './product-routing.module';
 import { ProductComponent } from './product.component';
 import { components } from './components';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [...components, ProductComponent],

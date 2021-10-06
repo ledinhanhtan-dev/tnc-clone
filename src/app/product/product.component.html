@@ -1,8 +1,7 @@
 <!-- Resolver, next behavior subject -->
 <app-product-top-toolbar
   *ngIf="product"
-  [name]="product.name"
-  [price]="product.price"
+  [prod]="{ id: product.id, name: product.name, price: product.price }"
 ></app-product-top-toolbar>
 
 <div class="container" *ngIf="product">

@@ -14,6 +14,12 @@ import { Subscription } from 'rxjs';
 
 type Div = HTMLDivElement;
 
+interface SimpleProductData {
+  id: number;
+  name: string;
+  price: number;
+}
+
 @Component({
   selector: 'app-product-top-toolbar',
   templateUrl: './product-top-toolbar.component.html',
@@ -26,8 +32,7 @@ export class ProductTopToolbarComponent
   private indexSub!: Subscription;
   private tabs!: NodeList;
 
-  @Input() name!: string;
-  @Input() price!: number;
+  @Input() prod!: SimpleProductData;
   @HostBinding('class.active')
   private active: boolean = false;
 
