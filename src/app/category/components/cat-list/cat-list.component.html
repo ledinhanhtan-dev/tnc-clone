@@ -1,9 +1,7 @@
 <div class="header">
   <div class="name">{{ category.name }}</div>
   <div class="quantity">({{ category.count }} sản phẩm)</div>
-  <div class="sort">
-    <span>Sắp xếp theo</span>
-  </div>
+  <app-cat-sort [slug]="category.slug"></app-cat-sort>
 </div>
 
 <div class="grid">
@@ -12,3 +10,10 @@
     *ngFor="let product of category.products"
   ></app-product-card>
 </div>
+
+<a href="#" class="ad">
+  <img
+    src="http://localhost:3000/image/banner/category-banner.jpg"
+    alt="Khuyến mãi Giảm giá"
+  />
+</a>

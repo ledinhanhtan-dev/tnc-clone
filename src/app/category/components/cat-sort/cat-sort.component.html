@@ -1,0 +1,8 @@
+<span class="label">Sắp xếp theo:</span>
+<select class="select" (change)="onSelectChange($event)">
+  <option value="?sort=createdAt&order=ASC">Mới nhất</option>
+  <option value="?sort=price&order=ASC">Giá (Thấp - Cao)</option>
+  <option value="?sort=price&order=DESC">Giá (Cao - Thấp)</option>
+  <option value="?sort=name&order=ASC">Tên (A - Z)</option>
+  <option value="?sort=name&order=DESC">Tên (Z - A)</option>
+</select>

@@ -1,0 +1,23 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-right: 0.5rem;
+}
+
+.select {
+  width: 200px;
+  height: 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding-left: 10px;
+  background-color: $color-pale-blue;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}

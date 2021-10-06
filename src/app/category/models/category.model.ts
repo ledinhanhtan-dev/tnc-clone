@@ -20,3 +20,13 @@ export interface Category {
 
   count: number;
 }
+
+export const EMPTY_CATEGORY: Category = {
+  id: 0,
+  name: '',
+  slug: '',
+  image: '',
+  description: { title: '', text: '' },
+  products: [],
+  count: 0,
+};

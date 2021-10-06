@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Category } from './models/category.model';
+import { CategoryService } from './services/category.service';
 
 @Component({
   selector: 'app-category',
@@ -12,10 +13,19 @@ export class CategoryComponent implements OnInit, OnDestroy {
   private catSub!: Subscription;
   category!: Category;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private catService: CategoryService
+  ) {}
 
   ngOnInit(): void {
-    this.catSub = this.route.data.subscribe(data => (this.category = data[0]));
+    this.catSub = this.route.data.subscribe(data => {
+      this.category = data[0];
+
+      this.catSub = this.catService.category$.subscribe(
+        category => (this.category = category)
+      );
+    });
   }
 
   ngOnDestroy(): void {
