@@ -4,7 +4,7 @@ export interface HomeBanner {
   image: string;
 }
 
-export const heroBanners: HomeBanner[] = [
+export const HERO_BANNERS: HomeBanner[] = [
   {
     link: '#',
     image: 'http://localhost:3000/image/banner/banner-01.jpg',
@@ -52,7 +52,7 @@ export const heroBanners: HomeBanner[] = [
   },
 ];
 
-export const subBanners: HomeBanner[] = [
+export const SUB_BANNERS: HomeBanner[] = [
   {
     link: '#',
     image: 'http://localhost:3000/image/banner/store-asus.jpg',

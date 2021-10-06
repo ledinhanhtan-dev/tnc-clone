@@ -4,7 +4,7 @@ export interface HomeFeaturedProduct {
   id: string;
 }
 
-export const homeFeaturedProducts: HomeFeaturedProduct[] = [
+export const HOME_FEATURED_PRODUCTS: HomeFeaturedProduct[] = [
   {
     image: 'http://localhost:3000/image/featured/featured-product-1.jpg',
     alt: '',

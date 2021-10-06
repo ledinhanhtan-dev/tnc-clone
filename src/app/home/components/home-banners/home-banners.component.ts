@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  heroBanners,
+  HERO_BANNERS,
   HomeBanner,
-  subBanners,
-} from 'app/home/models/home-banner.model';
+  SUB_BANNERS,
+} from 'app/home/constants/home-banners.constant';
 import SwiperCore, {
   Autoplay,
   Navigation,
@@ -19,8 +19,8 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
   styleUrls: ['./home-banners.component.scss'],
 })
 export class HomeBannersComponent implements OnInit {
-  heroBanners: HomeBanner[] = heroBanners;
-  subBanners: HomeBanner[] = subBanners;
+  heroBanners: HomeBanner[] = HERO_BANNERS;
+  subBanners: HomeBanner[] = SUB_BANNERS;
 
   heroSwiperConfig: SwiperOptions = {
     slidesPerView: 1,

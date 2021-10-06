@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeChannel, homeChannels } from 'app/home/models/home-channel.model';
+import {
+  HomeChannel,
+  HOME_CHANNELS,
+} from 'app/home/constants/home-channels.constant';
 
 @Component({
   selector: 'app-home-channel',
@@ -7,7 +10,7 @@ import { HomeChannel, homeChannels } from 'app/home/models/home-channel.model';
   styleUrls: ['./home-channel.component.scss'],
 })
 export class HomeChannelComponent implements OnInit {
-  homeChannels: HomeChannel[] = homeChannels;
+  homeChannels: HomeChannel[] = HOME_CHANNELS;
 
   constructor() {}
 

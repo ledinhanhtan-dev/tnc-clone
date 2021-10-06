@@ -5,7 +5,7 @@ export interface HomeChannel {
   alt: string;
 }
 
-export const homeChannels: HomeChannel[] = [
+export const HOME_CHANNELS: HomeChannel[] = [
   {
     title:
       'PEWPEW MUA PC 27 TRIỆU Và Pha Chốt Đơn Nhanh Như HACK SPEED Tại TNC Store! - Mua PC Như Mua Rau',

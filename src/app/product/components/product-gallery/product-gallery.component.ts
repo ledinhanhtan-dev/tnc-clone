@@ -9,7 +9,7 @@ import {
 import { Controller, Navigation, SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 import SwiperCore from 'swiper';
-import { Product } from '@core/models/product.model';
+import { Product } from 'app/product/models/product.model';
 
 SwiperCore.use([Navigation, Controller]);
 

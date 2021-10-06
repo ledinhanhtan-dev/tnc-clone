@@ -3,7 +3,7 @@ export interface HomeFeedback {
   image: string;
 }
 
-export const homeFeedbacks: HomeFeedback[] = [
+export const HOME_FEEDBACKS: HomeFeedback[] = [
   {
     image: 'http://localhost:3000/image/feedback/fb-1.jpg',
     link: '#',

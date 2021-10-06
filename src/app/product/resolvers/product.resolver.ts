@@ -5,7 +5,7 @@ import {
   ActivatedRouteSnapshot,
   Router,
 } from '@angular/router';
-import { Product } from '@core/models/product.model';
+import { Product } from 'app/product/models/product.model';
 import { ProductsService } from 'app/product/services/products.service';
 import { catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';

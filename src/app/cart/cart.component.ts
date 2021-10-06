@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { EMPTY_CART } from '@core/constants/cart.constant';
-import { Cart } from '@core/models/cart.model';
+import { EMPTY_CART } from '@cart/constants/cart.constant';
+import { Cart } from '@cart/models/cart.model';
 import { Subscription } from 'rxjs';
 import { CartService } from './services/cart.service';
 

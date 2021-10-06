@@ -1,7 +1,7 @@
-<a href="#" *ngFor="let cat of categories">
+<a [routerLink]="cat.routerLink" *ngFor="let cat of categories">
   <div class="category">
     <div class="shape" [ngStyle]="{ 'background-color': cat.color }"></div>
     <p class="title">{{ cat.title }}</p>
-    <img [src]="cat.image" [alt]="cat.alt" class="image" />
+    <img [src]="cat.image" [alt]="cat.title" class="image" />
   </div>
 </a>

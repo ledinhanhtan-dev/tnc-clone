@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { homeCategories, HomeCategory } from '../../models/home-category.model';
+import {
+  HomeCategory,
+  HOME_CATEGORIES,
+} from 'app/home/constants/home-categories.constant';
 
 @Component({
   selector: 'app-home-categories',
@@ -7,7 +10,7 @@ import { homeCategories, HomeCategory } from '../../models/home-category.model';
   styleUrls: ['./home-categories.component.scss'],
 })
 export class HomeCategoriesComponent implements OnInit {
-  categories: HomeCategory[] = homeCategories;
+  categories: HomeCategory[] = HOME_CATEGORIES;
 
   constructor() {}
 

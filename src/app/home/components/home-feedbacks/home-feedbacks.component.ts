@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {
   HomeFeedback,
-  homeFeedbacks,
-} from 'app/home/models/home-feedback.model';
+  HOME_FEEDBACKS,
+} from 'app/home/constants/home-feedback.constant';
 import { SwiperOptions } from 'swiper';
 
 @Component({
@@ -11,7 +11,7 @@ import { SwiperOptions } from 'swiper';
   styleUrls: ['./home-feedbacks.component.scss'],
 })
 export class HomeFeedbacksComponent implements OnInit {
-  homeFeedbacks: HomeFeedback[] = homeFeedbacks;
+  homeFeedbacks: HomeFeedback[] = HOME_FEEDBACKS;
 
   swiperConfig: SwiperOptions = {
     slidesPerView: 1,

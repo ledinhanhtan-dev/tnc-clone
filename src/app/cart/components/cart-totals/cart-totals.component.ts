@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { CartService } from '@cart/services/cart.service';
-import { Cart } from '@core/models/cart.model';
+import { Cart } from '@cart/models/cart.model';
 import { Subscription } from 'rxjs';
 
 @Component({

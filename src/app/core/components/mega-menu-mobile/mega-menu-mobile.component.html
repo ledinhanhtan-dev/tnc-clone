@@ -6,7 +6,7 @@
 
     <ul class="cat-menu">
       <li (click)="onToggleActiveFromCatMenu($event)">
-        <a [href]="cat.link" class="cat-title">{{ cat.title }}</a>
+        <a [routerLink]="cat.routerLink" class="cat-title">{{ cat.title }}</a>
       </li>
       <li class="cat-item" *ngFor="let item of cat.items">
         <a [href]="item.itemLink">

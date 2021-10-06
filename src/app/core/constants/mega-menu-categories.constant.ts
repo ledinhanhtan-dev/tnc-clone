@@ -5,14 +5,14 @@ interface CategoryItem {
 
 export interface Category {
   title: string;
-  link: string;
+  routerLink: string;
   imagePath: string;
   items: CategoryItem[];
 }
 
-const pcCat: Category = {
+const PC_CAT: Category = {
   title: 'Xây dựng cấu hình PC',
-  link: '#',
+  routerLink: '/page/xay-dung-cau-hinh-pc',
   imagePath: 'http://localhost:3000/image/category/category-pc.png',
   items: [
     { itemTitle: 'PRO GAMING PC', itemLink: '#' },
@@ -24,9 +24,9 @@ const pcCat: Category = {
   ],
 };
 
-const laptopCat: Category = {
+const LAPTOP_CAT: Category = {
   title: 'Laptops',
-  link: '#',
+  routerLink: '#',
   imagePath: 'http://localhost:3000/image/category/category-laptop.png',
   items: [
     { itemTitle: 'Gaming Laptop', itemLink: '#' },
@@ -34,9 +34,9 @@ const laptopCat: Category = {
   ],
 };
 
-const hardwareCat: Category = {
+const HARDWARE_CAT: Category = {
   title: 'Link kiện máy tính',
-  link: '#',
+  routerLink: '#',
   imagePath: 'http://localhost:3000/image/category/category-hardware.png',
   items: [
     { itemTitle: 'CPU - Bộ vi xử lý', itemLink: '#' },
@@ -51,9 +51,9 @@ const hardwareCat: Category = {
   ],
 };
 
-const monitorCat: Category = {
+const MONITOR_CAT: Category = {
   title: 'Màn hình máy tính',
-  link: '#',
+  routerLink: '#',
   imagePath: 'http://localhost:3000/image/category/category-monitor.png',
   items: [
     { itemTitle: 'Màn Hình Gaming', itemLink: '#' },
@@ -62,9 +62,9 @@ const monitorCat: Category = {
   ],
 };
 
-const gearCat: Category = {
+const GEAR_CAT: Category = {
   title: 'Gaming Gears',
-  link: '#',
+  routerLink: '#',
   imagePath: 'http://localhost:3000/image/category/category-gear.png',
   items: [
     { itemTitle: 'Bàn Phím Cơ', itemLink: '#' },
@@ -77,9 +77,9 @@ const gearCat: Category = {
   ],
 };
 
-const accessoryCat: Category = {
+const ACCESSORY_CAT: Category = {
   title: 'Phụ Kiện - Tản Nhiệt PC',
-  link: '#',
+  routerLink: '#',
   imagePath: 'http://localhost:3000/image/category/category-accessory.png',
   items: [
     { itemTitle: 'Tản nhiệt khí cho PC', itemLink: '#' },
@@ -90,9 +90,9 @@ const accessoryCat: Category = {
   ],
 };
 
-const officeCat: Category = {
+const OFFICE_CAT: Category = {
   title: 'Thiết Bị Văn Phòng',
-  link: '#',
+  routerLink: '#',
   imagePath: 'http://localhost:3000/image/category/category-office.png',
   items: [
     { itemTitle: 'Loa máy tính', itemLink: '#' },
@@ -105,9 +105,9 @@ const officeCat: Category = {
   ],
 };
 
-const networkCat: Category = {
+const NETWORK_CAT: Category = {
   title: 'Thiết Bị Mạng',
-  link: '#',
+  routerLink: '#',
   imagePath: 'http://localhost:3000/image/category/category-network.png',
   items: [
     { itemTitle: 'Router Wifi', itemLink: '#' },
@@ -116,4 +116,13 @@ const networkCat: Category = {
 };
 
 // prettier-ignore
-export const CATEGORIES: Category[] = [pcCat, laptopCat, hardwareCat, monitorCat, gearCat, accessoryCat, officeCat, networkCat];
+export const MEGA_MENU_CATEGORIES: Category[] = [
+  PC_CAT,
+  LAPTOP_CAT,
+  HARDWARE_CAT,
+  MONITOR_CAT,
+  GEAR_CAT,
+  ACCESSORY_CAT,
+  OFFICE_CAT,
+  NETWORK_CAT,
+];

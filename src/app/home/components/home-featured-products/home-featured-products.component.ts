@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {
   HomeFeaturedProduct,
-  homeFeaturedProducts,
-} from 'app/home/models/home-featured-product.model';
+  HOME_FEATURED_PRODUCTS,
+} from 'app/home/constants/home-featured-products.constant';
 
 @Component({
   selector: 'app-home-featured-products',
@@ -10,7 +10,7 @@ import {
   styleUrls: ['./home-featured-products.component.scss'],
 })
 export class HomeFeaturedProductsComponent implements OnInit {
-  featuredProducts: HomeFeaturedProduct[] = homeFeaturedProducts;
+  featuredProducts: HomeFeaturedProduct[] = HOME_FEATURED_PRODUCTS;
 
   constructor() {}
 

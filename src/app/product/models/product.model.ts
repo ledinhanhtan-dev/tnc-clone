@@ -1,5 +1,5 @@
-import { Category } from './category.model';
-import { Brand } from './brand.model';
+import { Category } from '../../core/models/category.model';
+import { Brand } from '../../core/models/brand.model';
 
 export interface Product {
   id: number;

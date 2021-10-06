@@ -1,5 +1,5 @@
 import { Subscription } from 'rxjs';
-import { Cart } from '@core/models/cart.model';
+import { Cart } from '@cart/models/cart.model';
 import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { CartService } from '@cart/services/cart.service';
 

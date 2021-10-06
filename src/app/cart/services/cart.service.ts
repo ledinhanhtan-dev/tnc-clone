@@ -3,9 +3,9 @@ import { BehaviorSubject } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CART_API } from '@core/constants/api.constant';
-import { EMPTY_CART } from '@core/constants/cart.constant';
+import { EMPTY_CART } from '@cart/constants/cart.constant';
 import { CookieService } from 'ngx-cookie-service';
-import { Cart } from '@core/models/cart.model';
+import { Cart } from '@cart/models/cart.model';
 
 @Injectable({
   providedIn: 'root',
