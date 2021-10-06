@@ -1,5 +1,5 @@
 <swiper [config]="swiperConfig">
-  <ng-template swiperSlide *ngFor="let brand of homeBrands">
+  <ng-template swiperSlide *ngFor="let brand of brands">
     <a [href]="brand.link" class="brand">
       <img [src]="brand.image" [alt]="brand.alt" />
     </a>

@@ -1,0 +1,19 @@
+<div class="container">
+  <app-block title="Lựa chọn giải pháp">
+    <div class="cat-items">
+      <div class="item" *ngFor="let item of catItems">
+        <a [routerLink]="item.routerLink" class="link">
+          <img [src]="item.img" [alt]="item.title" />
+        </a>
+        <div class="content">
+          <div class="title">{{ item.title }}</div>
+          <div class="desc">{{ item.desc }}</div>
+          <a [routerLink]="item.routerLink" class="readmore">Xem thêm</a>
+        </div>
+      </div>
+    </div>
+  </app-block>
+  <app-block title="Các thương hiệu">
+    <app-brands></app-brands>
+  </app-block>
+</div>

@@ -17,9 +17,9 @@
     type="button"
     class="btn btn-to-cart"
     [ngClass]="cart.totalQuantity === 0 ? 'disable' : ''"
-    (click)="onGoToCart()"
+    (click)="onGoTo()"
   >
-    ĐẾN GIỎ HÀNG
+    {{ isModal ? 'ĐẾN GIỎ HÀNG' : 'XÁC NHẬN ĐƠN HÀNG' }}
   </button>
   <button class="btn btn-delete-cart" type="button" (click)="onDeleteCart()">
     XÓA GIỎ HÀNG

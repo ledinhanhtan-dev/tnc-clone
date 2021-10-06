@@ -12,9 +12,7 @@ export class CartItemDetailComponent implements OnInit {
 
   constructor(private cartService: CartService) {}
 
-  ngOnInit(): void {
-    console.log(this.item.product.shortDesc);
-  }
+  ngOnInit(): void {}
 
   removeItem() {
     this.cartService.removeFromCart(this.item.id);

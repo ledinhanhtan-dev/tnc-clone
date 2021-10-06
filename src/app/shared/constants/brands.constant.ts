@@ -1,10 +1,10 @@
-export interface HomeBrand {
+interface Brand {
   alt: string;
   link: string;
   image: string;
 }
 
-export const homeBrands: HomeBrand[] = [
+export const BRANDS: Brand[] = [
   {
     image: 'http://localhost:3000/image/brand/acer.png',
     alt: 'Thương hiệu Acer',

@@ -1,0 +1,58 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+.container {
+  @include container;
+}
+
+app-block:last-child {
+  margin-top: 4rem;
+}
+
+.cat-items {
+  gap: 2rem;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+}
+
+.item {
+  position: relative;
+}
+
+.content {
+  left: 1rem;
+  top: 1.25rem;
+  max-width: 300px;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  color: $color-white;
+  position: absolute;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.desc {
+  margin-bottom: 1.5rem;
+}
+
+.readmore {
+  width: 150px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  background-color: $color-red;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}

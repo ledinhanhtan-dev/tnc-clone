@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { CartService } from '@cart/services/cart.service';
 import { Cart } from '@core/models/cart.model';
 import { Subscription } from 'rxjs';
@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./cart-totals.component.scss'],
 })
 export class CartTotalsComponent implements OnInit, OnDestroy {
+  @Input() isModal: boolean = false;
   private cartSub!: Subscription;
   cart!: Cart;
 
@@ -23,11 +24,14 @@ export class CartTotalsComponent implements OnInit, OnDestroy {
     if (this.cartSub) this.cartSub.unsubscribe();
   }
 
-  onGoToCart() {
+  onGoTo() {
     if (this.cart.totalQuantity === 0) return;
 
-    this.cartService.closeModal();
-    this.router.navigate(['/cart']);
+    if (this.isModal) {
+      this.cartService.closeModal();
+      this.router.navigate(['/cart']);
+    }
+    // else go to checkout
   }
 
   onDeleteCart() {
