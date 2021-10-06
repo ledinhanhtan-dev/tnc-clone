@@ -1,0 +1,12 @@
+<div class="header" (click)="toggleActive()">
+  <app-icon iconId="chevron-right" size="xs"></app-icon>
+  Chi tiết sản phẩm
+</div>
+
+<div class="body">
+  <p *ngFor="let text of shortDesc" class="text">- {{ text }}</p>
+  <p class="note">
+    *Do nguồn cung hạn chế. Sản phẩm không bán lẻ, chỉ bán kèm PC, mong quý
+    khách thông cảm
+  </p>
+</div>

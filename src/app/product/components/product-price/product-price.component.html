@@ -1,10 +1,10 @@
 <!-- Good candidate for using pipe -->
 <div class="data">
   <div class="status-quantity">
-    <div [class]="data.available ? 'status' : 'status unavailable'">
+    <div [class]="product.inStock ? 'status' : 'status unavailable'">
       <div class="status-circle"></div>
       <span class="status-text">{{
-        data.available ? 'CÒN HÀNG' : 'HẾT HÀNG'
+        product.inStock ? 'CÒN HÀNG' : 'HẾT HÀNG'
       }}</span>
     </div>
 
@@ -12,7 +12,9 @@
   </div>
 
   <div class="prices">
-    <p class="price-old">{{ data.priceOld | price }} đ</p>
-    <p class="price">{{ data.price | price }} đ</p>
+    <p class="price-old">{{ product.priceOld | price }} đ</p>
+    <p class="price">{{ product.price | price }} đ</p>
   </div>
 </div>
+
+<app-product-cta [productId]="product.id"></app-product-cta>

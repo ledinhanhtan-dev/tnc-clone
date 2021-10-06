@@ -17,11 +17,11 @@
       </div>
       <app-cart-item
         *ngFor="let item of cart.cartItems"
-        [cartItem]="item"
+        [item]="item"
       ></app-cart-item>
     </div>
     <div class="info">
-      <app-cart-total [cart]="cart"></app-cart-total>
+      <app-cart-totals></app-cart-totals>
       <app-cart-guarantees></app-cart-guarantees>
     </div>
   </div>

@@ -40,28 +40,7 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 2rem;
-}
-
-.qty {
-  display: flex;
-  align-items: center;
-
-  &-input {
-    border: 0;
-    width: 26px;
-    height: 22px;
-    font-weight: 700;
-    color: $color-accent-blue;
-    text-align: center;
-  }
-
-  &-btn {
-    width: 22px;
-    font-weight: 600;
-    color: $color-primary;
-    background-color: $color-border;
-  }
+  gap: 1rem;
 }
 
 .remove {

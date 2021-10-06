@@ -1,0 +1,22 @@
+@import '/src/styles/variables';
+
+:host {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  border: 0;
+  width: 30px;
+  height: 22px;
+  font-weight: 600;
+  color: $color-accent-blue;
+  text-align: center;
+}
+
+.btn {
+  width: 22px;
+  font-weight: 600;
+  color: $color-primary;
+  background-color: $color-border;
+}

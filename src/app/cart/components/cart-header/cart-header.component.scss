@@ -1,0 +1,34 @@
+@import '/src/styles/variables';
+
+:host {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+  display: flex;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.actions {
+  display: flex;
+}
+
+.action {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: $color-accent-blue;
+  text-decoration: underline;
+  align-items: center;
+  display: flex;
+
+  app-icon {
+    margin-right: 0.6rem;
+  }
+
+  &:first-child {
+    margin-right: 2rem;
+  }
+}

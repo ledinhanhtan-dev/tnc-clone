@@ -8,30 +8,26 @@ import { CartService } from '@cart/services/cart.service';
   styleUrls: ['./cart-item.component.scss'],
 })
 export class CartItemComponent implements OnInit {
-  @Input() cartItem!: CartItem;
-  total: number = 0;
+  @Input() item!: CartItem;
 
   constructor(private cartService: CartService) {}
 
-  ngOnInit(): void {
-    this.total = this.cartItem.quantity * this.cartItem.product.price;
-  }
+  ngOnInit(): void {}
 
   closeModal() {
     this.cartService.closeModal();
   }
 
   addQuantity() {
-    this.cartService.increaseItemQty(this.cartItem.id);
+    this.cartService.increaseItemQty(this.item.id);
   }
 
   subQuantity() {
-    if (this.cartItem.quantity <= 1)
-      this.cartService.removeFromCart(this.cartItem.id);
-    else this.cartService.decreaseItemQty(this.cartItem.id);
+    if (this.item.quantity <= 1) this.cartService.removeFromCart(this.item.id);
+    else this.cartService.decreaseItemQty(this.item.id);
   }
 
   remove() {
-    this.cartService.removeFromCart(this.cartItem.id);
+    this.cartService.removeFromCart(this.item.id);
   }
 }

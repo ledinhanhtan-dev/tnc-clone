@@ -1,0 +1,26 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+  padding: 3rem 0;
+}
+
+.container {
+  @include container;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+
+  &:first-child {
+    margin-bottom: 5rem;
+  }
+}
+
+.content {
+  width: 66.66%;
+}
+
+.info {
+  width: 33.33%;
+  margin-left: 1.5rem;
+}

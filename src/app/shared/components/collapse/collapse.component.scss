@@ -1,0 +1,47 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+
+  &.active {
+    .header > app-icon {
+      transform: rotateZ(90deg) scale(0.65);
+    }
+
+    .body {
+      display: block;
+    }
+  }
+}
+
+.header {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: $color-accent-blue;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+
+  & > app-icon {
+    margin-right: 0.5rem;
+    transition: transform 100ms;
+    transform: scale(0.65);
+  }
+}
+
+.body {
+  display: none;
+  padding: 0.5rem 0 0.5rem 1rem;
+
+  & > p {
+    font-size: 0.875rem;
+  }
+}
+
+.text {
+  margin-bottom: 3px;
+}
+
+.note {
+  margin-top: 1rem;
+}

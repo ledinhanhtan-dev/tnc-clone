@@ -1,1 +1,19 @@
-<p>cart works!</p>
+<div class="container">
+  <div class="content">
+    <app-cart-process></app-cart-process>
+    <app-cart-header></app-cart-header>
+    <app-cart-item-detail
+      *ngFor="let item of cart.cartItems"
+      [item]="item"
+    ></app-cart-item-detail>
+  </div>
+
+  <div class="info">
+    <app-cart-totals></app-cart-totals>
+    <app-cart-guarantees></app-cart-guarantees>
+  </div>
+</div>
+
+<div class="container">
+  <app-block title="Sản phẩm vừa xem"></app-block>
+</div>

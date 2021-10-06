@@ -1,0 +1,71 @@
+@import '/src/styles/variables';
+
+:host {
+  display: flex;
+  padding: 0.625rem 1rem;
+  border: 1px solid $color-border;
+  margin-bottom: 0.625rem;
+}
+
+.img {
+  width: 80px;
+  margin-right: 1.25rem;
+}
+
+.content {
+  width: 100%;
+}
+
+.name {
+  font-weight: 600;
+  color: $color-accent-blue;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.price {
+  min-width: 120px;
+  font-weight: 700;
+  width: max-content;
+  text-align: right;
+}
+
+.actions {
+  margin-top: 0.5rem;
+  align-items: center;
+  display: flex;
+}
+
+.text {
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
+app-cart-quantity {
+  margin-right: auto;
+}
+
+.remove {
+  font-weight: 700;
+  padding: 6px 1rem;
+  font-size: 0.875rem;
+  color: $color-accent-blue;
+  border: 1px solid $color-accent-blue;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  transition: all $duration-100;
+
+  > app-icon {
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-accent-blue;
+  }
+}

@@ -13,12 +13,4 @@
   <p class="note">*Quý khách mua lẻ vui lòng mua với giá niêm yết</p>
 </div>
 
-<app-product-price
-  [data]="{
-    price: product.price,
-    priceOld: product.priceOld,
-    available: product.inStock
-  }"
-></app-product-price>
-
-<app-product-cta [productId]="product.id"></app-product-cta>
+<app-product-price [product]="product"></app-product-price>

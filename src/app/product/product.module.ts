@@ -8,6 +8,6 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [...components, ProductComponent],
-  imports: [CommonModule, SharedModule, ProductRoutingModule],
+  imports: [CommonModule, SharedModule, ProductRoutingModule, FormsModule],
 })
 export class ProductModule {}

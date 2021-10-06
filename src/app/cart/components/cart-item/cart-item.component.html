@@ -9,27 +9,17 @@
   <a
     class="name"
     (click)="closeModal()"
-    [routerLink]="['/product', cartItem.product.slug]"
-    >{{ cartItem.product.name }}</a
+    [routerLink]="['/product', item.product.slug]"
+    >{{ item.product.name }}</a
   >
-  <p class="total">{{ total | price }} đ</p>
+  <p class="total">{{ item.product.price * item.quantity | price }} đ</p>
 </div>
 
 <div class="actions">
-  <div class="qty">
-    <button type="button" class="qty-btn qty-btn-sub" (click)="subQuantity()">
-      -
-    </button>
-    <input
-      type="number"
-      name="quantity"
-      class="qty-input"
-      [value]="cartItem.quantity"
-    />
-    <button class="qty-btn qty-btn-add" type="button" (click)="addQuantity()">
-      +
-    </button>
-  </div>
+  <app-cart-quantity
+    [quantity]="item.quantity"
+    [itemId]="item.id"
+  ></app-cart-quantity>
   <button class="remove" type="button" (click)="remove()">
     <app-icon iconId="bin" size="sm"></app-icon>
   </button>

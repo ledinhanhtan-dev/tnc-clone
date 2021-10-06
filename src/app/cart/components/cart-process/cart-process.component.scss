@@ -1,0 +1,52 @@
+@import '/src/styles/variables';
+
+:host {
+  width: 100%;
+  justify-content: space-between;
+  overflow: hidden;
+  display: flex;
+}
+
+.process {
+  width: 32.5%;
+  height: 40px;
+  transform: skewX(-20deg);
+  background-color: #ededed;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #4e4e54;
+  display: flex;
+
+  & > p {
+    font-weight: 700;
+    font-size: 1.125rem;
+    transform: skewX(20deg);
+  }
+
+  &.active {
+    color: $color-white;
+    background-color: $color-accent-blue;
+
+    &::before {
+      background-color: $color-accent-blue !important;
+    }
+  }
+
+  &:not(:nth-child(2))::before {
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    content: '';
+
+    background-color: #ededed;
+  }
+
+  &:first-child::before {
+    left: -1rem;
+  }
+
+  &:last-child::before {
+    right: -1rem;
+  }
+}

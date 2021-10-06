@@ -1,12 +1,11 @@
 <span class="label">Số lượng</span>
 <div class="quantity">
   <input
-    #input
     min="1"
     type="number"
     class="input"
     name="quantity"
-    [value]="quantity"
+    [(ngModel)]="quantity"
   />
   <input type="hidden" name="product-id" />
 

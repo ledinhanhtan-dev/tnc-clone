@@ -15,8 +15,10 @@ app-icon {
 }
 
 .cart-amount {
+  padding: 0.2rem;
+  min-width: 32px;
   font-weight: 700;
-  padding: 0.2rem 0.5rem;
   background-color: $color-yellow;
   color: $color-primary;
+  text-align: center;
 }

@@ -1,5 +1,4 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { CartService } from '@cart/services/cart.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProductsService } from 'app/product/services/products.service';
 import { Subscription } from 'rxjs';
 
@@ -8,18 +7,16 @@ import { Subscription } from 'rxjs';
   templateUrl: './product-quantity.component.html',
   styleUrls: ['./product-quantity.component.scss'],
 })
-export class ProductQuantityComponent implements OnInit, OnDestroy {
-  qtySub!: Subscription;
+export class ProductQuantityComponent implements OnInit {
   quantity: number = 1;
 
   constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {
-    this.qtySub = this.productsService.quantity$.subscribe(
-      qty => (this.quantity = qty)
-    );
+    this.productsService.quantity$.subscribe(qty => (this.quantity = qty));
   }
 
+  // FIX: bind input
   add() {
     this.productsService.quantity$.next(this.quantity + 1);
   }
@@ -27,9 +24,5 @@ export class ProductQuantityComponent implements OnInit, OnDestroy {
   subtract() {
     if (this.quantity <= 1) return;
     this.productsService.quantity$.next(this.quantity - 1);
-  }
-
-  ngOnDestroy(): void {
-    if (this.qtySub) this.qtySub.unsubscribe();
   }
 }

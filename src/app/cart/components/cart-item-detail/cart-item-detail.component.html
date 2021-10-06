@@ -1,0 +1,26 @@
+<div class="img">
+  <img [src]="item.product.thumbnail" [alt]="item.product.name" />
+</div>
+
+<div class="content">
+  <div class="name">
+    <a [routerLink]="['/product', item.product.slug]">
+      {{ item.product.name }}
+    </a>
+  </div>
+  <div class="meta">
+    <app-collapse [shortDesc]="item.product.shortDesc"></app-collapse>
+    <div class="price">{{ item.product.price * item.quantity | price }} đ</div>
+  </div>
+  <div class="actions">
+    <div class="text">Số lượng</div>
+    <app-cart-quantity
+      [quantity]="item.quantity"
+      [itemId]="item.id"
+    ></app-cart-quantity>
+    <button class="remove" type="button" (click)="removeItem()">
+      <app-icon iconId="bin" size="xs"></app-icon>
+      Xóa
+    </button>
+  </div>
+</div>
