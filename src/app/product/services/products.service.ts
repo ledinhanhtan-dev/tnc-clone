@@ -18,8 +18,8 @@ export class ProductsService {
     return this.http.get<HomeProducts>(PRODUCTS_API + 'home');
   }
 
-  fetchProduct(id: string): Observable<Product> {
-    return this.http.get<Product>(PRODUCTS_API + id);
+  fetchProduct(slug: string): Observable<Product> {
+    return this.http.get<Product>(PRODUCTS_API + slug);
   }
 
   fetchRelatedProduct(catId: number): Observable<Product[]> {

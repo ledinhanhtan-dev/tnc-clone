@@ -1,0 +1,14 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+.container {
+  @include container;
+
+  display: flex;
+  justify-content: space-between;
+}

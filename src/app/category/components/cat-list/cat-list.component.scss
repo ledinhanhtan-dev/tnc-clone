@@ -1,0 +1,27 @@
+@import '/src/styles/variables';
+
+:host {
+  width: 100%;
+  display: block;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.quantity {
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

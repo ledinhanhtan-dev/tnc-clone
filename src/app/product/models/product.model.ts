@@ -1,4 +1,4 @@
-import { Category } from '../../core/models/category.model';
+import { Category } from 'app/category/models/category.model';
 import { Brand } from '../../core/models/brand.model';
 
 export interface Product {

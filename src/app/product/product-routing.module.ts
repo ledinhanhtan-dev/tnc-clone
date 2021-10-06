@@ -4,7 +4,7 @@ import { ProductComponent } from './product.component';
 import { ProductResolver } from './resolvers/product.resolver';
 
 const routes: Routes = [
-  { path: ':id', component: ProductComponent, resolve: [ProductResolver] },
+  { path: ':slug', component: ProductComponent, resolve: [ProductResolver] },
 ];
 
 @NgModule({

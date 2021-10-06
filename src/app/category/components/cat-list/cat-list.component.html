@@ -1,0 +1,14 @@
+<div class="header">
+  <div class="name">{{ category.name }}</div>
+  <div class="quantity">({{ category.count }} sản phẩm)</div>
+  <div class="sort">
+    <span>Sắp xếp theo</span>
+  </div>
+</div>
+
+<div class="grid">
+  <app-product-card
+    [product]="product"
+    *ngFor="let product of category.products"
+  ></app-product-card>
+</div>

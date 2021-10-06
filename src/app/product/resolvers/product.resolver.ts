@@ -23,9 +23,9 @@ export class ProductResolver implements Resolve<Product | boolean> {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<Product | boolean> {
-    const id: string = route.params.id;
+    const slug: string = route.params.slug;
 
-    return this.productsService.fetchProduct(id).pipe(
+    return this.productsService.fetchProduct(slug).pipe(
       catchError(error => {
         this.router.navigate(['not-found']);
         return of(false);

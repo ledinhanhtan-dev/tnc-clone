@@ -1,0 +1,44 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input {
+  display: none;
+
+  &:checked + .checkbox {
+    background-color: $color-accent-blue;
+    border: 1px solid $color-accent-blue;
+  }
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  background-color: $color-white;
+  border: 1px solid $color-gray;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+
+  &::after {
+    width: 6px;
+    height: 12px;
+    margin-top: -4px;
+    transform: rotateZ(45deg);
+    border: solid $color-white;
+    border-width: 0 3px 3px 0;
+    position: absolute;
+    display: block;
+    content: '';
+  }
+}

@@ -1,0 +1,45 @@
+@import '/src/styles/variables';
+
+:host {
+  padding: 1rem;
+  margin-bottom: 0.625rem;
+  background-color: $color-pale-blue;
+  display: block;
+}
+
+.header {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.body {
+  display: none;
+}
+
+app-icon {
+  transform: scale(0.7);
+  transition: all $duration-100;
+}
+
+app-cat-filter-item {
+  margin-bottom: 0.5rem;
+}
+
+:host.active {
+  .header {
+    border-bottom: 1px solid $color-border;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .body {
+    display: block;
+  }
+
+  app-icon {
+    transform: rotateZ(90deg) scale(0.7);
+  }
+}
