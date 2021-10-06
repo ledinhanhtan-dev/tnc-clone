@@ -11,4 +11,8 @@
 
   display: flex;
   justify-content: space-between;
+
+  &:first-child {
+    margin-bottom: 2rem;
+  }
 }

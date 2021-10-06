@@ -1,0 +1,51 @@
+@import '/src/styles/variables';
+
+:host {
+  width: 100%;
+  padding: 1.25rem;
+  background-color: $color-pale-blue;
+  display: block;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.3rem 1rem;
+  color: $color-white;
+  background-color: $color-accent-blue;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    top: 0;
+    width: 20px;
+    height: 100%;
+    right: -10px;
+    transform: skewX(-15deg);
+    background-color: $color-accent-blue;
+    position: absolute;
+    content: '';
+  }
+}
+
+.body {
+  display: flex;
+}
+
+.image {
+  max-width: 320px;
+  margin-right: 2rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  line-height: 1.5;
+  font-size: 1.125rem;
+}

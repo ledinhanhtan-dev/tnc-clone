@@ -1,5 +1,10 @@
 import { Product } from 'app/product/models/product.model';
 
+export interface CategoryDescription {
+  title: string;
+  text: string;
+}
+
 export interface Category {
   id: number;
 
@@ -9,7 +14,7 @@ export interface Category {
 
   image: string;
 
-  description: { title: string; content: string };
+  description: CategoryDescription;
 
   products: Product[];
 
