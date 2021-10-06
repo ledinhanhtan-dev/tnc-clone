@@ -43,10 +43,18 @@
   }
 }
 
-.title {
+.image {
+  height: 260px;
+  align-items: center;
+  display: flex;
+}
+
+.name {
   font-weight: 600;
   line-height: 1.4;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
+  overflow: hidden;
+  height: 45px;
 }
 
 .rating {
@@ -101,7 +109,7 @@
     background-color: $color-primary;
   }
 
-  .title {
+  .name {
     color: $color-white;
   }
 

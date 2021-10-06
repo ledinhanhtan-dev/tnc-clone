@@ -1,15 +1,15 @@
 <div class="thumbnail">
-  <div class="percent">
+  <div class="percent" *ngIf="product.priceOld">
     <span>-{{ percent }}%</span>
   </div>
 
-  <a [routerLink]="['/product', product.slug]">
-    <img [src]="product.thumbnail" alt="" />
+  <a [routerLink]="['/product', product.slug]" class="image">
+    <img [src]="product.thumbnail" [alt]="product.name" />
   </a>
 </div>
 <div class="content">
-  <div class="title">
-    <a [routerLink]="['/product', product.slug]">{{ product.name }}</a>
+  <div class="name">
+    <a [routerLink]="['/product', product.slug]">{{ product.name }} </a>
   </div>
 
   <app-product-rating
@@ -20,7 +20,9 @@
 
   <div class="price">
     <span class="price-sale">{{ product.price | price }} đ</span>
-    <span class="price-old">{{ product.priceOld | price }} đ</span>
+    <span class="price-old" *ngIf="product.priceOld"
+      >{{ product.priceOld | price }} đ</span
+    >
   </div>
 
   <button class="add-to-cart" type="button" (click)="addToCart()">

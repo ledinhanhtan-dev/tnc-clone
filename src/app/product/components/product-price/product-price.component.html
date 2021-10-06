@@ -12,7 +12,9 @@
   </div>
 
   <div class="prices">
-    <p class="price-old">{{ product.priceOld | price }} đ</p>
+    <p class="price-old" *ngIf="product.priceOld">
+      {{ product.priceOld | price }} đ
+    </p>
     <p class="price">{{ product.price | price }} đ</p>
   </div>
 </div>
