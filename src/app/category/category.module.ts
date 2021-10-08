@@ -6,6 +6,8 @@ import { CategoryRoutingModule } from './category-routing.module';
 import { components } from './components';
 import { CatSortComponent } from './components/cat-sort/cat-sort.component';
 import { CatPaginationComponent } from './components/cat-pagination/cat-pagination.component';
+import { CatListFilterComponent } from './components/cat-list-filter/cat-list-filter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,8 @@ import { CatPaginationComponent } from './components/cat-pagination/cat-paginati
     CategoryComponent,
     CatSortComponent,
     CatPaginationComponent,
+    CatListFilterComponent,
   ],
-  imports: [CommonModule, SharedModule, CategoryRoutingModule],
+  imports: [CommonModule, SharedModule, CategoryRoutingModule, FormsModule],
 })
 export class CategoryModule {}

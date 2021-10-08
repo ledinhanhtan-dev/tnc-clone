@@ -1,0 +1,12 @@
+<p class="label">Lọc theo:</p>
+<div class="filters">
+  <div class="item" *ngFor="let item of filterItems">
+    {{ item.name }}
+    <button class="remove" (click)="removeItem(item)">
+      <app-icon iconId="close" size="xxs"></app-icon>
+    </button>
+  </div>
+</div>
+<button type="button" class="remove-all" (click)="removeAll()">
+  Xóa tất cả bộ lọc
+</button>

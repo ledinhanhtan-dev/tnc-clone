@@ -1,0 +1,58 @@
+@import '/src/styles/variables';
+
+:host {
+  min-height: 62px;
+  margin-bottom: 1rem;
+  padding: 0.8rem 2rem;
+  background-color: $color-pale-blue;
+  flex-direction: row;
+  align-items: center;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.label {
+  font-weight: 700;
+  margin-right: 1.5rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.item {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-right: 0.6rem;
+  padding: 0.5rem 0.9rem;
+  background-color: $color-white;
+  border: 1px solid $color-border;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: max-content;
+  display: flex;
+}
+
+.item:nth-child(4),
+.item:nth-child(4) ~ .item {
+  margin-top: 0.4rem;
+}
+
+.remove {
+  margin-left: 0.7rem;
+  color: $color-accent-blue;
+}
+
+.remove-all {
+  min-width: 80px;
+  font-weight: 600;
+  color: $color-accent-blue;
+  text-decoration: underline;
+  margin-left: auto;
+}

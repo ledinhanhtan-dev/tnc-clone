@@ -5,7 +5,7 @@
 
 <div class="body">
   <app-cat-filter-item
-    *ngFor="let label of block.labels"
-    [label]="label"
+    *ngFor="let item of block.filterItems"
+    [item]="item"
   ></app-cat-filter-item>
 </div>

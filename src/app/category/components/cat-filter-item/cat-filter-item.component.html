@@ -1,5 +1,10 @@
 <label class="item">
-  <input type="checkbox" class="input" />
+  <input
+    type="checkbox"
+    class="input"
+    (change)="onSelectItem()"
+    [(ngModel)]="checked"
+  />
   <div class="checkbox"></div>
-  <span class="label">{{ label }}</span>
+  <span class="label">{{ item.name }}</span>
 </label>

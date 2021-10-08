@@ -4,6 +4,7 @@ import { CATEGORY_API } from '@core/constants/api.constant';
 import { Category, EMPTY_CATEGORY } from '../models/category.model';
 import { BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { FilterItem } from '../models/filter-item.model';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +12,8 @@ import { tap } from 'rxjs/operators';
 export class CategoryService {
   category$ = new BehaviorSubject<Category>(EMPTY_CATEGORY);
   currentPage$ = new BehaviorSubject<number>(1);
+
+  // FIX: CONST
   sortQuery: string = '?sort=createdAt&order=ASC';
 
   constructor(private http: HttpClient) {}
