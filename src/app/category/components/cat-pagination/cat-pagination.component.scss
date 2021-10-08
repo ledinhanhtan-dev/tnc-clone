@@ -1,0 +1,36 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  width: 36px;
+  height: 36px;
+  font-weight: 600;
+  color: $color-gray;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  &:hover {
+    color: $color-accent-blue;
+    background-color: $color-pale-blue;
+  }
+
+  &.active {
+    color: $color-white;
+    background-color: $color-accent-blue;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: $color-gray;
+  }
+}

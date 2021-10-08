@@ -8,7 +8,7 @@
       </h4>
 
       <li *ngFor="let item of cat.items" class="cat-item">
-        <a [href]="item.itemLink">{{ item.itemTitle }}</a>
+        <a [routerLink]="item.routerLink">{{ item.title }}</a>
       </li>
 
       <a [routerLink]="cat.routerLink" class="cat-image">

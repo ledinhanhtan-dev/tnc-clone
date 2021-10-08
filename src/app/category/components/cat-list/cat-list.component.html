@@ -1,7 +1,7 @@
 <div class="header">
   <div class="name">{{ category.name }}</div>
   <div class="quantity">({{ category.count }} sản phẩm)</div>
-  <app-cat-sort [slug]="category.slug"></app-cat-sort>
+  <app-cat-sort></app-cat-sort>
 </div>
 
 <div class="grid">
@@ -17,3 +17,5 @@
     alt="Khuyến mãi Giảm giá"
   />
 </a>
+
+<app-cat-pagination [count]="category.count"></app-cat-pagination>

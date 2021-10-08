@@ -20,7 +20,6 @@
 }
 
 app-icon {
-  transform: scale(0.7);
   transition: all $duration-100;
 }
 
@@ -40,6 +39,6 @@ app-cat-filter-item {
   }
 
   app-icon {
-    transform: rotateZ(90deg) scale(0.7);
+    transform: rotateZ(90deg);
   }
 }

@@ -5,7 +5,7 @@
 
   &.active {
     .header > app-icon {
-      transform: rotateZ(90deg) scale(0.65);
+      transform: rotateZ(90deg);
     }
 
     .body {
@@ -25,7 +25,6 @@
   & > app-icon {
     margin-right: 0.5rem;
     transition: transform 100ms;
-    transform: scale(0.65);
   }
 }
 

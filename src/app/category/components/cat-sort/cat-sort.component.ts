@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CategoryService } from 'app/category/services/category.service';
 
 @Component({
@@ -7,14 +7,12 @@ import { CategoryService } from 'app/category/services/category.service';
   styleUrls: ['./cat-sort.component.scss'],
 })
 export class CatSortComponent implements OnInit {
-  @Input() slug!: string;
-
   constructor(private catService: CategoryService) {}
 
   ngOnInit(): void {}
 
   onSelectChange(e: Event) {
     const query = (e.target as HTMLSelectElement).value;
-    this.catService.fetchSortedCategory(this.slug, query);
+    this.catService.fetchSortedCategory(query);
   }
 }

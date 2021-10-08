@@ -1,0 +1,30 @@
+<ul class="pagination">
+  <button type="button" *ngIf="!isFirstPage()" (click)="toPage(1)">
+    <app-icon iconId="chevron-left-double" size="xxs"></app-icon>
+  </button>
+  <button
+    type="button"
+    *ngIf="!isFirstPage()"
+    (click)="toPage(currentPage - 1)"
+  >
+    <app-icon iconId="chevron-left" size="xxs"></app-icon>
+  </button>
+  <button
+    type="button"
+    *ngFor="let page of totalPagesArray"
+    [ngClass]="page === currentPage ? 'active' : ''"
+    (click)="toPage(page)"
+  >
+    {{ page }}
+  </button>
+  <button type="button" *ngIf="!isLastPage()" (click)="toPage(currentPage + 1)">
+    <app-icon iconId="chevron-right" size="xxs"></app-icon>
+  </button>
+  <button
+    type="button"
+    *ngIf="!isLastPage()"
+    (click)="toPage(totalPagesArray.length)"
+  >
+    <app-icon iconId="chevron-right-double" size="xxs"></app-icon>
+  </button>
+</ul>
