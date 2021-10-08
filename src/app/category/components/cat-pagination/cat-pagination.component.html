@@ -1,23 +1,27 @@
-<ul class="pagination">
+<ul class="pagination" *ngIf="pagination.count !== 0">
   <button type="button" *ngIf="!isFirstPage()" (click)="toPage(1)">
     <app-icon iconId="chevron-left-double" size="xxs"></app-icon>
   </button>
   <button
     type="button"
     *ngIf="!isFirstPage()"
-    (click)="toPage(currentPage - 1)"
+    (click)="toPage(pagination.currentPage - 1)"
   >
     <app-icon iconId="chevron-left" size="xxs"></app-icon>
   </button>
   <button
     type="button"
     *ngFor="let page of totalPagesArray"
-    [ngClass]="page === currentPage ? 'active' : ''"
+    [ngClass]="page === pagination.currentPage ? 'active' : ''"
     (click)="toPage(page)"
   >
     {{ page }}
   </button>
-  <button type="button" *ngIf="!isLastPage()" (click)="toPage(currentPage + 1)">
+  <button
+    type="button"
+    *ngIf="!isLastPage()"
+    (click)="toPage(pagination.currentPage + 1)"
+  >
     <app-icon iconId="chevron-right" size="xxs"></app-icon>
   </button>
   <button

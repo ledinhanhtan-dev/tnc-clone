@@ -1,6 +1,6 @@
 import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
-import { FilterItem } from 'app/category/models/filter-item.model';
-import { CatFilterService } from 'app/category/services/cat-filter.service';
+import { CategoryService } from 'app/category/services/category.service';
+import { Tag } from 'app/tag/models/tag.model';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -11,27 +11,27 @@ import { Subscription } from 'rxjs';
 export class CatListFilterComponent implements OnInit, OnDestroy {
   @HostBinding('class.active')
   private active: boolean = true;
-  private filterItemsSub!: Subscription;
-  filterItems: FilterItem[] = [];
+  private filtersSub!: Subscription;
+  tags: Tag[] = [];
 
-  constructor(private catFilterService: CatFilterService) {}
+  constructor(private catService: CategoryService) {}
 
   ngOnInit(): void {
-    this.filterItemsSub = this.catFilterService.filters$.subscribe(items => {
-      this.filterItems = items;
-      this.active = items.length !== 0;
+    this.filtersSub = this.catService.filters$.subscribe(tags => {
+      this.tags = tags;
+      this.active = tags.length !== 0;
     });
   }
 
-  removeItem(filterItem: FilterItem) {
-    this.catFilterService.removeFilter(filterItem);
+  removeTag(tag: Tag) {
+    this.catService.removeTag(tag);
   }
 
-  removeAll() {
-    this.catFilterService.filters$.next([]);
+  removeAllTags() {
+    this.catService.removeAllTags();
   }
 
   ngOnDestroy(): void {
-    if (this.filterItemsSub) this.filterItemsSub.unsubscribe();
+    if (this.filtersSub) this.filtersSub.unsubscribe();
   }
 }

@@ -1,4 +1,4 @@
-export interface FilterItem {
+export interface Tag {
   id: number;
   name: string;
 }

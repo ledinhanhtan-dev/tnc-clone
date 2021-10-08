@@ -1,8 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { FilterItem } from 'app/category/models/filter-item.model';
-import { CatFilterService } from 'app/category/services/cat-filter.service';
+import { CategoryService } from 'app/category/services/category.service';
+import { Tag } from 'app/tag/models/tag.model';
 import { Subscription } from 'rxjs';
-import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cat-filter-item',
@@ -10,19 +9,19 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./cat-filter-item.component.scss'],
 })
 export class CatFilterItemComponent implements OnInit, OnDestroy {
-  @Input() item!: FilterItem;
+  @Input() tag!: Tag;
   private filtersSub!: Subscription;
   checked: boolean = false;
 
-  constructor(private catFilterService: CatFilterService) {}
+  constructor(private catService: CategoryService) {}
 
   ngOnInit(): void {
-    this.filtersSub = this.catFilterService.filters$.subscribe(filters => {
+    this.filtersSub = this.catService.filters$.subscribe(tags => {
       if (!this.checked) return;
 
-      const hasThisItem = filters.find(item => item.id === this.item.id);
+      const hasThisTag = tags.find(tag => tag.id === this.tag.id);
 
-      if (this.checked && !hasThisItem) this.checked = false;
+      if (this.checked && !hasThisTag) this.checked = false;
     });
   }
 
@@ -30,8 +29,8 @@ export class CatFilterItemComponent implements OnInit, OnDestroy {
     if (this.filtersSub) this.filtersSub.unsubscribe();
   }
 
-  onSelectItem() {
-    if (this.checked) this.catFilterService.addFilter(this.item);
-    else this.catFilterService.removeFilter(this.item);
+  onSelectTag() {
+    if (this.checked) this.catService.addTag(this.tag);
+    else this.catService.removeTag(this.tag);
   }
 }

@@ -1,12 +1,12 @@
 <p class="label">Lọc theo:</p>
-<div class="filters">
-  <div class="item" *ngFor="let item of filterItems">
+<div class="tags">
+  <div class="item" *ngFor="let item of tags">
     {{ item.name }}
-    <button class="remove" (click)="removeItem(item)">
+    <button class="remove" (click)="removeTag(item)">
       <app-icon iconId="close" size="xxs"></app-icon>
     </button>
   </div>
 </div>
-<button type="button" class="remove-all" (click)="removeAll()">
+<button type="button" class="remove-all" (click)="removeAllTags()">
   Xóa tất cả bộ lọc
 </button>

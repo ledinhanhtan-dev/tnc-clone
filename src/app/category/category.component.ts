@@ -24,6 +24,7 @@ export class CategoryComponent implements OnInit, OnDestroy {
     this.catSub = this.route.data.subscribe(data => {
       this.category = data[0];
 
+      // FIX: switch map, exhausted map ?
       this.catSub = this.catService.category$.subscribe(
         category => (this.category = category)
       );

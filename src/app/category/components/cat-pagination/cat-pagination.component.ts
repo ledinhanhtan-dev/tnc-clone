@@ -1,5 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { PAGE_SIZE } from 'app/category/constants/cat-pagination.constant';
+import { PAGE_SIZE } from 'app/category/constants/category.constant';
+import { CatPagination } from 'app/category/models/cat-pagination';
 import { CategoryService } from 'app/category/services/category.service';
 import { Subscription } from 'rxjs';
 
@@ -9,24 +10,22 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./cat-pagination.component.scss'],
 })
 export class CatPaginationComponent implements OnInit, OnDestroy {
-  @Input() count!: number;
+  private paginationSub!: Subscription;
+  pagination!: CatPagination;
   totalPagesArray: number[] = [];
-
-  private currentPageSub!: Subscription;
-  currentPage: number = 1;
 
   constructor(private catService: CategoryService) {}
 
   ngOnInit(): void {
-    this.totalPagesArray = this.calcTotalPages(this.count);
-    this.currentPageSub = this.catService.currentPage$.subscribe(currPage => {
-      this.currentPage = currPage;
+    this.paginationSub = this.catService.pagination$.subscribe(pagination => {
+      this.pagination = pagination;
+      this.totalPagesArray = this.calcTotalPages(pagination.count);
     });
   }
 
   ngOnDestroy(): void {
-    if (this.currentPageSub) this.currentPageSub.unsubscribe();
-    this.catService.currentPage$.next(1);
+    if (this.paginationSub) this.paginationSub.unsubscribe();
+    this.catService.pagination$.next({ count: 1, currentPage: 1 });
   }
 
   toPage(page: number) {
@@ -34,12 +33,13 @@ export class CatPaginationComponent implements OnInit, OnDestroy {
   }
 
   isFirstPage(): boolean {
-    return this.currentPage === 1;
+    return this.pagination.currentPage === 1;
   }
 
   isLastPage(): boolean {
     return (
-      this.currentPage === this.totalPagesArray[this.totalPagesArray.length - 1]
+      this.pagination.currentPage ===
+      this.totalPagesArray[this.totalPagesArray.length - 1]
     );
   }
 

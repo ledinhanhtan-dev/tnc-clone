@@ -20,6 +20,6 @@ export class CategoryResolver implements Resolve<Category> {
     state: RouterStateSnapshot
   ): Observable<Category> {
     const slug: string = route.params.slug;
-    return this.catService.fetchCategory(slug);
+    return this.catService.initialFetchByResolver(slug);
   }
 }
