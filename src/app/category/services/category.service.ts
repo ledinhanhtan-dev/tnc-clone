@@ -12,9 +12,9 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class CategoryService {
-  category$ = new BehaviorSubject<Category>(EMPTY_CATEGORY);
   pagination$ = new BehaviorSubject<CatPagination>(INIT_PAGINATION);
   sortQuery$ = new BehaviorSubject<string>(INIT_SORT_QUERY);
+  category$ = new BehaviorSubject<Category>(EMPTY_CATEGORY);
   filters$ = new BehaviorSubject<Tag[]>([]);
 
   constructor(private http: HttpClient) {}

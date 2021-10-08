@@ -1,8 +1,8 @@
 <p class="label">Lọc theo:</p>
 <div class="tags">
-  <div class="item" *ngFor="let item of tags">
-    {{ item.name }}
-    <button class="remove" (click)="removeTag(item)">
+  <div class="tag" *ngFor="let tag of tags">
+    {{ tag.name }}
+    <button class="remove" (click)="removeTag(tag)">
       <app-icon iconId="close" size="xxs"></app-icon>
     </button>
   </div>

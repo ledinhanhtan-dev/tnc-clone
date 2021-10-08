@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { CategoryService } from './services/category.service';
+import { Category } from './models/category.model';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Category } from './models/category.model';
-import { CategoryService } from './services/category.service';
 
 @Component({
   selector: 'app-category',
@@ -24,7 +24,7 @@ export class CategoryComponent implements OnInit, OnDestroy {
     this.catSub = this.route.data.subscribe(data => {
       this.category = data[0];
 
-      // FIX: switch map, exhausted map ?
+      // Switch to subscribe from CatService
       this.catSub = this.catService.category$.subscribe(
         category => (this.category = category)
       );
