@@ -9,9 +9,9 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./cat-filter-item.component.scss'],
 })
 export class CatFilterItemComponent implements OnInit, OnDestroy {
-  @Input() tag!: Tag;
   private filtersSub!: Subscription;
   checked: boolean = false;
+  @Input() tag!: Tag;
 
   constructor(private catService: CategoryService) {}
 
@@ -20,8 +20,7 @@ export class CatFilterItemComponent implements OnInit, OnDestroy {
       if (!this.checked) return;
 
       const hasThisTag = tags.find(tag => tag.id === this.tag.id);
-
-      if (this.checked && !hasThisTag) this.checked = false;
+      if (!hasThisTag) this.checked = false;
     });
   }
 

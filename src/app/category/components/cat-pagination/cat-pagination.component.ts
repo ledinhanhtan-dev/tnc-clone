@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { PAGE_SIZE } from 'app/category/constants/category.constant';
-import { CatPagination } from 'app/category/models/cat-pagination';
+import { CatPagination } from 'app/category/models/cat-pagination.model';
 import { CategoryService } from 'app/category/services/category.service';
 import { Subscription } from 'rxjs';
 

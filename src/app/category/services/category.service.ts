@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { CATEGORY_API } from '@core/constants/api.constant';
 import { Category, EMPTY_CATEGORY } from '../models/category.model';
 import { INIT_SORT_QUERY } from '../constants/category.constant';
-import { CatPagination } from '../models/cat-pagination';
+import { CatPagination, INIT_PAGINATION } from '../models/cat-pagination.model';
 import { Tag } from 'app/tag/models/tag.model';
 import { BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -13,12 +13,9 @@ import { tap } from 'rxjs/operators';
 })
 export class CategoryService {
   category$ = new BehaviorSubject<Category>(EMPTY_CATEGORY);
-  pagination$ = new BehaviorSubject<CatPagination>({
-    count: 0,
-    currentPage: 1,
-  });
+  pagination$ = new BehaviorSubject<CatPagination>(INIT_PAGINATION);
+  sortQuery$ = new BehaviorSubject<string>(INIT_SORT_QUERY);
   filters$ = new BehaviorSubject<Tag[]>([]);
-  sortQuery: string = INIT_SORT_QUERY;
 
   constructor(private http: HttpClient) {}
 
@@ -31,37 +28,37 @@ export class CategoryService {
     );
   }
 
-  fetchCategory() {
+  private fetchCategory() {
     const slug = this.category$.value.slug;
+
     this.http
       .post<Category>(CATEGORY_API + slug, { filters: [] })
       .subscribe(category => {
+        this.filters$.next([]);
         this.category$.next(category);
+        this.sortQuery$.next(INIT_SORT_QUERY);
         this.paginationNext(category.count);
       });
-
-    this.filters$.next([]);
   }
 
   fetchSortedCategory(sortQuery: string) {
-    // Save sort query for pagination
-    this.sortQuery = sortQuery;
-
+    const filters = this.filters$.value;
     const slug = this.category$.value.slug;
     const url = CATEGORY_API + slug + sortQuery;
-    const filters = this.filters$.value;
 
     this.http.post<Category>(url, { filters }).subscribe(category => {
       this.category$.next(category);
+      this.sortQuery$.next(sortQuery);
       this.paginationNext(category.count);
     });
   }
 
   fetchPaginatedCategory(currentPage: number) {
     const slug = this.category$.value.slug;
-    const url =
-      CATEGORY_API + slug + this.sortQuery + `&currentPage=${currentPage}`;
+    const query = this.sortQuery$.value;
     const filters = this.filters$.value;
+
+    const url = CATEGORY_API + slug + query + `&currentPage=${currentPage}`;
 
     this.http.post<Category>(url, { filters }).subscribe(category => {
       this.category$.next(category);
@@ -71,20 +68,20 @@ export class CategoryService {
 
   fetchFilteredCategory(filters: Tag[]) {
     const slug = this.category$.value.slug;
+    const query = INIT_SORT_QUERY;
 
     this.http
-      .post<Category>(CATEGORY_API + slug + this.sortQuery, { filters })
+      .post<Category>(CATEGORY_API + slug + query, { filters })
       .subscribe(category => {
+        this.filters$.next(filters);
         this.category$.next(category);
+        this.sortQuery$.next(INIT_SORT_QUERY);
         this.paginationNext(category.count);
       });
-
-    this.filters$.next(filters);
   }
 
   addTag(tag: Tag) {
     const filters = [...this.filters$.value, tag];
-
     this.fetchFilteredCategory(filters);
   }
 
