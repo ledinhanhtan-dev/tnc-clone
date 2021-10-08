@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { CatItem, CAT_ITEMS } from 'app/page/constants/cat-items.constant';
 
 @Component({
@@ -9,7 +10,9 @@ import { CatItem, CAT_ITEMS } from 'app/page/constants/cat-items.constant';
 export class BuildPcComponent implements OnInit {
   catItems: CatItem[] = CAT_ITEMS;
 
-  constructor() {}
+  constructor(private readonly title: Title) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.title.setTitle('Xây dựng cấu hình PC');
+  }
 }

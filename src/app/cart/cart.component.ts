@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { EMPTY_CART } from '@cart/constants/cart.constant';
 import { Cart } from '@cart/models/cart.model';
@@ -14,9 +15,10 @@ export class CartComponent implements OnInit, OnDestroy {
   private cartSub!: Subscription;
   cart: Cart = EMPTY_CART;
 
-  constructor(private cartService: CartService) {}
+  constructor(private title: Title, private cartService: CartService) {}
 
   ngOnInit(): void {
+    this.title.setTitle('Giỏ hàng');
     this.cartSub = this.cartService.cart$.subscribe(cart => (this.cart = cart));
   }
 

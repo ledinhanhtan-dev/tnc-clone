@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Category } from './models/category.model';
@@ -14,6 +15,7 @@ export class CategoryComponent implements OnInit, OnDestroy {
   category!: Category;
 
   constructor(
+    private title: Title,
     private route: ActivatedRoute,
     private catService: CategoryService
   ) {}
@@ -26,6 +28,8 @@ export class CategoryComponent implements OnInit, OnDestroy {
         category => (this.category = category)
       );
     });
+
+    this.title.setTitle(this.category.name);
   }
 
   ngOnDestroy(): void {

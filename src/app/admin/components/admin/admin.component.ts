@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { AdminService } from 'app/admin/services/admin.service';
 
 @Component({
@@ -7,7 +8,9 @@ import { AdminService } from 'app/admin/services/admin.service';
   styleUrls: ['./admin.component.scss'],
 })
 export class AdminComponent implements OnInit {
-  constructor(private adminService: AdminService) {}
+  constructor(private title: Title, private adminService: AdminService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.title.setTitle('Admin');
+  }
 }

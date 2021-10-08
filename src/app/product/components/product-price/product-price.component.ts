@@ -10,7 +10,5 @@ export class ProductPriceComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.product.priceOld);
-  }
+  ngOnInit(): void {}
 }
