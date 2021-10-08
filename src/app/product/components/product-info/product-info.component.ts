@@ -6,7 +6,7 @@ import {
   Component,
   OnDestroy,
 } from '@angular/core';
-import { ProductsService } from 'app/product/services/products.service';
+import { ProductService } from 'app/product/services/product.service';
 import { Subscription } from 'rxjs';
 
 type Div = HTMLDivElement;
@@ -29,7 +29,7 @@ export class ProductInfoComponent implements OnInit, OnDestroy, AfterViewInit {
     'Review sản phẩm',
   ];
 
-  constructor(private readonly productsService: ProductsService) {}
+  constructor(private readonly productService: ProductService) {}
 
   ngOnInit(): void {}
 
@@ -40,7 +40,7 @@ export class ProductInfoComponent implements OnInit, OnDestroy, AfterViewInit {
       '.content'
     );
 
-    this.indexSub = this.productsService.activeInfoIndex$.subscribe(
+    this.indexSub = this.productService.activeInfoIndex$.subscribe(
       activeIndex => {
         this.tabs.forEach(tab => (tab as Div).classList.remove('active'));
         this.contents.forEach(content =>
@@ -54,12 +54,12 @@ export class ProductInfoComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngOnDestroy(): void {
-    this.productsService.activeInfoIndex$.next(0);
+    this.productService.activeInfoIndex$.next(0);
     if (this.indexSub) this.indexSub.unsubscribe();
   }
 
   onSelectTab(e: MouseEvent) {
     const index = (e.target as Div).dataset.index!;
-    this.productsService.activeInfoIndex$.next(+index);
+    this.productService.activeInfoIndex$.next(+index);
   }
 }

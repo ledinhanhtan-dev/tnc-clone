@@ -9,7 +9,7 @@ import {
   OnDestroy,
   ViewChild,
 } from '@angular/core';
-import { ProductsService } from 'app/product/services/products.service';
+import { ProductService } from 'app/product/services/product.service';
 import { Subscription } from 'rxjs';
 
 type Div = HTMLDivElement;
@@ -43,7 +43,7 @@ export class ProductTopToolbarComponent
     'Review sản phẩm',
   ];
 
-  constructor(private readonly productsService: ProductsService) {}
+  constructor(private readonly productService: ProductService) {}
 
   ngOnInit(): void {}
 
@@ -52,7 +52,7 @@ export class ProductTopToolbarComponent
       '.tab'
     );
 
-    this.indexSub = this.productsService.activeInfoIndex$.subscribe(
+    this.indexSub = this.productService.activeInfoIndex$.subscribe(
       activeInfoIndex => {
         this.tabs.forEach(tab => (tab as Div).classList.remove('active'));
         (this.tabs[activeInfoIndex] as Div).classList.add('active');
@@ -66,7 +66,7 @@ export class ProductTopToolbarComponent
 
   onSelectTab(e: MouseEvent) {
     const index = (e.target as Div).dataset.index!;
-    this.productsService.activeInfoIndex$.next(+index);
+    this.productService.activeInfoIndex$.next(+index);
   }
 
   @HostListener('window:scroll', [])

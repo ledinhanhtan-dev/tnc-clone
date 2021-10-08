@@ -6,7 +6,7 @@ import {
   ActivatedRouteSnapshot,
 } from '@angular/router';
 import { HomeProducts } from '@core/models/home-products.model';
-import { ProductsService } from 'app/product/services/products.service';
+import { ProductService } from 'app/product/services/product.service';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
@@ -16,7 +16,7 @@ import { tap } from 'rxjs/operators';
 export class HomeResolver implements Resolve<HomeProducts> {
   cache!: HomeProducts;
 
-  constructor(private readonly productsService: ProductsService) {}
+  constructor(private readonly productService: ProductService) {}
 
   resolve(
     route: ActivatedRouteSnapshot,
@@ -24,7 +24,7 @@ export class HomeResolver implements Resolve<HomeProducts> {
   ): Observable<HomeProducts> {
     if (this.cache) return of(this.cache);
 
-    return this.productsService
+    return this.productService
       .fetchHomeProducts()
       .pipe(tap(homeProducts => (this.cache = homeProducts)));
   }

@@ -1,6 +1,6 @@
 import { Product } from 'app/product/models/product.model';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ProductsService } from 'app/product/services/products.service';
+import { ProductService } from 'app/product/services/product.service';
 import { ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
@@ -14,16 +14,16 @@ export class ProductComponent implements OnInit, OnDestroy {
   relatedProduct: Product[] = [];
 
   constructor(
-    private title: Title,
+    private readonly title: Title,
     private readonly route: ActivatedRoute,
-    private readonly productsService: ProductsService
+    private readonly productService: ProductService
   ) {}
 
   ngOnInit(): void {
     this.route.data.subscribe(data => {
       this.product = data[0];
 
-      this.productsService
+      this.productService
         .fetchRelatedProduct(this.product.category.id)
         .subscribe(products => (this.relatedProduct = products));
     });

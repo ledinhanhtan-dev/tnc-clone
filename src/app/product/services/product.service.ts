@@ -8,7 +8,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class ProductsService {
+export class ProductService {
   activeInfoIndex$ = new BehaviorSubject<number>(0);
   quantity$ = new BehaviorSubject<number>(1);
 

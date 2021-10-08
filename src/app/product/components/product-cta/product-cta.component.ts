@@ -1,6 +1,6 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { CartService } from '@cart/services/cart.service';
-import { ProductsService } from 'app/product/services/products.service';
+import { ProductService } from 'app/product/services/product.service';
 
 @Component({
   selector: 'app-product-cta',
@@ -17,14 +17,14 @@ export class ProductCtaComponent implements OnInit {
 
   constructor(
     private cartService: CartService,
-    private productsService: ProductsService
+    private productService: ProductService
   ) {}
 
   ngOnInit(): void {}
 
   addToCart() {
-    const quantity = this.productsService.quantity$.value;
+    const quantity = this.productService.quantity$.value;
     this.cartService.addToCart(this.productId, quantity);
-    this.productsService.quantity$.next(1);
+    this.productService.quantity$.next(1);
   }
 }

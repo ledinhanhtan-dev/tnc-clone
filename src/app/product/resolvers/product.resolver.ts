@@ -6,7 +6,7 @@ import {
   Router,
 } from '@angular/router';
 import { Product } from 'app/product/models/product.model';
-import { ProductsService } from 'app/product/services/products.service';
+import { ProductService } from 'app/product/services/product.service';
 import { catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 
@@ -14,10 +14,7 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductResolver implements Resolve<Product | boolean> {
-  constructor(
-    private productsService: ProductsService,
-    private router: Router
-  ) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
   resolve(
     route: ActivatedRouteSnapshot,
@@ -25,7 +22,7 @@ export class ProductResolver implements Resolve<Product | boolean> {
   ): Observable<Product | boolean> {
     const slug: string = route.params.slug;
 
-    return this.productsService.fetchProduct(slug).pipe(
+    return this.productService.fetchProduct(slug).pipe(
       catchError(error => {
         this.router.navigate(['not-found']);
         return of(false);
