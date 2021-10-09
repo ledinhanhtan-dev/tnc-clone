@@ -1,3 +1,5 @@
+import { environment } from '@env';
+
 interface CategoryItem {
   title: string;
   routerLink: string;
@@ -13,7 +15,7 @@ export interface Category {
 const PC_CAT: Category = {
   title: 'Xây dựng cấu hình PC',
   routerLink: '/page/xay-dung-cau-hinh-pc',
-  imagePath: 'http://localhost:3000/image/category/category-pc.png',
+  imagePath: environment.apiUrl + 'image/category/category-pc.png',
   items: [
     { title: 'PRO GAMING PC', routerLink: '/category/gaming-pc' },
     { title: 'PRO WORKSTATION', routerLink: '#' },
@@ -27,7 +29,7 @@ const PC_CAT: Category = {
 const LAPTOP_CAT: Category = {
   title: 'Laptops',
   routerLink: '#',
-  imagePath: 'http://localhost:3000/image/category/category-laptop.png',
+  imagePath: environment.apiUrl + 'image/category/category-laptop.png',
   items: [
     { title: 'Gaming Laptop', routerLink: '#' },
     { title: 'Laptop Văn Phòng', routerLink: '#' },
@@ -37,7 +39,7 @@ const LAPTOP_CAT: Category = {
 const HARDWARE_CAT: Category = {
   title: 'Link kiện máy tính',
   routerLink: '#',
-  imagePath: 'http://localhost:3000/image/category/category-hardware.png',
+  imagePath: environment.apiUrl + 'image/category/category-hardware.png',
   items: [
     { title: 'CPU - Bộ vi xử lý', routerLink: '#' },
     { title: 'Case - Vỏ máy tính', routerLink: '#' },
@@ -54,7 +56,7 @@ const HARDWARE_CAT: Category = {
 const MONITOR_CAT: Category = {
   title: 'Màn hình máy tính',
   routerLink: '#',
-  imagePath: 'http://localhost:3000/image/category/category-monitor.png',
+  imagePath: environment.apiUrl + 'image/category/category-monitor.png',
   items: [
     { title: 'Màn Hình Gaming', routerLink: '#' },
     { title: 'Màn Hình Đồ Họa', routerLink: '#' },
@@ -65,7 +67,7 @@ const MONITOR_CAT: Category = {
 const GEAR_CAT: Category = {
   title: 'Gaming Gears',
   routerLink: '#',
-  imagePath: 'http://localhost:3000/image/category/category-gear.png',
+  imagePath: environment.apiUrl + 'image/category/category-gear.png',
   items: [
     { title: 'Bàn Phím Cơ', routerLink: '#' },
     { title: 'Bàn Di Chuột', routerLink: '#' },
@@ -80,7 +82,7 @@ const GEAR_CAT: Category = {
 const ACCESSORY_CAT: Category = {
   title: 'Phụ Kiện - Tản Nhiệt PC',
   routerLink: '#',
-  imagePath: 'http://localhost:3000/image/category/category-accessory.png',
+  imagePath: environment.apiUrl + 'image/category/category-accessory.png',
   items: [
     { title: 'Tản nhiệt khí cho PC', routerLink: '#' },
     { title: 'Tản nước All-in-one', routerLink: '#' },
@@ -93,7 +95,7 @@ const ACCESSORY_CAT: Category = {
 const OFFICE_CAT: Category = {
   title: 'Thiết Bị Văn Phòng',
   routerLink: '#',
-  imagePath: 'http://localhost:3000/image/category/category-office.png',
+  imagePath: environment.apiUrl + 'image/category/category-office.png',
   items: [
     { title: 'Loa máy tính', routerLink: '#' },
     { title: 'Phần mềm bản quyền', routerLink: '#' },
@@ -108,7 +110,7 @@ const OFFICE_CAT: Category = {
 const NETWORK_CAT: Category = {
   title: 'Thiết Bị Mạng',
   routerLink: '#',
-  imagePath: 'http://localhost:3000/image/category/category-network.png',
+  imagePath: environment.apiUrl + 'image/category/category-network.png',
   items: [
     { title: 'Router Wifi', routerLink: '#' },
     { title: 'Card Wifi', routerLink: '#' },

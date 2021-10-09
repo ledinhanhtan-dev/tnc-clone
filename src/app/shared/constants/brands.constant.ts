@@ -1,3 +1,5 @@
+import { environment } from '@env';
+
 interface Brand {
   alt: string;
   link: string;
@@ -6,82 +8,82 @@ interface Brand {
 
 export const BRANDS: Brand[] = [
   {
-    image: 'http://localhost:3000/image/brand/acer.png',
+    image: environment.apiUrl + 'image/brand/acer.png',
     alt: 'Thương hiệu Acer',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/afox.jpg',
+    image: environment.apiUrl + 'image/brand/afox.jpg',
     alt: 'Thương hiệu Afox',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/apple.jpg',
+    image: environment.apiUrl + 'image/brand/apple.jpg',
     alt: 'Thương hiệu Apple',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/ares.png',
+    image: environment.apiUrl + 'image/brand/ares.png',
     alt: 'Thương hiệu Ares',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/asrock.jpg',
+    image: environment.apiUrl + 'image/brand/asrock.jpg',
     alt: 'Thương hiệu AsRock',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/asus.png',
+    image: environment.apiUrl + 'image/brand/asus.png',
     alt: 'Thương hiệu Asus',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/cannon.png',
+    image: environment.apiUrl + 'image/brand/cannon.png',
     alt: 'Thương hiệu Cannon',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/coolermaster.png',
+    image: environment.apiUrl + 'image/brand/coolermaster.png',
     alt: 'Thương hiệu CoolerMaster',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/corsair.png',
+    image: environment.apiUrl + 'image/brand/corsair.png',
     alt: 'Thương hiệu Corsair',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/dell.png',
+    image: environment.apiUrl + 'image/brand/dell.png',
     alt: 'Thương hiệu Dell',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/edra.jpg',
+    image: environment.apiUrl + 'image/brand/edra.jpg',
     alt: 'Thương hiệu Edra',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/krom.jpg',
+    image: environment.apiUrl + 'image/brand/krom.jpg',
     alt: 'Thương hiệu Krom',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/mad-catz.jpg',
+    image: environment.apiUrl + 'image/brand/mad-catz.jpg',
     alt: 'Thương hiệu Mad Catz',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/lg.png',
+    image: environment.apiUrl + 'image/brand/lg.png',
     alt: 'Thương hiệu LG',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/msi.png',
+    image: environment.apiUrl + 'image/brand/msi.png',
     alt: 'Thương hiệu MSI',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/brand/razer.png',
+    image: environment.apiUrl + 'image/brand/razer.png',
     alt: 'Thương hiệu Razer',
     link: '#',
   },
