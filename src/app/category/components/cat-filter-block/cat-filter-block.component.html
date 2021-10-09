@@ -1,11 +1,11 @@
 <div class="header" (click)="toggleActive()">
-  <span>{{ block.title }}</span>
+  <span>{{ filter.name }}</span>
   <app-icon iconId="chevron-right" size="xxs"></app-icon>
 </div>
 
 <div class="body">
   <app-cat-filter-item
-    *ngFor="let tag of block.tags"
+    *ngFor="let tag of filter.tags"
     [tag]="tag"
   ></app-cat-filter-item>
 </div>

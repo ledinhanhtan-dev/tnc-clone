@@ -1,4 +1,4 @@
-import { Tag } from 'app/tag/models/tag.model';
+import { Tag } from '@core/models/tag.model';
 
 export interface FilterBlock {
   title: string;
@@ -6,7 +6,7 @@ export interface FilterBlock {
 }
 
 export const MANUFACTURE_BLOCK: FilterBlock = {
-  title: 'Gaming PC Series',
+  title: 'Hãng sản xuất',
   tags: [{ id: 0, name: 'TNC Gaming' }],
 };
 

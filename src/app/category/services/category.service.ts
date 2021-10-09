@@ -4,7 +4,7 @@ import { CATEGORY_API } from '@core/constants/api.constant';
 import { Category, EMPTY_CATEGORY } from '../models/category.model';
 import { INIT_SORT_QUERY } from '../constants/category.constant';
 import { CatPagination, INIT_PAGINATION } from '../models/cat-pagination.model';
-import { Tag } from 'app/tag/models/tag.model';
+import { Tag } from '@core/models/tag.model';
 import { BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
@@ -20,7 +20,7 @@ export class CategoryService {
   constructor(private http: HttpClient) {}
 
   initialFetchByResolver(slug: string) {
-    return this.http.post<Category>(CATEGORY_API + slug, { filters: [] }).pipe(
+    return this.http.get<Category>(CATEGORY_API + slug).pipe(
       tap(category => {
         this.category$.next(category);
         this.paginationNext(category.count);

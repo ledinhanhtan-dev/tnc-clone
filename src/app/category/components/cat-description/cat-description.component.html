@@ -1,5 +1,5 @@
 <div class="name">{{ category.name }}</div>
-<div class="body">
+<div class="body" *ngIf="category.description">
   <img
     class="image"
     [src]="category.image"

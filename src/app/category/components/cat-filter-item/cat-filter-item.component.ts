@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { CategoryService } from 'app/category/services/category.service';
-import { Tag } from 'app/tag/models/tag.model';
+import { Tag } from '@core/models/tag.model';
 import { Subscription } from 'rxjs';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
-import { FilterBlock } from 'app/category/models/filter-block.model';
+import { Filter } from '@core/models/filter.model';
 
 @Component({
   selector: 'app-cat-filter-block',
@@ -8,7 +8,7 @@ import { FilterBlock } from 'app/category/models/filter-block.model';
 })
 export class CatFilterBlockComponent implements OnInit {
   @HostBinding('class.active') active: boolean = true;
-  @Input() block!: FilterBlock;
+  @Input() filter!: Filter;
 
   constructor() {}
 

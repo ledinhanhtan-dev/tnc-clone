@@ -1,3 +1,4 @@
+import { Filter } from '@core/models/filter.model';
 import { Product } from 'app/product/models/product.model';
 
 export interface CategoryDescription {
@@ -18,6 +19,8 @@ export interface Category {
 
   products: Product[];
 
+  filters: Filter[];
+
   count: number;
 }
 
@@ -28,5 +31,6 @@ export const EMPTY_CATEGORY: Category = {
   image: '',
   description: { title: '', text: '' },
   products: [],
+  filters: [],
   count: 0,
 };
