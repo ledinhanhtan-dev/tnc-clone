@@ -42,3 +42,9 @@
     margin-bottom: 0.5rem;
   }
 }
+
+@include respond($mobile-lg) {
+  .copyright {
+    max-width: 300px;
+  }
+}

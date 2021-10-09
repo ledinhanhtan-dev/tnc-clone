@@ -14,6 +14,10 @@
   align-items: center;
   justify-content: center;
   min-height: 260px;
+
+  @include respond($tablet) {
+    min-height: 220px;
+  }
 }
 
 .content {
@@ -67,22 +71,31 @@
   }
 }
 
-.price {
+.prices {
   margin: 5px 0;
 
-  &-sale {
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: $color-red;
-  }
+  @include respond($mobile-lg) {
+    display: flex;
+    flex-direction: column-reverse;
 
-  &-old {
-    margin-left: 5px;
-    font-weight: 500;
-    font-size: 0.875rem;
-    text-decoration: line-through;
-    color: #99a0ad;
+    .price-old {
+      margin-left: 0;
+    }
   }
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: $color-red;
+}
+
+.price-old {
+  margin-left: 5px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-decoration: line-through;
+  color: #99a0ad;
 }
 
 .add-to-cart {
@@ -114,7 +127,7 @@
   }
 
   app-product-rating,
-  .price {
+  .prices {
     visibility: hidden;
   }
 

@@ -18,8 +18,8 @@
     [count]="product.rating.count"
   ></app-product-rating>
 
-  <div class="price">
-    <span class="price-sale">{{ product.price | price }} đ</span>
+  <div class="prices">
+    <span class="price">{{ product.price | price }} đ</span>
     <span class="price-old" *ngIf="product.priceOld"
       >{{ product.priceOld | price }} đ</span
     >

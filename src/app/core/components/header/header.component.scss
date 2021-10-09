@@ -16,10 +16,6 @@
 
   & > img {
     margin: 0px auto;
-
-    @include respond($desktop-sm) {
-      max-width: 120%;
-    }
   }
 }
 
