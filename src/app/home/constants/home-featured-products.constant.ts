@@ -6,27 +6,32 @@ export interface HomeFeaturedProduct {
 
 export const HOME_FEATURED_PRODUCTS: HomeFeaturedProduct[] = [
   {
-    image: 'http://localhost:3000/image/featured/featured-product-1.jpg',
+    image:
+      'https://tnc-clone.herokuapp.com/image/featured/featured-product-1.jpg',
     alt: '',
     id: '#',
   },
   {
-    image: 'http://localhost:3000/image/featured/featured-product-2.jpg',
+    image:
+      'https://tnc-clone.herokuapp.com/image/featured/featured-product-2.jpg',
     alt: '',
     id: '#',
   },
   {
-    image: 'http://localhost:3000/image/featured/featured-product-3.jpg',
+    image:
+      'https://tnc-clone.herokuapp.com/image/featured/featured-product-3.jpg',
     alt: '',
     id: '#',
   },
   {
-    image: 'http://localhost:3000/image/featured/featured-product-4.jpg',
+    image:
+      'https://tnc-clone.herokuapp.com/image/featured/featured-product-4.jpg',
     alt: '',
     id: '#',
   },
   {
-    image: 'http://localhost:3000/image/featured/featured-product-5.jpg',
+    image:
+      'https://tnc-clone.herokuapp.com/image/featured/featured-product-5.jpg',
     alt: '',
     id: '#',
   },

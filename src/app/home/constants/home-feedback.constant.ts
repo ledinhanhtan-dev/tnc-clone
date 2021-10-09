@@ -5,23 +5,23 @@ export interface HomeFeedback {
 
 export const HOME_FEEDBACKS: HomeFeedback[] = [
   {
-    image: 'http://localhost:3000/image/feedback/fb-1.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/feedback/fb-1.jpg',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/feedback/fb-2.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/feedback/fb-2.jpg',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/feedback/fb-3.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/feedback/fb-3.jpg',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/feedback/fb-4.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/feedback/fb-4.jpg',
     link: '#',
   },
   {
-    image: 'http://localhost:3000/image/feedback/fb-5.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/feedback/fb-5.jpg',
     link: '#',
   },
 ];

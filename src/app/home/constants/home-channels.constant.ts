@@ -11,34 +11,34 @@ export const HOME_CHANNELS: HomeChannel[] = [
       'PEWPEW MUA PC 27 TRIỆU Và Pha Chốt Đơn Nhanh Như HACK SPEED Tại TNC Store! - Mua PC Như Mua Rau',
     alt: 'PEWPEW MUA PC 27 TRIỆU Và Pha Chốt Đơn Nhanh Như HACK SPEED Tại TNC Store! - Mua PC Như Mua Rau',
     link: '#',
-    image: 'http://localhost:3000/image/channel/channel-1.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/channel/channel-1.jpg',
   },
   {
     title:
       'Cấu Hình PC Chơi Liên Minh Huyền Thoại "10 NĂM KHÔNG HỎNG" Của Nữ MC-Streamer Minh Nghi',
     alt: 'Cấu Hình PC Chơi Liên Minh Huyền Thoại "10 NĂM KHÔNG HỎNG" Của Nữ MC-Streamer Minh Nghi',
     link: '#',
-    image: 'http://localhost:3000/image/channel/channel-2.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/channel/channel-2.jpg',
   },
   {
     title:
       'KHÁNH VY ĐI MUA PC BỊ PEWPEW "THUỐC ĐỒ NGON" TẠI TNC STORE NHƯ THẾ NÀO? [REACTION]',
     alt: 'KHÁNH VY ĐI MUA PC BỊ PEWPEW "THUỐC ĐỒ NGON" TẠI TNC STORE NHƯ THẾ NÀO? [REACTION]',
     link: '#',
-    image: 'http://localhost:3000/image/channel/channel-3.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/channel/channel-3.jpg',
   },
   {
     title:
       'Khi Độ Mixi Đi Lượn Phố Vớ Được Hàng Khủng... Màn Hình Cực Nét Thì Stream Đến Bao Giờ??',
     alt: 'Khi Độ Mixi Đi Lượn Phố Vớ Được Hàng Khủng... Màn Hình Cực Nét Thì Stream Đến Bao Giờ??',
     link: '#',
-    image: 'http://localhost:3000/image/channel/channel-4.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/channel/channel-4.jpg',
   },
   {
     title:
       'Đập hộp dàn Mainboard Z490 siêu khủng của ASUS - Phổ cập Thunderbolt 3 đến mọi nhà',
     alt: 'Đập hộp dàn Mainboard Z490 siêu khủng của ASUS - Phổ cập Thunderbolt 3 đến mọi nhà',
     link: '#',
-    image: 'http://localhost:3000/image/channel/channel-5.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/channel/channel-5.jpg',
   },
 ];

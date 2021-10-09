@@ -7,47 +7,47 @@ export interface HomeBanner {
 export const HERO_BANNERS: HomeBanner[] = [
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/banner-01.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/banner-01.jpg',
     alt: '',
   },
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/banner-02.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/banner-02.jpg',
     alt: '',
   },
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/banner-03.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/banner-03.jpg',
     alt: '',
   },
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/banner-04.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/banner-04.jpg',
     alt: '',
   },
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/banner-05.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/banner-05.jpg',
     alt: '',
   },
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/banner-06.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/banner-06.jpg',
     alt: '',
   },
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/banner-07.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/banner-07.jpg',
     alt: '',
   },
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/banner-08.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/banner-08.jpg',
     alt: '',
   },
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/banner-09.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/banner-09.jpg',
     alt: '',
   },
 ];
@@ -55,22 +55,22 @@ export const HERO_BANNERS: HomeBanner[] = [
 export const SUB_BANNERS: HomeBanner[] = [
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/store-asus.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/store-asus.jpg',
     alt: '',
   },
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/store-lg.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/store-lg.jpg',
     alt: '',
   },
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/store-acer.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/store-acer.jpg',
     alt: '',
   },
   {
     link: '#',
-    image: 'http://localhost:3000/image/banner/store-nzxt.jpg',
+    image: 'https://tnc-clone.herokuapp.com/image/banner/store-nzxt.jpg',
     alt: '',
   },
 ];

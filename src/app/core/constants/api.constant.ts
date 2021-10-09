@@ -1,4 +1,5 @@
-export const BASE_API = 'http://localhost:3000/';
-export const PRODUCTS_API = 'http://localhost:3000/product/';
-export const CATEGORY_API = 'http://localhost:3000/category/';
-export const CART_API = 'http://localhost:3000/cart/';
+import { environment } from '@env';
+
+export const PRODUCTS_API = environment.apiUrl + 'product/';
+export const CATEGORY_API = environment.apiUrl + 'category/';
+export const CART_API = environment.apiUrl + 'cart/';
