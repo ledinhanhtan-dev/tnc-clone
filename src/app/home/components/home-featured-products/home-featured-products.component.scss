@@ -12,6 +12,10 @@
 
     &:hover {
       transform: scale(1.04);
+
+      @include respond($tablet) {
+        transform: scale(1.015);
+      }
     }
   }
 
@@ -21,6 +25,8 @@
       'main main'
       'sub sub'
       'sub sub';
+
+    gap: 0.875rem;
   }
 }
 

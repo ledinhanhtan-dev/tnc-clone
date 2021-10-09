@@ -6,12 +6,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  @include respond($desktop-md) {
-    padding: 0 1rem;
-  }
 }
 
-.logo > img {
+.logo {
   height: 72px;
+}
+
+@include respond($desktop-md) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    max-height: 50px;
+  }
+
+  app-header-search {
+    display: none;
+  }
 }

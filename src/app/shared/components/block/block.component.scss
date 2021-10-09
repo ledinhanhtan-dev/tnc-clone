@@ -30,6 +30,11 @@
     background-color: rgba($color-primary, 0.15);
     position: absolute;
     content: '';
+
+    @include respond($tablet) {
+      height: 8px;
+      width: 22%;
+    }
   }
 
   &::before {
@@ -39,13 +44,21 @@
   &::after {
     right: 0;
   }
+
+  @include respond($desktop-sm) {
+    font-size: 1.25rem;
+  }
+
+  @include respond($tablet) {
+    font-size: 1.125rem;
+  }
 }
 
 .content {
   margin-top: 2rem;
 }
 
-.read-more {
+.readmore {
   padding: 2rem 0;
   text-align: center;
 
@@ -55,5 +68,9 @@
     background-color: $color-accent-blue;
     display: inline-block;
     color: $color-white;
+
+    @include respond($desktop-sm) {
+      padding: 0.75rem 4rem;
+    }
   }
 }

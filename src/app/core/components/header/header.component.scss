@@ -16,6 +16,10 @@
 
   & > img {
     margin: 0px auto;
+
+    @include respond($desktop-sm) {
+      max-width: 120%;
+    }
   }
 }
 
@@ -28,7 +32,8 @@
 
   @include respond($desktop-sm) {
     text-align: center;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
+    padding: 5px 0;
   }
 }
 

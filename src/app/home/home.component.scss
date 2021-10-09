@@ -12,4 +12,8 @@
 
 app-block {
   margin-top: 4rem;
+
+  @include respond($tablet) {
+    margin-top: 2.5rem;
+  }
 }

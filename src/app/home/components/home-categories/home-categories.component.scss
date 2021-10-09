@@ -9,6 +9,8 @@
   @include respond($desktop-sm) {
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 1fr);
+
+    gap: 0.875rem;
   }
 }
 
@@ -29,6 +31,7 @@
 
     .image {
       transform: translateX(5%);
+
       @include respond($desktop-sm) {
         transform: translateX(-15%);
       }
@@ -37,6 +40,11 @@
 
   @include respond($desktop-sm) {
     padding: 1.5rem;
+  }
+
+  @include respond($tablet) {
+    height: 100px;
+    padding: 1rem;
   }
 }
 
@@ -49,6 +57,10 @@
   line-height: 1.5;
   width: 120px;
   z-index: 11;
+
+  @include respond($desktop-sm) {
+    font-size: 1rem;
+  }
 }
 
 .image {
@@ -61,6 +73,10 @@
 
   @include respond($desktop-sm) {
     transform: translateX(0%);
+  }
+
+  @include respond($tablet) {
+    transform: translateX(20%);
   }
 }
 

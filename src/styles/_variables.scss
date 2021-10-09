@@ -40,7 +40,6 @@ $tablet: 768px;
 
 $desktop-sm: 860px;
 $desktop-md: 1280px;
-$desktop-lg: 1440px;
 
 //  Mixins
 @mixin container {
@@ -50,6 +49,11 @@ $desktop-lg: 1440px;
   @include respond($desktop-md) {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
+  }
+
+  @include respond($tablet) {
+    padding-left: 0.5rem;
+    padding-left: 0.5rem;
   }
 }
 

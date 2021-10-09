@@ -24,7 +24,6 @@ export class HomeBannersComponent implements OnInit {
 
   heroSwiperConfig: SwiperOptions = {
     slidesPerView: 1,
-    spaceBetween: 32, // 2rem
     autoplay: { delay: 5000, disableOnInteraction: true },
     pagination: { clickable: true },
     scrollbar: { draggable: true },
@@ -35,11 +34,15 @@ export class HomeBannersComponent implements OnInit {
 
   subSwiperConfig: SwiperOptions = {
     slidesPerView: 2,
-    spaceBetween: 32, // 2rem
+    spaceBetween: 14,
     autoplay: { delay: 10000, disableOnInteraction: true },
     scrollbar: { draggable: true },
     navigation: true,
     loop: true,
+
+    breakpoints: {
+      '1000': { spaceBetween: 32 },
+    },
   };
 
   constructor() {}
