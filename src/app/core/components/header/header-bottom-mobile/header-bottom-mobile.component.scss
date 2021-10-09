@@ -15,7 +15,7 @@
   align-items: center;
   text-transform: uppercase;
   font-weight: 600;
-  padding: 0.5rem;
+  padding: 0.8rem 1rem;
   width: 100%;
 }
 
@@ -30,4 +30,8 @@
   & > li:not(li:last-child) {
     border-bottom: 1px solid $color-white-4;
   }
+}
+
+.chevron {
+  transform: rotateZ(-90deg);
 }

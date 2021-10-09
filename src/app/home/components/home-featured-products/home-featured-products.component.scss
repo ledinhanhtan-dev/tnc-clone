@@ -1,3 +1,5 @@
+@import '/src/styles/variables';
+
 :host {
   gap: 2rem;
   display: grid;
@@ -11,6 +13,14 @@
     &:hover {
       transform: scale(1.04);
     }
+  }
+
+  @include respond($tablet) {
+    grid-template-areas:
+      'main main'
+      'main main'
+      'sub sub'
+      'sub sub';
   }
 }
 

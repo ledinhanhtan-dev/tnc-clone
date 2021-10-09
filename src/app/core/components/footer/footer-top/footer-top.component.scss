@@ -6,40 +6,51 @@
 
 :host {
   width: 100%;
-  display: block;
+  padding: 3rem;
   background-color: $color-black;
   color: $color-white;
-  padding: 3rem;
+  display: block;
 
-  @include respond($desktop-sm) {
+  @include respond($desktop-md) {
     padding: 2rem 1rem;
   }
 }
 
-.footer-links {
+.links {
   display: flex;
   margin-bottom: 3.5rem;
 
   & > * {
     flex: 25%;
   }
-
-  @include respond($desktop-sm) {
-    flex-direction: column;
-    gap: 2rem;
-  }
 }
 
-.footer-info {
+.info {
   .title {
     font-weight: 500;
     font-size: 1.125rem;
-    color: $color-white;
     margin-bottom: 1.25rem;
+    color: $color-white;
   }
 
   p {
     margin-bottom: 0.75rem;
     color: $color-white-9;
+  }
+}
+
+@include respond($desktop-md) {
+  :host {
+    padding: 2rem 1rem;
+  }
+
+  .links {
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  .info > p:not(.title) {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
   }
 }

@@ -8,17 +8,33 @@
   align-items: center;
   cursor: pointer;
   display: flex;
+  position: relative;
 }
 
 app-icon {
   margin-top: -4px;
 }
 
-.cart-amount {
+.amount {
   padding: 0.2rem;
   min-width: 32px;
   font-weight: 700;
   background-color: $color-yellow;
   color: $color-primary;
   text-align: center;
+
+  @include respond($desktop-md) {
+    position: absolute;
+    border-radius: 50%;
+    min-width: unset;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 0;
+    right: 0;
+    transform: translateX(30%) translateY(-30%);
+  }
 }

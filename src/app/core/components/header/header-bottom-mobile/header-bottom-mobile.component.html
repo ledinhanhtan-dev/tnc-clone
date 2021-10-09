@@ -1,33 +1,39 @@
 <div class="container">
   <button (click)="toggleMenuOpen()" class="menu-entry menu-btn">
-    <app-icon size="xs" iconId="hamburger"></app-icon>
-    {{ menuOpen$.value === true ? 'Đóng Menu' : 'Xem Menu' }}
+    <app-icon
+      size="xs"
+      [iconId]="hostActive ? 'close' : 'hamburger'"
+    ></app-icon>
+    {{ hostActive ? 'Đóng Menu' : 'Xem Menu' }}
   </button>
 
-  <ul class="menu" *ngIf="menuOpen$.value">
+  <ul class="menu" *ngIf="hostActive">
     <li>
       <button (click)="toggleCatOpen()" class="menu-btn">
+        <app-icon size="sm" [iconId]="menuActive ? 'chevron-left' : 'computer'">
+        </app-icon>
+        {{ menuActive ? 'Quay lại' : 'Danh mục sản phẩm' }}
         <app-icon
           size="xs"
-          [iconId]="catOpen$.value ? 'chevron-left' : 'computer'"
-        >
-        </app-icon>
-        {{ catOpen$.value ? 'Quay lại' : 'Danh mục sản phẩm' }}
+          class="chevron"
+          iconId="chevron-left"
+          *ngIf="!menuActive"
+        ></app-icon>
       </button>
 
-      <app-mega-menu-mobile *ngIf="catOpen$.value"></app-mega-menu-mobile>
+      <app-mega-menu-mobile *ngIf="menuActive"></app-mega-menu-mobile>
     </li>
 
-    <li *ngIf="!catOpen$.value">
+    <li *ngIf="!menuActive">
       <app-header-item
         iconId="config"
         title="Xây dựng cấu hình"
       ></app-header-item>
     </li>
-    <li *ngIf="!catOpen$.value">
+    <li *ngIf="!menuActive">
       <app-header-item iconId="sale" title="Click là sale"></app-header-item>
     </li>
-    <li *ngIf="!catOpen$.value">
+    <li *ngIf="!menuActive">
       <app-header-item iconId="news" title="Tin tức"></app-header-item>
     </li>
   </ul>

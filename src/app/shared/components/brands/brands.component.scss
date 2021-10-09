@@ -1,3 +1,13 @@
+@import '/src/styles/variables';
+
 .brand {
   padding: 0 2rem;
+
+  @include respond($desktop-sm) {
+    padding: 0 1.5rem;
+  }
+
+  @include respond($tablet) {
+    padding: 0 1rem;
+  }
 }

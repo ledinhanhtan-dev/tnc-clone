@@ -2,13 +2,16 @@
 
 .container {
   @include container;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include respond($desktop-md) {
+    padding: 0 1rem;
+  }
 }
 
-.logo {
-  & > img {
-    height: 72px;
-  }
+.logo > img {
+  height: 72px;
 }

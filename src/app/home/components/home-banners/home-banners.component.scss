@@ -6,7 +6,11 @@
 
 .hero-link {
   height: 600px;
-  display: flex;
-  align-items: center;
   background-color: $color-pale-blue;
+  align-items: center;
+  display: flex;
+
+  @include respond($desktop-md) {
+    height: 50vw;
+  }
 }

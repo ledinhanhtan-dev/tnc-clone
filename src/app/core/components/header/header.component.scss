@@ -33,7 +33,7 @@
 }
 
 app-header-bottom {
-  @include respond($tablet) {
+  @include respond($desktop-md) {
     display: none;
   }
 }
@@ -41,7 +41,7 @@ app-header-bottom {
 app-header-bottom-mobile {
   display: none;
 
-  @include respond($tablet) {
+  @include respond($desktop-md) {
     display: block;
   }
 }

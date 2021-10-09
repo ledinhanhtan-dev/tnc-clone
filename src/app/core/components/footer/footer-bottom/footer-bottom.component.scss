@@ -2,28 +2,39 @@
 
 .container {
   @include container;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond($desktop-md) {
+  }
 }
 
 :host {
   display: block;
   padding: 1rem 0;
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @include respond($desktop-sm) {
-      flex-direction: column;
-    }
-  }
 }
 
-.footer-copyright {
+.copyright {
   font-size: 0.875rem;
 }
 
-.footer-icons {
+.icons {
   display: flex;
   gap: 1rem;
+}
+
+@include respond($desktop-md) {
+  :host {
+    padding: 1rem 0 0.8rem;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .icons {
+    margin-top: 0.5rem;
+  }
 }

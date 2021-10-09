@@ -16,10 +16,20 @@ export class ProductsSwiperComponent implements OnInit {
 
   swiperConfig: SwiperOptions = {
     spaceBetween: 0,
-    slidesPerView: 4,
+    slidesPerView: 2,
     scrollbar: { draggable: true },
     navigation: true,
     loop: true,
+
+    grid: {
+      rows: 2,
+    },
+
+    breakpoints: {
+      '1000': {
+        slidesPerView: 4,
+      },
+    },
   };
 
   constructor() {}

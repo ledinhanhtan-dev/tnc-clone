@@ -12,10 +12,14 @@ export class BrandsComponent implements OnInit {
 
   swiperConfig: SwiperOptions = {
     spaceBetween: 0,
-    slidesPerView: 6,
+    slidesPerView: 5,
     scrollbar: { draggable: true },
     navigation: true,
     loop: true,
+
+    breakpoints: {
+      '860': { slidesPerView: 6 },
+    },
   };
 
   constructor() {}

@@ -1,30 +1,32 @@
+@import '/src/styles/variables';
+
 :host {
   gap: 2rem;
-  display: flex;
   margin-bottom: 2rem;
+  display: flex;
 }
 
 .one {
   width: 60%;
 
   .title {
-    display: block;
     margin-top: 1rem;
     font-size: 1.5rem;
+    display: block;
   }
 }
 
 .four {
   width: 40%;
   gap: 0.5rem;
-  display: grid;
   grid-template-rows: repeat(4, 1fr);
+  display: grid;
 
   .channel {
     gap: 1.5rem;
     width: 100%;
-    display: flex;
     height: min-content;
+    display: flex;
   }
 
   .thumbnail {
@@ -41,4 +43,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@include respond($desktop-md) {
+  :host {
+    flex-direction: column;
+  }
+
+  .one {
+    width: 100%;
+    padding: 0 1rem;
+
+    .title {
+      font-size: 1.25rem;
+    }
+  }
+
+  .four {
+    width: 100%;
+    margin-top: 0.5rem;
+    grid-template-rows: repeat(4, 1fr);
+
+    .thumbnail {
+      max-width: 200px;
+    }
+
+    .title {
+      font-size: 0.875rem;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -7,19 +7,18 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./header-bottom-mobile.component.scss'],
 })
 export class HeaderBottomMobileComponent implements OnInit {
-  // FIX: close hamburger icons
-  menuOpen$ = new BehaviorSubject<boolean>(false);
-  catOpen$ = new BehaviorSubject<boolean>(false);
+  hostActive: boolean = false;
+  menuActive: boolean = false;
 
   constructor() {}
 
   ngOnInit(): void {}
 
   toggleMenuOpen() {
-    this.menuOpen$.next(!this.menuOpen$.value);
+    this.hostActive = !this.hostActive;
   }
 
   toggleCatOpen() {
-    this.catOpen$.next(!this.catOpen$.value);
+    this.menuActive = !this.menuActive;
   }
 }

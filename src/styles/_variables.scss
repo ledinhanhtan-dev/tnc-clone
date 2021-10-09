@@ -38,7 +38,7 @@ $mobile-lg: 640px;
 
 $tablet: 768px;
 
-$desktop-sm: 960px;
+$desktop-sm: 860px;
 $desktop-md: 1280px;
 $desktop-lg: 1440px;
 
@@ -46,6 +46,11 @@ $desktop-lg: 1440px;
 @mixin container {
   margin: auto;
   max-width: 1110px;
+
+  @include respond($desktop-md) {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
 }
 
 @mixin respond($break-point) {

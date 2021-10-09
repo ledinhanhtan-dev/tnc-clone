@@ -11,6 +11,10 @@
   font-weight: 300;
   margin-bottom: 0.6rem;
   color: $color-white-9;
+
+  @include respond($tablet) {
+    font-size: 0.875rem;
+  }
 }
 
 .socials {
@@ -18,7 +22,7 @@
   display: flex;
   justify-content: space-between;
 
-  @include respond($desktop-sm) {
+  @include respond($desktop-md) {
     justify-content: flex-start;
     gap: 2.5rem;
   }
