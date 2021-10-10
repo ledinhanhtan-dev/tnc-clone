@@ -1,0 +1,18 @@
+<div class="backdrop" (click)="closeModal()"></div>
+<div class="modal">
+  <div class="title">
+    Bộ lọc sản phẩm
+    <button type="button" class="close" (click)="closeModal()">
+      <app-icon iconId="close" size="xs"></app-icon>
+    </button>
+  </div>
+  <app-cat-filter-block
+    *ngFor="let filter of filters"
+    [filter]="filter"
+  ></app-cat-filter-block>
+
+  <div class="actions">
+    <button type="button" class="apply" (click)="closeModal()">Áp dụng</button>
+    <button type="button" class="clear" (click)="clear()">Xóa bộ lọc</button>
+  </div>
+</div>

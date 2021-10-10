@@ -5,6 +5,7 @@ import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Filter } from '@core/models/filter.model';
+import { CatFilterMobileService } from './services/cat-filter-mobile.service';
 
 @Component({
   selector: 'app-category',
@@ -19,7 +20,8 @@ export class CategoryComponent implements OnInit, OnDestroy {
   constructor(
     private title: Title,
     private route: ActivatedRoute,
-    private catService: CategoryService
+    private catService: CategoryService,
+    private catFiltersMobile: CatFilterMobileService
   ) {}
 
   ngOnInit(): void {
@@ -40,5 +42,9 @@ export class CategoryComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     if (this.catSub) this.catSub.unsubscribe();
+  }
+
+  openCatFiltersMobile() {
+    this.catFiltersMobile.openModal();
   }
 }

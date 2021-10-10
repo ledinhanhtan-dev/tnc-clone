@@ -29,4 +29,40 @@
 .ad {
   display: block;
   margin: 1.5rem 0;
+
+  & > img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include respond($tablet) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quantity {
+    font-size: 0.875rem;
+  }
+}
+
+@include respond($mobile-lg) {
+  .header {
+    display: block;
+  }
+
+  .name,
+  .quantity {
+    width: 50%;
+    display: inline-block;
+  }
+
+  .name {
+    margin-right: 0;
+    font-size: 1.25rem;
+  }
+
+  .quantity {
+    text-align: right;
+  }
 }

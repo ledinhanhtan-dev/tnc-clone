@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CatFilterComponent } from './cat-filter.component';
+import { CatFiltersMobileComponent } from './cat-filters-mobile.component';
 
-describe('CatFilterComponent', () => {
-  let component: CatFilterComponent;
-  let fixture: ComponentFixture<CatFilterComponent>;
+describe('CatFiltersMobileComponent', () => {
+  let component: CatFiltersMobileComponent;
+  let fixture: ComponentFixture<CatFiltersMobileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CatFilterComponent ]
+      declarations: [ CatFiltersMobileComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CatFilterComponent);
+    fixture = TestBed.createComponent(CatFiltersMobileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

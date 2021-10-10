@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CatListFilterComponent } from './cat-list-filter.component';
+import { CatListFilterComponent } from './cat-list-filters.component';
 
 describe('CatListFilterComponent', () => {
   let component: CatListFilterComponent;
@@ -8,9 +8,8 @@ describe('CatListFilterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CatListFilterComponent ]
-    })
-    .compileComponents();
+      declarations: [CatListFilterComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

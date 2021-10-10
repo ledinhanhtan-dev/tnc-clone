@@ -1,13 +1,18 @@
 @import '/src/styles/variables';
 
 :host {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .label {
   font-weight: 600;
   font-size: 1.125rem;
   margin-right: 0.5rem;
+
+  @include respond($desktop-sm) {
+    font-size: 1rem;
+  }
 }
 
 .select {
@@ -20,4 +25,11 @@
   cursor: pointer;
   outline: none;
   border: none;
+}
+
+@include respond($mobile-lg) {
+  :host {
+    margin-top: 1rem;
+    justify-content: space-between;
+  }
 }

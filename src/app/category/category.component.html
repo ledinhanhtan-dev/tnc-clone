@@ -1,5 +1,12 @@
 <div class="container">
-  <app-cat-filter [filters]="filtersClone"></app-cat-filter>
+  <app-cat-filters [filters]="filtersClone"></app-cat-filters>
+
+  <button class="cat-filters-mobile-entry" (click)="openCatFiltersMobile()">
+    <app-icon iconId="filter" size="sm"></app-icon>
+    Lọc sản phẩm
+  </button>
+  <app-cat-filters-mobile [filters]="filtersClone"></app-cat-filters-mobile>
+
   <app-cat-list [category]="category"></app-cat-list>
 </div>
 

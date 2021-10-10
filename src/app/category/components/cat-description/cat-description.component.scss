@@ -7,6 +7,12 @@
   display: block;
 }
 
+:host.active {
+  .body {
+    height: unset;
+  }
+}
+
 .name {
   font-weight: 700;
   font-size: 1.5rem;
@@ -28,15 +34,23 @@
     position: absolute;
     content: '';
   }
+
+  @include respond($tablet) {
+    font-size: 1.25rem;
+  }
 }
 
 .body {
+  height: 130px;
+  overflow: hidden;
   display: flex;
 }
 
 .image {
   max-width: 320px;
   margin-right: 2rem;
+  align-self: flex-start;
+  object-fit: contain;
 }
 
 .title {
@@ -48,4 +62,68 @@
 .text {
   line-height: 1.5;
   font-size: 1.0625rem;
+}
+
+.readmore {
+  font-weight: 600;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: $color-accent-blue;
+  align-items: center;
+  display: flex;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+  border: 1px solid $color-accent-blue;
+  background-color: $color-accent-blue;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  &::after {
+    width: 9px;
+    height: 9px;
+    margin-top: -5px;
+    transform: rotateZ(45deg);
+    // Keep this order!
+    border: solid $color-white;
+    border-width: 0 3px 3px 0;
+    //
+    position: absolute;
+    display: block;
+    content: '';
+  }
+}
+
+:host.active .checkbox::after {
+  transform: rotateZ(225deg);
+  margin-top: 4px;
+}
+
+@include respond($tablet) {
+  .image {
+    max-width: 200px;
+    margin-right: 1rem;
+  }
+}
+
+@include respond($mobile-md) {
+  .body {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
+    height: 160px;
+    max-width: 100%;
+    margin-right: 0;
+    object-fit: cover;
+  }
+
+  .content {
+    margin-top: 1rem;
+  }
 }

@@ -1,0 +1,89 @@
+@import '/src/styles/variables';
+
+@mixin full {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+:host {
+  min-width: 255px;
+  margin-right: 1.5rem;
+  display: none;
+
+  @include respond($desktop-md) {
+    @include full;
+    z-index: 10;
+  }
+}
+
+.title {
+  height: 40px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+:host.active {
+  display: block;
+
+  .backdrop,
+  .modal {
+    display: block;
+  }
+}
+
+.backdrop,
+.modal {
+  display: none;
+}
+
+.backdrop {
+  @include full;
+
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  @include full();
+
+  top: unset;
+  height: 85vh;
+  z-index: 11;
+  padding: 0.25rem 0.8rem 0;
+  background-color: $color-white;
+}
+
+.actions {
+  left: 0;
+  bottom: 0;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 0 0.8rem 0.8rem;
+  justify-content: space-between;
+  position: fixed;
+  display: flex;
+}
+
+.apply,
+.clear {
+  width: 50%;
+  height: 44px;
+  font-weight: 700;
+  border: 1px solid $color-accent-blue;
+}
+
+.apply {
+  color: $color-white;
+  background-color: $color-accent-blue;
+}
+
+.clear {
+  color: $color-accent-blue;
+}

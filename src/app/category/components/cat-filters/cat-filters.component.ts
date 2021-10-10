@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Filter } from '@core/models/filter.model';
 @Component({
-  selector: 'app-cat-filter',
-  templateUrl: './cat-filter.component.html',
-  styleUrls: ['./cat-filter.component.scss'],
+  selector: 'app-cat-filters',
+  templateUrl: './cat-filters.component.html',
+  styleUrls: ['./cat-filters.component.scss'],
 })
-export class CatFilterComponent implements OnInit {
+export class CatFiltersComponent implements OnInit {
   @Input() filters: Filter[] = [];
 
   constructor() {}

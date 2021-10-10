@@ -12,7 +12,31 @@
   display: flex;
   justify-content: space-between;
 
+  @include respond($desktop-sm) {
+    flex-direction: column;
+  }
+
   &:first-child {
     margin-bottom: 2rem;
+  }
+}
+
+.cat-filters-mobile-entry {
+  width: 100%;
+  font-weight: 600;
+  padding: 0.65rem 0;
+  margin-bottom: 1.5rem;
+  border: 1px solid $color-accent-blue;
+  color: $color-accent-blue;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  & > app-icon {
+    margin-right: 0.5rem;
+  }
+
+  @include respond($desktop-sm) {
+    display: flex;
   }
 }

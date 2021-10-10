@@ -5,9 +5,11 @@ import { SharedModule } from '@shared/shared.module';
 import { CategoryRoutingModule } from './category-routing.module';
 import { FormsModule } from '@angular/forms';
 import { components } from './components';
+import { CatFilterMobileService } from './services/cat-filter-mobile.service';
 
 @NgModule({
   declarations: [...components, CategoryComponent],
   imports: [CommonModule, SharedModule, CategoryRoutingModule, FormsModule],
+  providers: [CatFilterMobileService],
 })
 export class CategoryModule {}

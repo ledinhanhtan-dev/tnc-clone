@@ -4,6 +4,10 @@
   min-width: 255px;
   margin-right: 1.5rem;
   display: block;
+
+  @include respond($desktop-sm) {
+    display: none;
+  }
 }
 
 .title {

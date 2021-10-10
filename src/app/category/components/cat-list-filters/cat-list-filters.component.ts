@@ -4,9 +4,9 @@ import { Tag } from '@core/models/tag.model';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-cat-list-filter',
-  templateUrl: './cat-list-filter.component.html',
-  styleUrls: ['./cat-list-filter.component.scss'],
+  selector: 'app-cat-list-filters',
+  templateUrl: './cat-list-filters.component.html',
+  styleUrls: ['./cat-list-filters.component.scss'],
 })
 export class CatListFilterComponent implements OnInit, OnDestroy {
   @HostBinding('class.active')

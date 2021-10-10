@@ -10,3 +10,8 @@
     <p class="text">{{ category.description.text }}</p>
   </div>
 </div>
+
+<button type="button" class="readmore" (click)="toggleActive()">
+  {{ active ? 'Thu Gọn' : 'Xem Thêm' }}
+  <div class="checkbox"></div>
+</button>
