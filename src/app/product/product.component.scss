@@ -19,3 +19,13 @@
 app-block {
   margin-top: 4rem;
 }
+
+@include respond($desktop-sm) {
+  .content {
+    display: block;
+  }
+
+  app-product-detail {
+    margin-top: 2rem;
+  }
+}

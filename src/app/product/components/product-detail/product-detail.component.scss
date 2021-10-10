@@ -6,7 +6,18 @@
 }
 
 .name {
+  display: block;
   color: $color-accent-blue;
+
+  @include respond($desktop-sm) {
+    display: none;
+  }
+}
+
+app-product-rating {
+  @include respond($tablet) {
+    padding: 0 0.5rem;
+  }
 }
 
 .rating-guarantee {
@@ -32,5 +43,15 @@
   .note {
     margin-top: 1rem;
     font-weight: 600;
+  }
+}
+
+@include respond($tablet) {
+  .rating-guarantee {
+    margin-top: 0.5rem;
+  }
+
+  app-product-rating {
+    padding: 0 0.5rem;
   }
 }

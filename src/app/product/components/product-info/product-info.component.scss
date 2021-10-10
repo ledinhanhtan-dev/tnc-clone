@@ -7,6 +7,11 @@
 .tabs {
   display: flex;
   background-color: $color-pale-blue;
+  @include respond($tablet) {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .tab {
@@ -20,6 +25,12 @@
   &.active {
     color: $color-white;
     background-color: $color-accent-blue;
+  }
+
+  @include respond($tablet) {
+    font-size: 1rem;
+    padding: 10px 15px;
+    text-align: center;
   }
 }
 

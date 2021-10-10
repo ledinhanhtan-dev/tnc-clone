@@ -3,10 +3,15 @@
 :host {
   display: block;
   margin-top: 100px;
+
+  @include respond($desktop-sm) {
+    margin-top: 2rem;
+  }
 }
 
 .data {
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
@@ -50,6 +55,18 @@ app-product-quantity {
   font-size: 1.25rem;
   text-decoration: line-through;
   color: $color-gray;
+
+  @include respond($desktop-md) {
+    font-size: 1.175rem;
+  }
+
+  @include respond($mobile-md) {
+    font-size: 1.125rem;
+  }
+
+  @include respond($mobile-sm) {
+    font-size: 1rem;
+  }
 }
 
 .price {
@@ -57,4 +74,16 @@ app-product-quantity {
   font-weight: 700;
   margin-top: 0.25rem;
   color: $color-red;
+
+  @include respond($desktop-md) {
+    font-size: 1.85rem;
+  }
+
+  @include respond($mobile-md) {
+    font-size: 1.65rem;
+  }
+
+  @include respond($mobile-sm) {
+    font-size: 1.35rem;
+  }
 }

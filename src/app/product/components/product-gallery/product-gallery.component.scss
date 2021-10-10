@@ -6,6 +6,21 @@
   height: min-content;
   position: relative;
   display: block;
+
+  @include respond($desktop-sm) {
+    width: 100%;
+    max-width: unset;
+  }
+}
+
+.name {
+  margin-bottom: 1rem;
+  color: $color-accent-blue;
+  display: none;
+
+  @include respond($desktop-sm) {
+    display: block;
+  }
 }
 
 .brand {
@@ -17,33 +32,32 @@
 }
 
 .main {
-  border: 1px solid $color-border;
+  border: 1px solid $color-border !important;
 
-  .image {
-    max-width: 350px;
-    margin: 0 auto;
+  .image-wrapper {
+    position: relative;
+
+    .image {
+      max-width: 350px;
+      margin: 0 auto;
+    }
   }
 }
 
 .sub {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 
   .image-wrapper {
     border: 1px solid $color-border !important;
-    height: 100px;
+    height: 120px;
     display: flex;
     align-items: center;
     overflow: hidden;
   }
 
-  .image {
-    width: 100%;
+  @include respond($desktop-sm) {
+    margin-top: 1rem;
   }
-}
-
-.swiper-slide {
-  display: none;
-  height: 100%;
 }
 
 .empty {

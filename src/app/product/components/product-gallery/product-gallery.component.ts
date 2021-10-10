@@ -34,10 +34,12 @@ export class ProductGalleryComponent implements OnInit, AfterViewInit {
 
   subGalleryConfig: SwiperOptions = {
     slidesPerView: 3,
-    spaceBetween: 32,
+    spaceBetween: 16,
     scrollbar: { draggable: true },
     navigation: true,
     grabCursor: true,
+
+    breakpoints: { '860': { spaceBetween: 24 } },
   };
 
   constructor(private cdr: ChangeDetectorRef) {}

@@ -1,17 +1,20 @@
-<a [routerLink]="['/brand', product.brand.slug]" class="brand">
-  <img [src]="product.brand.image" />
-</a>
+<h1 class="name">{{ product.name }}</h1>
 
 <swiper [config]="mainGalleryConfig" class="main" slideClass="main" #topSlider>
   <ng-template swiperSlide *ngFor="let image of product.images">
-    <img [src]="image" alt="" class="image" />
+    <div class="image-wrapper">
+      <a [routerLink]="['/brand', product.brand.slug]" class="brand">
+        <img [src]="product.brand.image" />
+      </a>
+      <img [src]="image" [alt]="product.name" class="image" />
+    </div>
   </ng-template>
 </swiper>
 
 <swiper #thumbsSlider [config]="subGalleryConfig" class="sub">
   <ng-template swiperSlide *ngFor="let image of product.images">
     <div class="image-wrapper">
-      <img [src]="image" alt="" class="image" />
+      <img [src]="image" [alt]="product.name" class="image" />
     </div>
   </ng-template>
 

@@ -78,3 +78,52 @@
     margin-right: 8px;
   }
 }
+
+@include respond($desktop-sm) {
+  :host {
+    top: unset;
+    bottom: 0;
+    box-shadow: 0px -5px 7px rgba($color-primary, 0.1);
+
+    .container {
+      padding: 0.5rem;
+      padding-top: 0.4rem;
+    }
+  }
+
+  .data {
+    gap: 0rem;
+    flex-wrap: wrap;
+  }
+
+  .name {
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0;
+    max-width: 60%;
+  }
+
+  .price {
+    text-align: right;
+
+    & > p {
+      display: none;
+    }
+  }
+
+  app-product-cta {
+    height: 40px;
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+
+  .navigation {
+    display: none;
+  }
+}
+
+@include respond($mobile-sm) {
+  .price > h3 {
+    font-size: 1.125rem;
+  }
+}

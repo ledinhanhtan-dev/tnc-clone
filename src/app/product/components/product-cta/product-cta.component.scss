@@ -2,19 +2,27 @@
 
 :host {
   gap: 2rem;
-  display: flex;
   margin-top: 1rem;
+  display: flex;
+
+  @include respond($tablet) {
+    gap: 0.8rem;
+  }
+
+  @include respond($mobile-lg) {
+    flex-direction: column;
+  }
 }
 
 .btn {
+  gap: 0.5rem;
   width: 100%;
   font-weight: 700;
-  padding: 0.6rem 0;
+  padding: 0.7rem 0;
   border: 1px solid $color-accent-blue;
   justify-content: center;
   align-items: center;
   display: flex;
-  gap: 0.5rem;
 
   &-atc {
     color: $color-accent-blue;
@@ -48,5 +56,15 @@
   .btn {
     padding: 0rem;
     width: 175px;
+  }
+}
+
+@include respond($desktop-sm) {
+  :host.toolbar {
+    gap: 10px;
+
+    .btn {
+      width: 100%;
+    }
   }
 }
