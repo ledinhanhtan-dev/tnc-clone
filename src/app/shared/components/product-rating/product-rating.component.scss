@@ -3,7 +3,11 @@
 :host {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
+
+  @include respond($mobile-lg) {
+    justify-content: space-between;
+  }
 }
 
 .stars {
@@ -17,6 +21,7 @@
 
   @include respond($mobile-sm) {
     transform: scale(0.8);
+    width: 40%;
   }
 }
 
@@ -31,17 +36,16 @@ app-icon {
 
 .count {
   font-weight: 600;
-  padding-top: 2px;
+  padding-top: 1px;
   font-size: 0.875rem;
   color: $color-gray;
+  padding-left: 0.5rem;
+
+  @include respond($mobile-md) {
+    font-size: 0.75rem;
+  }
 }
 
 .small.stars {
   gap: 5px;
-}
-
-@include respond($mobile-lg) {
-  .count {
-    font-size: 0.75rem;
-  }
 }

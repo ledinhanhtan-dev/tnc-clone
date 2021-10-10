@@ -1,5 +1,5 @@
 import { catchError, tap } from 'rxjs/operators';
-import { BehaviorSubject, Observable, of } from 'rxjs';
+import { BehaviorSubject, of } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CART_API } from '@core/constants/api.constant';
@@ -26,7 +26,7 @@ export class CartService {
       });
     } else {
       this.http
-        .get<Cart>(CART_API, { withCredentials: true })
+        .get<Cart>(CART_API)
         .pipe(
           catchError(() => {
             this.cookieService.delete('sessionId');
@@ -43,36 +43,32 @@ export class CartService {
 
   addToCart(productId: number, quantity: number = 1) {
     this.http
-      .post<Cart>(
-        CART_API + 'add/' + productId,
-        { quantity },
-        { withCredentials: true }
-      )
+      .post<Cart>(CART_API + 'add/' + productId, { quantity })
       .pipe(tap(() => this.active$.next(true)))
       .subscribe(cart => this.cart$.next(cart));
   }
 
   increaseItemQty(cartItemId: number) {
     this.http
-      .get<Cart>(CART_API + 'plus/' + cartItemId, { withCredentials: true })
+      .get<Cart>(CART_API + 'plus/' + cartItemId)
       .subscribe(cart => this.cart$.next(cart));
   }
 
   decreaseItemQty(cartItemId: number) {
     this.http
-      .get<Cart>(CART_API + 'minus/' + cartItemId, { withCredentials: true })
+      .get<Cart>(CART_API + 'minus/' + cartItemId)
       .subscribe(cart => this.cart$.next(cart));
   }
 
   removeFromCart(cartItemId: number) {
     this.http
-      .get<Cart>(CART_API + 'remove/' + cartItemId, { withCredentials: true })
+      .get<Cart>(CART_API + 'remove/' + cartItemId)
       .subscribe(cart => this.cart$.next(cart));
   }
 
   deleteCart() {
     this.http
-      .get<Cart>(CART_API + 'delete', { withCredentials: true })
+      .get<Cart>(CART_API + 'delete')
       .subscribe(_ => this.cart$.next(EMPTY_CART));
   }
 

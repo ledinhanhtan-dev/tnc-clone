@@ -6,9 +6,9 @@
   color: $color-white;
   background-color: $color-primary;
   align-items: center;
+  position: relative;
   cursor: pointer;
   display: flex;
-  position: relative;
 }
 
 app-icon {
@@ -23,18 +23,18 @@ app-icon {
   color: $color-primary;
   text-align: center;
 
-  @include respond($desktop-md) {
-    position: absolute;
-    border-radius: 50%;
-    min-width: unset;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  @include respond($desktop-sm) {
     top: 0;
     right: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    min-width: unset;
+    display: flex;
+
     transform: translateX(30%) translateY(-30%);
   }
 }
