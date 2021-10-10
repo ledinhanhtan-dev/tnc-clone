@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CartModalComponent } from './components/cart-modal/cart-modal.component';
 import { CartComponent } from './cart.component';
 import { components } from './components';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CartInterceptor } from './interceptors/cart.interceptor';
 
 const routes: Routes = [{ path: '', component: CartComponent }];
 
@@ -12,5 +14,8 @@ const routes: Routes = [{ path: '', component: CartComponent }];
   declarations: [...components, CartComponent],
   imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
   exports: [CartModalComponent],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: CartInterceptor, multi: true },
+  ],
 })
 export class CartModule {}

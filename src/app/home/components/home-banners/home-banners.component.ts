@@ -34,7 +34,7 @@ export class HomeBannersComponent implements OnInit {
 
   subSwiperConfig: SwiperOptions = {
     slidesPerView: 2,
-    spaceBetween: 14,
+    spaceBetween: 10,
     autoplay: { delay: 10000, disableOnInteraction: true },
     scrollbar: { draggable: true },
     navigation: true,

@@ -1,5 +1,5 @@
-import { tap } from 'rxjs/operators';
-import { BehaviorSubject } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CART_API } from '@core/constants/api.constant';
@@ -27,7 +27,17 @@ export class CartService {
     } else {
       this.http
         .get<Cart>(CART_API, { withCredentials: true })
-        .subscribe(cart => this.cart$.next(cart));
+        .pipe(
+          catchError(() => {
+            this.cookieService.delete('sessionId');
+            // Refetch new cart
+            this.fetchCartData();
+            return of(EMPTY_CART);
+          })
+        )
+        .subscribe(cart => {
+          this.cart$.next(cart);
+        });
     }
   }
 

@@ -12,11 +12,11 @@
   transform-origin: left;
 
   @include respond($mobile-md) {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 
   @include respond($mobile-sm) {
-    transform: scale(0.7);
+    transform: scale(0.8);
   }
 }
 
