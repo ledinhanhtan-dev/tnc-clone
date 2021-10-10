@@ -1,16 +1,18 @@
-<div class="title">Thông tin giỏ hàng</div>
+<div class="data">
+  <div class="title">Thông tin giỏ hàng</div>
 
-<div class="quantity">
-  Số lượng sản phẩm
-  <span class="count">{{ cart.totalQuantity }}</span>
+  <div class="quantity">
+    Số lượng sản phẩm
+    <span class="count">{{ cart.totalQuantity }}</span>
+  </div>
+
+  <div class="total">
+    Tổng chi phí
+    <span class="price">{{ cart.totalPrice | price }} đ</span>
+  </div>
+
+  <div class="vat">Đã bao gồm VAT (nếu có)</div>
 </div>
-
-<div class="total">
-  Tổng chi phí
-  <span class="price">{{ cart.totalPrice | price }} đ</span>
-</div>
-
-<div class="vat">Đã bao gồm VAT (nếu có)</div>
 
 <div class="actions">
   <button

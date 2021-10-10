@@ -10,10 +10,10 @@
   justify-content: space-between;
   display: flex;
   width: 100%;
+}
 
-  &:first-child {
-    margin-bottom: 5rem;
-  }
+.cart {
+  margin-bottom: 5rem;
 }
 
 .content {
@@ -27,4 +27,25 @@
 
 .empty {
   font-size: 0.875rem;
+  margin-bottom: 1rem;
+
+  @include respond($desktop-sm) {
+    text-align: center;
+  }
+}
+
+@include respond(950px) {
+  .cart {
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .info {
+    width: 100%;
+    margin-left: 0;
+  }
 }

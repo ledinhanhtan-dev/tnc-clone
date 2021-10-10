@@ -3,13 +3,28 @@
 :host {
   display: flex;
   padding: 0.625rem 1rem;
-  border: 1px solid $color-border;
   margin-bottom: 0.625rem;
+  border: 1px solid $color-border;
 }
 
 .img {
   width: 80px;
   margin-right: 1.25rem;
+
+  &-mobile {
+    display: none;
+    margin-bottom: 0.5rem;
+  }
+
+  @include respond($tablet) {
+    &-desktop {
+      display: none;
+    }
+
+    &-mobile {
+      display: block;
+    }
+  }
 }
 
 .content {
@@ -19,19 +34,31 @@
 .name {
   font-weight: 600;
   color: $color-accent-blue;
+  align-items: flex-start;
+  display: flex;
 }
 
 .meta {
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
+
+  @include respond($tablet) {
+    display: block;
+  }
 }
 
 .price {
-  min-width: 120px;
+  min-width: 130px;
   font-weight: 700;
   width: max-content;
   text-align: right;
+
+  @include respond($tablet) {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    text-align: left;
+  }
 }
 
 .actions {
@@ -55,10 +82,10 @@ app-cart-quantity {
   font-size: 0.875rem;
   color: $color-accent-blue;
   border: 1px solid $color-accent-blue;
+  transition: all $duration-100;
   justify-items: center;
   align-items: center;
   display: flex;
-  transition: all $duration-100;
 
   > app-icon {
     margin-right: 0.5rem;

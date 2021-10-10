@@ -6,6 +6,7 @@ import { CART_API } from '@core/constants/api.constant';
 import { EMPTY_CART } from '@cart/constants/cart.constant';
 import { CookieService } from 'ngx-cookie-service';
 import { Cart } from '@cart/models/cart.model';
+import { BP } from '@core/constants/breakpoints.constant';
 
 @Injectable({
   providedIn: 'root',
@@ -44,7 +45,7 @@ export class CartService {
   addToCart(productId: number, quantity: number = 1) {
     this.http
       .post<Cart>(CART_API + 'add/' + productId, { quantity })
-      .pipe(tap(() => this.active$.next(true)))
+      .pipe(tap(() => this.openModal()))
       .subscribe(cart => this.cart$.next(cart));
   }
 
@@ -73,7 +74,8 @@ export class CartService {
   }
 
   openModal() {
-    this.active$.next(true);
+    if (window.innerWidth <= BP.DESKTOP_MD) return;
+    else this.active$.next(true);
   }
 
   closeModal() {

@@ -1,9 +1,12 @@
-<div class="img">
+<div class="img img-desktop">
   <img [src]="item.product.thumbnail" [alt]="item.product.name" />
 </div>
 
 <div class="content">
   <div class="name">
+    <div class="img img-mobile">
+      <img [src]="item.product.thumbnail" [alt]="item.product.name" />
+    </div>
     <a [routerLink]="['/product', item.product.slug]">
       {{ item.product.name }}
     </a>

@@ -39,14 +39,15 @@ $mobile-lg: 640px;
 $tablet: 768px;
 
 $desktop-sm: 860px;
-$desktop-md: 1280px;
+$desktop-md: 1080px;
+$desktop-lg: 1280px;
 
 //  Mixins
 @mixin container {
   margin: auto;
   max-width: 1110px;
 
-  @include respond($desktop-md) {
+  @include respond($desktop-lg) {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
   }

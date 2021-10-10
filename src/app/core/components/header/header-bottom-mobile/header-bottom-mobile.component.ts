@@ -1,5 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header-bottom-mobile',
@@ -10,15 +12,24 @@ export class HeaderBottomMobileComponent implements OnInit {
   hostActive: boolean = false;
   menuActive: boolean = false;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationStart))
+      .subscribe(() => this.closeMenus());
+  }
 
-  toggleMenuOpen() {
+  toggleHostActive() {
     this.hostActive = !this.hostActive;
   }
 
-  toggleCatOpen() {
+  toggleMenuActive() {
     this.menuActive = !this.menuActive;
+  }
+
+  private closeMenus() {
+    this.hostActive = false;
+    this.menuActive = false;
   }
 }

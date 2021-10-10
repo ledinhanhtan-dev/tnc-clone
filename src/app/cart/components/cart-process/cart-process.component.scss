@@ -22,6 +22,18 @@
     font-weight: 700;
     font-size: 1.125rem;
     transform: skewX(20deg);
+    padding: 0 0.5rem;
+
+    @include respond($tablet) {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    @include respond($mobile-lg) {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+    }
   }
 
   &.active {
@@ -48,5 +60,9 @@
 
   &:last-child::before {
     right: -1rem;
+  }
+
+  @include respond($tablet) {
+    height: 46px;
   }
 }

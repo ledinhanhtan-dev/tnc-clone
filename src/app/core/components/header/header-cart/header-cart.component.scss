@@ -23,12 +23,13 @@ app-icon {
   color: $color-primary;
   text-align: center;
 
-  @include respond($desktop-sm) {
+  @include respond($desktop-md) {
     top: 0;
     right: 0;
     width: 25px;
     height: 25px;
     border-radius: 50%;
+    font-size: 0.875rem;
     justify-content: center;
     align-items: center;
     position: absolute;

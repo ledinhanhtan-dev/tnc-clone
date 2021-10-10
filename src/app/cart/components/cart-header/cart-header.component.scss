@@ -5,15 +5,37 @@
   margin-bottom: 1.5rem;
   justify-content: space-between;
   display: flex;
+
+  @include respond($desktop-sm) {
+    margin-bottom: 1rem;
+  }
 }
 
 .title {
   font-weight: 700;
   font-size: 1.25rem;
+
+  @include respond($desktop-sm) {
+    display: none;
+  }
+}
+
+.block {
+  display: none;
+  margin-bottom: -1.5rem;
+
+  @include respond($desktop-sm) {
+    display: block;
+  }
 }
 
 .actions {
   display: flex;
+
+  @include respond($desktop-sm) {
+    display: none;
+    text-align: center;
+  }
 }
 
 .action {

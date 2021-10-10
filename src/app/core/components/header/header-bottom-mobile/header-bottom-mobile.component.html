@@ -1,5 +1,5 @@
 <div class="container">
-  <button (click)="toggleMenuOpen()" class="menu-entry menu-btn">
+  <button (click)="toggleHostActive()" class="menu-entry menu-btn">
     <app-icon
       size="xs"
       [iconId]="hostActive ? 'close' : 'hamburger'"
@@ -9,7 +9,7 @@
 
   <ul class="menu" *ngIf="hostActive">
     <li>
-      <button (click)="toggleCatOpen()" class="menu-btn">
+      <button (click)="toggleMenuActive()" class="menu-btn">
         <app-icon size="sm" [iconId]="menuActive ? 'chevron-left' : 'computer'">
         </app-icon>
         {{ menuActive ? 'Quay lại' : 'Danh mục sản phẩm' }}

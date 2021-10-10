@@ -16,7 +16,7 @@ export class HeaderCartComponent implements OnInit, OnDestroy {
   constructor(private cartService: CartService, private router: Router) {}
 
   @HostListener('click') onOpenCartModel() {
-    if (window.innerWidth <= BP.DESKTOP_SM) {
+    if (window.innerWidth <= BP.DESKTOP_MD) {
       this.router.navigateByUrl('/cart');
     } else {
       this.cartService.openModal();
