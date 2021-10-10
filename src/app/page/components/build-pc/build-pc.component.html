@@ -1,9 +1,9 @@
 <div class="container">
   <app-block title="Lựa chọn giải pháp">
-    <div class="cat-items">
+    <div class="items">
       <div class="item" *ngFor="let item of catItems">
         <a [routerLink]="item.routerLink" class="link">
-          <img [src]="item.img" [alt]="item.title" />
+          <img [src]="item.img" [alt]="item.title" class="image" />
         </a>
         <div class="content">
           <div class="title">{{ item.title }}</div>

@@ -14,7 +14,7 @@ app-block:last-child {
   margin-top: 4rem;
 }
 
-.cat-items {
+.items {
   gap: 2rem;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
@@ -49,10 +49,66 @@ app-block:last-child {
   width: 150px;
   height: 40px;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
   background-color: $color-red;
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+@include respond($desktop-md) {
+  .items {
+    gap: 1.5rem;
+  }
+
+  .desc {
+    display: none;
+  }
+}
+
+@include respond($desktop-sm) {
+  .items {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .desc {
+    width: 350px;
+    font-size: 1rem;
+    display: block;
+  }
+
+  .image {
+    width: 100%;
+  }
+}
+
+@include respond($tablet) {
+}
+
+@include respond($mobile-lg) {
+  .content {
+    top: 1rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .items {
+    gap: 0.5rem;
+  }
+
+  .desc {
+    display: none;
+  }
+
+  .readmore {
+    width: 110px;
+    height: 34px;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
 }

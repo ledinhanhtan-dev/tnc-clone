@@ -37,6 +37,7 @@
   & > h3 {
     margin-top: -1px;
     color: $color-red;
+    min-width: max-content;
   }
 }
 
@@ -76,6 +77,16 @@
   app-icon {
     margin-top: 6px;
     margin-right: 8px;
+  }
+}
+
+@include respond($desktop-md) {
+  .data {
+    gap: 1.5rem;
+  }
+
+  .name {
+    padding-right: 0;
   }
 }
 
