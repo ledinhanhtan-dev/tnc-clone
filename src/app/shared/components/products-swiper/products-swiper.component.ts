@@ -13,6 +13,7 @@ SwiperCore.use([Pagination]);
 })
 export class ProductsSwiperComponent implements OnInit {
   @Input() products!: Product[];
+  @Input() options: SwiperOptions = {};
 
   swiperConfig: SwiperOptions = {
     spaceBetween: 0,
@@ -34,5 +35,7 @@ export class ProductsSwiperComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.swiperConfig = { ...this.swiperConfig, ...this.options };
+  }
 }

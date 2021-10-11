@@ -1,35 +1,25 @@
 import { environment } from '@env';
+import { FeaturedProduct } from '@shared/models/featured-product.model';
 
-export interface HomeFeaturedProduct {
-  image: string;
-  alt: string;
-  id: string;
-}
-
-export const HOME_FEATURED_PRODUCTS: HomeFeaturedProduct[] = [
+export const HOME_FEATURED_PRODUCTS: FeaturedProduct[] = [
   {
     image: environment.apiUrl + 'image/featured/featured-product-1.jpg',
-    alt: '',
-    id: '#',
+    slug: '#',
   },
   {
     image: environment.apiUrl + 'image/featured/featured-product-2.jpg',
-    alt: '',
-    id: '#',
+    slug: '#',
   },
   {
     image: environment.apiUrl + 'image/featured/featured-product-3.jpg',
-    alt: '',
-    id: '#',
+    slug: '#',
   },
   {
     image: environment.apiUrl + 'image/featured/featured-product-4.jpg',
-    alt: '',
-    id: '#',
+    slug: '#',
   },
   {
     image: environment.apiUrl + 'image/featured/featured-product-5.jpg',
-    alt: '',
-    id: '#',
+    slug: '#',
   },
 ];

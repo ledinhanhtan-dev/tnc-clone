@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="banner">
+    <img [src]="store.banner" [alt]="store.name" />
+  </div>
+
+  <app-block title="Sản phẩm nổi bật">
+    <app-featured-products
+      [products]="store.featuredProducts"
+    ></app-featured-products>
+  </app-block>
+
+  <app-block [title]="category.name" *ngFor="let category of store.categories">
+    <app-products-swiper
+      [products]="category.products"
+      [options]="{ loop: false }"
+    ></app-products-swiper>
+  </app-block>
+
+  <app-block title="Các thương hiệu">
+    <app-brands></app-brands>
+  </app-block>
+
+  <app-block title="Đánh giá từ khách hàng">
+    <app-feedbacks></app-feedbacks>
+  </app-block>
+</div>

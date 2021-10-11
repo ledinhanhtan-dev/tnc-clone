@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {
   Router,
@@ -5,23 +6,24 @@ import {
   RouterStateSnapshot,
   ActivatedRouteSnapshot,
 } from '@angular/router';
+import { STORE_API } from '@core/constants/api.constant';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { Category } from '../models/category.model';
-import { CategoryService } from '../services/category.service';
+import { Store } from '../models/store.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class CategoryResolver implements Resolve<Category | boolean> {
-  constructor(private catService: CategoryService, private router: Router) {}
+export class StoreResolver implements Resolve<Store | boolean> {
+  constructor(private http: HttpClient, private router: Router) {}
 
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): Observable<Category | boolean> {
+  ): Observable<Store | boolean> {
     const slug: string = route.params.slug;
-    return this.catService.initialFetchByResolver(slug).pipe(
+
+    return this.http.get<Store>(STORE_API + slug).pipe(
       catchError(() => {
         this.router.navigateByUrl('/not-found');
         return of(false);

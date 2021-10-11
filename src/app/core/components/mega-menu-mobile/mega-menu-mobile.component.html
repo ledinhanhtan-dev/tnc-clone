@@ -2,11 +2,12 @@
   <li class="menu-item" *ngFor="let cat of categories">
     <button class="cat-entry" (click)="onToggleActive($event)">
       {{ cat.title }}
+      <app-icon iconId="chevron-right" size="xxs"></app-icon>
     </button>
 
     <ul class="cat-menu">
       <li (click)="onToggleActiveFromCatMenu($event)">
-        <a [routerLink]="cat.routerLink" class="cat-title">{{ cat.title }}</a>
+        <a [routerLink]="cat.routerLink" class="cat-title">{{ cat.title }} </a>
       </li>
       <li class="cat-item" *ngFor="let item of cat.items">
         <a [routerLink]="item.routerLink">

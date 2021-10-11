@@ -1,0 +1,10 @@
+<a [routerLink]="['/product', products[0].slug]" class="one">
+  <img [src]="products[0].image" />
+</a>
+<a
+  class="four"
+  [routerLink]="['/product', product.slug]"
+  *ngFor="let product of products.slice(1)"
+>
+  <img [src]="product.image" />
+</a>

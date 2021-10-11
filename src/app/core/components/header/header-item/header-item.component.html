@@ -1,4 +1,8 @@
-<a href="#" [ngClass]="flashy ? 'flashy' : ''" *ngIf="type === 'link'">
+<a
+  [routerLink]="routerLink"
+  [ngClass]="flashy ? 'flashy' : ''"
+  *ngIf="type === 'link'"
+>
   <app-icon size="md" [iconId]="iconId"></app-icon>
   {{ title | uppercase }}
 </a>

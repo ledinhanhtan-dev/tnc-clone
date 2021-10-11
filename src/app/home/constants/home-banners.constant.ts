@@ -1,53 +1,53 @@
 import { environment } from '@env';
 export interface HomeBanner {
-  link: string;
+  routerLink: string;
   alt: string;
   image: string;
 }
 
 export const HERO_BANNERS: HomeBanner[] = [
   {
-    link: '#',
+    routerLink: '#',
     image: environment.apiUrl + 'image/banner/banner-01.jpg',
     alt: '',
   },
   {
-    link: '#',
+    routerLink: '#',
     image: environment.apiUrl + 'image/banner/banner-02.jpg',
     alt: '',
   },
   {
-    link: '#',
+    routerLink: '#',
     image: environment.apiUrl + 'image/banner/banner-03.jpg',
     alt: '',
   },
   {
-    link: '#',
+    routerLink: '#',
     image: environment.apiUrl + 'image/banner/banner-04.jpg',
     alt: '',
   },
   {
-    link: '#',
+    routerLink: '#',
     image: environment.apiUrl + 'image/banner/banner-05.jpg',
     alt: '',
   },
   {
-    link: '#',
+    routerLink: '#',
     image: environment.apiUrl + 'image/banner/banner-06.jpg',
     alt: '',
   },
   {
-    link: '#',
+    routerLink: '#',
     image: environment.apiUrl + 'image/banner/banner-07.jpg',
     alt: '',
   },
   {
-    link: '#',
+    routerLink: '#',
     image: environment.apiUrl + 'image/banner/banner-08.jpg',
     alt: '',
   },
   {
-    link: '#',
+    routerLink: '#',
     image: environment.apiUrl + 'image/banner/banner-09.jpg',
     alt: '',
   },
@@ -55,22 +55,27 @@ export const HERO_BANNERS: HomeBanner[] = [
 
 export const SUB_BANNERS: HomeBanner[] = [
   {
-    link: '#',
+    routerLink: '/store/msi-official-store',
+    image: environment.apiUrl + 'image/banner/store-msi.jpg',
+    alt: '',
+  },
+  {
+    routerLink: '/store/asus-official-store',
     image: environment.apiUrl + 'image/banner/store-asus.jpg',
     alt: '',
   },
   {
-    link: '#',
+    routerLink: '/store/lg-official-store',
     image: environment.apiUrl + 'image/banner/store-lg.jpg',
     alt: '',
   },
   {
-    link: '#',
+    routerLink: '/store/acer-official-store',
     image: environment.apiUrl + 'image/banner/store-acer.jpg',
     alt: '',
   },
   {
-    link: '#',
+    routerLink: '/store/nzxt-official-store',
     image: environment.apiUrl + 'image/banner/store-nzxt.jpg',
     alt: '',
   },

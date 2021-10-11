@@ -9,7 +9,7 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
   },
   {
-    path: 'page',
+    path: '',
     loadChildren: () => import('./page/page.module').then(m => m.PageModule),
   },
   {
@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'cart',
     loadChildren: () => import('./cart/cart.module').then(m => m.CartModule),
+  },
+  {
+    path: 'store',
+    loadChildren: () => import('./store/store.module').then(m => m.StoreModule),
   },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: 'not-found' },

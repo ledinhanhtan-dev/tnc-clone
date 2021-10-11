@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { StoreComponent } from './store.component';
 import { SharedModule } from '@shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeResolver } from './resolver/home.resolver';
-import { HomeComponent } from './home.component';
-import { components } from './components';
+import { StoreResolver } from './resolvers/store.resolver';
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    component: HomeComponent,
-    resolve: [HomeResolver],
+    path: ':slug',
+    component: StoreComponent,
+    resolve: [StoreResolver],
   },
 ];
 
 @NgModule({
-  declarations: [HomeComponent, ...components],
+  declarations: [StoreComponent],
   imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
 })
-export class HomeModule {}
+export class StoreModule {}

@@ -10,6 +10,7 @@ export class HeaderItemComponent implements OnInit {
   @Input() iconId!: string;
   @Input() flashy = false;
   @Input() type: 'button' | 'link' = 'link';
+  @Input() routerLink!: string;
 
   constructor() {}
 

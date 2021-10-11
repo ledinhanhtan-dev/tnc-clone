@@ -1,0 +1,14 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+  padding: 3rem 0;
+}
+
+.container {
+  @include container;
+}
+
+app-block {
+  margin-top: 4rem;
+}

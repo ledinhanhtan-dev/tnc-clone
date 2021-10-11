@@ -4,11 +4,8 @@
   @include container;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  @include respond($desktop-md) {
-  }
+  justify-content: space-between;
 }
 
 :host {
@@ -23,6 +20,10 @@
 .icons {
   display: flex;
   gap: 1rem;
+
+  & > img {
+    cursor: pointer;
+  }
 }
 
 @include respond($desktop-md) {

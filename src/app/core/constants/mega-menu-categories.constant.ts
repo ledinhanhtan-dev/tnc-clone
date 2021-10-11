@@ -14,7 +14,7 @@ export interface Category {
 
 const PC_CAT: Category = {
   title: 'Xây dựng cấu hình PC',
-  routerLink: '/page/xay-dung-cau-hinh-pc',
+  routerLink: '/xay-dung-cau-hinh-pc',
   imagePath: environment.apiUrl + 'image/category/category-pc.png',
   items: [
     { title: 'PRO GAMING PC', routerLink: '/category/gaming-pc' },

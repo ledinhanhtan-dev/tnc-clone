@@ -7,13 +7,17 @@ import { ProductsSwiperComponent } from './products-swiper/products-swiper.compo
 import { ProductRatingComponent } from './product-rating/product-rating.component';
 import { CollapseComponent } from './collapse/collapse.component';
 import { BrandsComponent } from './brands/brands.component';
+import { FeaturedProductsComponent } from './featured-products/featured-products.component';
+import { FeedbacksComponent } from './feedbacks/feedbacks.component';
 
 export const components: any[] = [
   IconComponent,
   BlockComponent,
   BrandsComponent,
   CollapseComponent,
+  FeedbacksComponent,
   YoutubeButtonComponent,
+  FeaturedProductsComponent,
 
   ProductCardComponent,
   ProductRatingComponent,

@@ -1,6 +1,9 @@
 <ul class="mega-menu">
   <li *ngFor="let cat of categories" class="menu-item">
-    <a [routerLink]="cat.routerLink" class="menu-item-title">{{ cat.title }}</a>
+    <a [routerLink]="cat.routerLink" class="menu-item-title"
+      >{{ cat.title }}
+      <app-icon iconId="chevron-right" size="xxs"></app-icon>
+    </a>
 
     <ul class="cat-menu">
       <h4 class="cat-title">

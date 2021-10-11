@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { components } from './components';
-import { CommonModule } from '@angular/common';
-import { SwiperModule } from 'swiper/angular';
-import { PricePipe } from './pipes/price.pipe';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { PricePipe } from './pipes/price.pipe';
+import { SwiperModule } from 'swiper/angular';
+import { components } from './components';
 
 @NgModule({
   declarations: [components, PricePipe],

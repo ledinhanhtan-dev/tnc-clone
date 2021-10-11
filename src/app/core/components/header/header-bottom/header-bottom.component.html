@@ -4,20 +4,27 @@
       title="Danh mục sản phẩm"
       iconId="computer"
       class="mega-menu-entry"
+      type="button"
     ></app-header-item>
 
     <app-header-item
       title="Xây dựng cấu hình"
       iconId="config"
+      routerLink="/xay-dung-cau-hinh-pc"
     ></app-header-item>
 
     <app-header-item
       title="Click là sale"
       iconId="sale"
       [flashy]="true"
+      routerLink="/khuyen-mai"
     ></app-header-item>
 
-    <app-header-item title="Tin tức" iconId="news"></app-header-item>
+    <app-header-item
+      title="Tin tức"
+      iconId="news"
+      routerLink="/tin-tuc"
+    ></app-header-item>
 
     <!-- Mega Menu -->
     <app-mega-menu class="mega-menu"></app-mega-menu>

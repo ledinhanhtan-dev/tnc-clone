@@ -28,13 +28,22 @@
       <app-header-item
         iconId="config"
         title="Xây dựng cấu hình"
+        routerLink="/xay-dung-cau-hinh-pc"
       ></app-header-item>
     </li>
     <li *ngIf="!menuActive">
-      <app-header-item iconId="sale" title="Click là sale"></app-header-item>
+      <app-header-item
+        iconId="sale"
+        title="Click là sale"
+        routerLink="/khuyen-mai"
+      ></app-header-item>
     </li>
     <li *ngIf="!menuActive">
-      <app-header-item iconId="news" title="Tin tức"></app-header-item>
+      <app-header-item
+        iconId="news"
+        title="Tin tức"
+        routerLink="/tin-tuc"
+      ></app-header-item>
     </li>
   </ul>
 </div>
