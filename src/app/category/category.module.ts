@@ -8,7 +8,7 @@ import { components } from './components';
 import { CatFilterMobileService } from './services/cat-filter-mobile.service';
 
 @NgModule({
-  declarations: [...components, CategoryComponent],
+  declarations: [components, CategoryComponent],
   imports: [CommonModule, SharedModule, CategoryRoutingModule, FormsModule],
   providers: [CatFilterMobileService],
 })

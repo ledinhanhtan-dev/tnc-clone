@@ -1,0 +1,152 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+}
+
+.pop {
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 0.5rem 0.7rem;
+  background-color: $color-accent-blue;
+  color: $color-white;
+  display: none;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.note {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+.asterisk {
+  font-size: 1.25rem;
+  vertical-align: middle;
+  color: red;
+}
+
+.form.invalid {
+  .control-input.ng-invalid {
+    border-color: $color-red;
+    background-color: hsl(3, 100%, 98%);
+
+    & + .control-error {
+      display: block;
+    }
+  }
+}
+
+.group {
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-border;
+  }
+}
+
+.control {
+  margin-top: 0.75rem;
+
+  &-label {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &-asterisk {
+    margin-left: 5px;
+  }
+
+  &-input-error {
+    width: 75%;
+    margin-left: auto;
+  }
+
+  &-input,
+  &-textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: $color-pale-blue;
+    padding: 0.65rem 1rem;
+    color: $color-primary;
+    border-radius: 3px;
+  }
+
+  &-error {
+    color: $color-red;
+    font-size: 0.85rem;
+    padding-left: 0.5rem;
+    margin-top: 4px;
+    display: none;
+  }
+}
+
+.control-input {
+  transform: all $duration-100;
+
+  &.ng-valid {
+    border-color: $color-border;
+  }
+
+  &.ng-touched.ng-invalid {
+    border-color: $color-red;
+    background-color: hsl(3, 100%, 98%);
+
+    & + .control-error {
+      display: block;
+    }
+  }
+}
+
+.control-textarea {
+  resize: vertical;
+
+  &.ng-touched.ng-valid {
+    border-color: $color-border;
+  }
+}
+
+.shipping-check {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+
+  & > label {
+    display: flex;
+    align-items: center;
+  }
+
+  .checkbox {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+  }
+}
+
+.radio {
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  &-label {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &-input {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  &-title {
+    font-weight: 600;
+    width: 100%;
+  }
+}

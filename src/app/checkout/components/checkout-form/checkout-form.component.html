@@ -1,0 +1,208 @@
+<form
+  #form
+  action="POST"
+  class="form"
+  [formGroup]="checkoutForm"
+  (ngSubmit)="onSubmit()"
+>
+  <!-- THÔNG TIN KHÁCH HÀNG -->
+
+  <div class="group">
+    <button (click)="pop()" class="pop" type="button">POP</button>
+    <div class="title">THÔNG TIN KHÁCH HÀNG</div>
+
+    <div class="control">
+      <label for="name" class="control-label">
+        Họ tên quý khách
+        <span class="asterisk control-asterisk">*</span>
+        <div class="control-input-error">
+          <input
+            type="text"
+            placeholder="Nhập tên khách hàng"
+            formControlName="name"
+            class="control-input"
+            (keyup)="onInputChange()"
+          />
+          <div class="control-error">Họ tên khách hàng không được để trống</div>
+        </div>
+      </label>
+    </div>
+
+    <div class="control">
+      <label for="email" class="control-label">
+        Địa chỉ email
+        <span class="asterisk control-asterisk">*</span>
+        <div class="control-input-error">
+          <input
+            type="email"
+            placeholder="Nhập địa chỉ email"
+            formControlName="email"
+            class="control-input"
+            (keyup)="onInputChange()"
+          />
+          <div class="control-error">Địa chỉ email không hợp lệ</div>
+        </div>
+      </label>
+    </div>
+
+    <div class="control">
+      <label for="phone" class="control-label">
+        Số điện thoại
+        <span class="asterisk control-asterisk">*</span>
+        <div class="control-input-error">
+          <input
+            type="tel"
+            placeholder="Nhập số điện thoại"
+            formControlName="phone"
+            class="control-input"
+            (keyup)="onInputChange()"
+          />
+          <div class="control-error">Số điện thoại không hợp lệ</div>
+        </div>
+      </label>
+    </div>
+
+    <div class="control">
+      <label for="adress" class="control-label">
+        Địa chỉ thường trú
+        <span class="asterisk control-asterisk">*</span>
+        <div class="control-input-error">
+          <input
+            type="text"
+            placeholder="Nhập địa chỉ"
+            formControlName="address"
+            class="control-input"
+            (keyup)="onInputChange()"
+          />
+          <div class="control-error">
+            Địa chỉ khách hàng không được để trống
+          </div>
+        </div>
+      </label>
+    </div>
+
+    <div class="note">(<span class="asterisk">*</span> Trường bắt buộc)</div>
+  </div>
+
+  <!-- THÔNG TIN GIAO HÀNG -->
+
+  <div class="group">
+    <div class="title">THÔNG TIN GIAO HÀNG</div>
+
+    <div class="shipping-check">
+      <label>
+        <input
+          type="checkbox"
+          class="checkbox"
+          formControlName="sameShippingInfo"
+          (change)="toggleShippingOther()"
+        />
+        Sử dụng thông tin khách hàng để giao hàng
+      </label>
+    </div>
+
+    <div class="control" *ngIf="!sameShippingInfo">
+      <label for="shippingName" class="control-label">
+        Họ & tên người nhận
+        <span class="asterisk control-asterisk">*</span>
+        <div class="control-input-error">
+          <input
+            type="text"
+            placeholder="Nhập tên người nhận"
+            formControlName="shippingName"
+            class="control-input"
+            (keyup)="onInputChange()"
+          />
+          <div class="control-error">Họ tên người nhận không được để trống</div>
+        </div>
+      </label>
+    </div>
+
+    <div class="control" *ngIf="!sameShippingInfo">
+      <label for="shippingPhone" class="control-label">
+        SĐT người nhận
+        <span class="asterisk control-asterisk">*</span>
+        <div class="control-input-error">
+          <input
+            type="tel"
+            placeholder="Nhập số điện thoại người nhận"
+            formControlName="shippingPhone"
+            class="control-input"
+            (keyup)="onInputChange()"
+          />
+          <div class="control-error">
+            Số điện thoại người nhận không được để trống
+          </div>
+        </div>
+      </label>
+    </div>
+
+    <div class="control" *ngIf="!sameShippingInfo">
+      <label for="shippingAddress" class="control-label">
+        Địa chỉ giao hàng
+        <span class="asterisk control-asterisk">*</span>
+        <div class="control-input-error">
+          <input
+            type="text"
+            placeholder="Nhập tên địa chỉ giao hàng"
+            formControlName="shippingAddress"
+            class="control-input"
+            (keyup)="onInputChange()"
+          />
+          <div class="control-error">Địa chỉ giao hàng không được để trống</div>
+        </div>
+      </label>
+    </div>
+
+    <div class="control">
+      <label for="note" class="control-label">
+        Ghi chú
+        <div class="control-input-error">
+          <textarea
+            name="note"
+            rows="5"
+            class="control-textarea"
+            placeholder="Nhập ghi chú"
+            formControlName="shippingNote"
+          ></textarea>
+        </div>
+      </label>
+    </div>
+
+    <div class="note" *ngIf="!sameShippingInfo">
+      (<span class="asterisk">*</span> Trường bắt buộc)
+    </div>
+  </div>
+
+  <!-- HÌNH THỨC THANH TOÁN -->
+
+  <div class="group">
+    <div class="title">HÌNH THỨC THANH TOÁN</div>
+    <div class="control">
+      <label class="radio-label">
+        <input
+          checked
+          type="radio"
+          class="radio-input"
+          [value]="true"
+          formControlName="paymentMethod"
+        />
+        <div class="radio-title">Thanh toán tại nơi giao hàng</div>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-label">
+        <input
+          type="radio"
+          class="radio-input"
+          [value]="false"
+          formControlName="paymentMethod"
+        />
+        <div class="radio-title">
+          Thanh toán bằng chuyển khoản
+          <app-checkout-banks></app-checkout-banks>
+        </div>
+      </label>
+    </div>
+  </div>
+</form>

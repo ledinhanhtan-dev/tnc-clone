@@ -9,7 +9,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { RouterModule } from '@angular/router';
 import { components } from './components';
 @NgModule({
-  declarations: [...components],
+  declarations: [components],
   imports: [CommonModule, SharedModule, HttpClientModule, RouterModule],
   exports: [HeaderComponent, FooterComponent, PageNotFoundComponent],
   providers: [CookieService],

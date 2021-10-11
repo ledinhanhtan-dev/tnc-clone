@@ -1,0 +1,6 @@
+<div
+  *ngFor="let process of processes; let i = index"
+  [ngClass]="i < step ? 'process active' : 'process'"
+>
+  <p>{{ process }}</p>
+</div>

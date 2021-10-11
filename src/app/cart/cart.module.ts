@@ -11,7 +11,7 @@ import { CartInterceptor } from './interceptors/cart.interceptor';
 const routes: Routes = [{ path: '', component: CartComponent }];
 
 @NgModule({
-  declarations: [...components, CartComponent],
+  declarations: [components, CartComponent],
   imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
   exports: [CartModalComponent],
   providers: [

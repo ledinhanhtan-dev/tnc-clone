@@ -1,0 +1,52 @@
+<div class="data">
+  <div class="title">Thông tin giỏ hàng</div>
+
+  <div class="quantity">
+    Số lượng sản phẩm
+    <span class="count">{{ cart.totalQuantity }}</span>
+  </div>
+
+  <div class="total">
+    Tổng chi phí
+    <span class="price">{{ cart.totalPrice | price }} đ</span>
+  </div>
+
+  <div class="vat">Đã bao gồm VAT (nếu có)</div>
+</div>
+
+<div class="actions">
+  <div class="checkout-summary" *ngIf="type === 'checkout'">
+    <div class="summary" *ngFor="let item of cart.cartItems">
+      <p class="summary-name">{{ item.product.name }}</p>
+      <app-collapse [shortDesc]="item.product.shortDesc"></app-collapse>
+      <p class="summary-price">
+        {{ item.product.price * item.quantity | price }} đ
+      </p>
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="btn btn-to-cart"
+    [ngClass]="cart.totalQuantity === 0 ? 'disable' : ''"
+    (click)="onGoTo()"
+  >
+    {{ goToTitle }}
+  </button>
+  <button
+    type="button"
+    (click)="onDeleteCart()"
+    class="btn btn-delete-cart"
+    *ngIf="type !== 'checkout'"
+  >
+    XÓA GIỎ HÀNG
+  </button>
+  <button
+    type="button"
+    (click)="onGoToOthers()"
+    class="btn btn-to-others"
+    *ngIf="type !== 'checkout'"
+  >
+    XEM SẢN PHẨM KHÁC
+  </button>
+</div>

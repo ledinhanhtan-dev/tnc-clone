@@ -1,15 +1,17 @@
 @import '/src/styles/variables';
 
 :host {
-  display: block;
   padding: 1.25rem 1.5rem;
   background-color: $color-pale-blue;
+  height: min-content;
+  display: block;
 }
 
 .title {
   font-weight: 700;
   font-size: 1.125rem;
   margin-bottom: 0.8rem;
+  text-transform: uppercase;
 }
 
 .quantity,
@@ -89,4 +91,25 @@
       color: lighten($color-accent-blue, 7%);
     }
   }
+}
+
+.summary {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid $color-border;
+
+  &-name {
+    font-weight: 600;
+    line-height: 1.5;
+    color: $color-accent-blue;
+  }
+
+  &-price {
+    font-weight: 600;
+    text-align: right;
+  }
+}
+
+app-collapse {
+  margin-top: 0.5rem;
 }
