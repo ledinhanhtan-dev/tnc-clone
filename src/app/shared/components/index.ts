@@ -9,11 +9,13 @@ import { CollapseComponent } from './collapse/collapse.component';
 import { BrandsComponent } from './brands/brands.component';
 import { FeaturedProductsComponent } from './featured-products/featured-products.component';
 import { FeedbacksComponent } from './feedbacks/feedbacks.component';
+import { PolicyComponent } from './policy/policy.component';
 
 export const components: any[] = [
   IconComponent,
   BlockComponent,
   BrandsComponent,
+  PolicyComponent,
   CollapseComponent,
   FeedbacksComponent,
   YoutubeButtonComponent,

@@ -20,6 +20,10 @@ app-block {
   margin-top: 4rem;
 }
 
+app-policy {
+  margin-top: 2.5rem;
+}
+
 @include respond($desktop-sm) {
   .content {
     display: block;

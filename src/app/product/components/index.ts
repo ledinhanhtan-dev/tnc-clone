@@ -5,7 +5,6 @@ import { ProductGalleryComponent } from './product-gallery/product-gallery.compo
 import { ProductPriceComponent } from './product-price/product-price.component';
 import { ProductTopToolbarComponent } from './product-top-toolbar/product-top-toolbar.component';
 import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
-import { ProductPolicyComponent } from './product-policy/product-policy.component';
 
 export const components: any[] = [
   ProductCtaComponent,
@@ -15,5 +14,4 @@ export const components: any[] = [
   ProductPriceComponent,
   ProductTopToolbarComponent,
   ProductQuantityComponent,
-  ProductPolicyComponent,
 ];
