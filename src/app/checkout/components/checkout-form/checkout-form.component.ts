@@ -35,7 +35,10 @@ export class CheckoutFormComponent implements OnInit, OnDestroy {
 
       sameShippingInfo: new FormControl(false),
       shippingName: new FormControl('', [Validators.required]),
-      shippingPhone: new FormControl('', [Validators.required]),
+      shippingPhone: new FormControl('', [
+        Validators.required,
+        this.phoneNumberValidator,
+      ]),
       shippingAddress: new FormControl('', [Validators.required]),
       shippingNote: new FormControl(''),
 
@@ -72,6 +75,7 @@ export class CheckoutFormComponent implements OnInit, OnDestroy {
   onSubmit() {
     if (!this.checkoutForm.valid) {
       (this.formRef.nativeElement as HTMLFormElement).classList.add('invalid');
+      this.focusOnFirstInvalidInput();
     } else {
       this.checkoutService.checkout(this.checkoutForm.value);
     }
@@ -105,6 +109,15 @@ export class CheckoutFormComponent implements OnInit, OnDestroy {
       this.checkoutForm
         .get('shippingAddress')
         ?.setValidators([Validators.required]);
+    }
+  }
+
+  private focusOnFirstInvalidInput() {
+    const invalidControl = (
+      this.formRef.nativeElement as HTMLFormElement
+    ).querySelector('.ng-invalid');
+    if (invalidControl) {
+      (invalidControl as HTMLInputElement).focus();
     }
   }
 

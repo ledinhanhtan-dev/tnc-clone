@@ -10,6 +10,10 @@
   justify-content: space-between;
   display: flex;
   width: 100%;
+
+  @include respond($desktop-sm) {
+    flex-direction: column;
+  }
 }
 
 .content {
@@ -19,4 +23,19 @@
 
 app-totals {
   width: 33.33%;
+}
+
+@include respond($desktop-sm) {
+  .container {
+    flex-direction: column;
+  }
+
+  .content {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  app-totals {
+    width: 100%;
+  }
 }

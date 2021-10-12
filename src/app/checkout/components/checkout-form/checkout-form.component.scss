@@ -54,13 +54,9 @@
 .control {
   margin-top: 0.75rem;
 
-  &-label {
+  &-wrapper {
     display: flex;
     align-items: flex-start;
-  }
-
-  &-asterisk {
-    margin-left: 5px;
   }
 
   &-input-error {
@@ -148,5 +144,24 @@
   &-title {
     font-weight: 600;
     width: 100%;
+  }
+}
+
+@include respond($tablet) {
+  .control-input-error {
+    width: 72%;
+  }
+}
+
+@include respond($mobile-lg) {
+  .control {
+    &-wrapper {
+      flex-direction: column;
+    }
+
+    &-input-error {
+      width: 100%;
+      margin-top: 3px;
+    }
   }
 }
