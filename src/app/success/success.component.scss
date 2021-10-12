@@ -1,0 +1,20 @@
+@import '/src/styles/variables';
+
+.container {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+}
+
+.success {
+  font-size: 3rem;
+  color: $color-accent-blue;
+  text-align: center;
+
+  @include respond($tablet) {
+    font-size: 2rem;
+  }
+}

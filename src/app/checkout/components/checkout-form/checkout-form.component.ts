@@ -55,17 +55,17 @@ export class CheckoutFormComponent implements OnInit, OnDestroy {
     if (this.checkoutSub) this.checkoutSub.unsubscribe();
   }
 
-  pop() {
+  populate() {
     this.checkoutForm.setValue({
       name: 'Gentek',
       email: 'gentek@citizen',
       phone: '0327730067',
-      address: '3/36 Đào Tấn',
+      address: '01 Hà Nội',
 
       sameShippingInfo: false,
       shippingName: 'Gentek',
       shippingPhone: '0327730067',
-      shippingAddress: '3/36 Đào Tấn',
+      shippingAddress: '01 Hà Nội',
       shippingNote:
         'This makes composing complex form models easier to maintain',
       paymentMethod: true,

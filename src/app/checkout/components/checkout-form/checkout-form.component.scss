@@ -4,13 +4,18 @@
   display: block;
 }
 
-.pop {
+.populate {
   font-weight: 700;
   border-radius: 4px;
   padding: 0.5rem 0.7rem;
-  background-color: $color-accent-blue;
-  color: $color-white;
-  display: none;
+  background-color: $color-border;
+  color: $color-primary;
+  margin: 0 auto 1rem;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-accent-blue;
+  }
 }
 
 .title {

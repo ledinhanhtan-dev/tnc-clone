@@ -45,6 +45,7 @@ export class TotalsComponent implements OnInit, OnDestroy {
         break;
       default:
         this.checkoutService.submit();
+        this.router.navigateByUrl('/success');
         break;
     }
   }

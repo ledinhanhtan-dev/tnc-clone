@@ -23,6 +23,10 @@ const routes: Routes = [
       import('./category/category.module').then(m => m.CategoryModule),
   },
   {
+    path: 'store',
+    loadChildren: () => import('./store/store.module').then(m => m.StoreModule),
+  },
+  {
     path: 'cart',
     loadChildren: () => import('./cart/cart.module').then(m => m.CartModule),
   },
@@ -32,9 +36,11 @@ const routes: Routes = [
       import('./checkout/checkout.module').then(m => m.CheckoutModule),
   },
   {
-    path: 'store',
-    loadChildren: () => import('./store/store.module').then(m => m.StoreModule),
+    path: 'success',
+    loadChildren: () =>
+      import('./success/success.module').then(m => m.SuccessModule),
   },
+
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: 'not-found' },
 ];
