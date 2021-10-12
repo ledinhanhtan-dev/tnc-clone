@@ -98,6 +98,8 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 - [Angular](https://angular.io/)
 - [SwiperJS](https://swiperjs.com/)
+- [NestJS](https://nestjs.com/)
+- [TypeORM](https://typeorm.io/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
