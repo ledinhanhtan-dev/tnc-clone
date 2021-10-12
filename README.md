@@ -38,7 +38,7 @@
     <a href="https://tnc-clone.web.app/"><strong>View Demo</strong></a>
     <br />
     <br />
-    <a href="https://www.tncstore.vn/">View Source website</a>
+    <a href="https://www.tncstore.vn/">View Source Website</a>
     ·
     <a href="https://github.com/ledinhanhtan-dev/tnc-client/issues">Report Bug</a>
     ·
