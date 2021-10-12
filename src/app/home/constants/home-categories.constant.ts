@@ -21,43 +21,43 @@ export const HOME_CATEGORIES: HomeCategory[] = [
     image:
       environment.apiUrl + 'image/category/home-category-gaming-laptops.png',
     color: '#FFF200',
-    routerLink: '#',
+    routerLink: '/page/xay-dung-cau-hinh-pc',
   },
   {
     title: 'GAMING GEARS',
     image: environment.apiUrl + 'image/category/home-category-gaming-gears.png',
     color: '#1EEC18',
-    routerLink: '#',
+    routerLink: '/page/xay-dung-cau-hinh-pc',
   },
   {
     title: 'PHỤ KIỆN TẢN NHIỆT PC',
     image: environment.apiUrl + 'image/category/home-category-accessories.png',
     color: '#8E07EF',
-    routerLink: '#',
+    routerLink: '/page/xay-dung-cau-hinh-pc',
   },
   {
     title: 'LINH KIỆN MÁY TÍNH',
     image: environment.apiUrl + 'image/category/home-category-hardwares.png',
     color: '#00F9C9',
-    routerLink: '#',
+    routerLink: '/page/xay-dung-cau-hinh-pc',
   },
   {
     title: 'MÀN HÌNH MÁY TÍNH',
     image: environment.apiUrl + 'image/category/home-category-monitors.png',
     color: '#F9495F',
-    routerLink: '#',
+    routerLink: '/page/xay-dung-cau-hinh-pc',
   },
   {
     title: 'BÀN GHẾ GAMING',
     image: environment.apiUrl + 'image/category/home-category-chairs.png',
     color: '#665DEA',
-    routerLink: '#',
+    routerLink: '/page/xay-dung-cau-hinh-pc',
   },
   {
     title: 'THIẾT BỊ MẠNG',
     image:
       environment.apiUrl + 'image/category/home-category-network-devices.png',
     color: '#F1E89B',
-    routerLink: '#',
+    routerLink: '/page/xay-dung-cau-hinh-pc',
   },
 ];
