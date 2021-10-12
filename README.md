@@ -35,10 +35,10 @@
   <p align="center">
     An awesome README template to jumpstart your projects!
     <br />
-    <a href="https://www.tncstore.vn/"><strong>View Source website ></strong></a>
+    <a href="https://tnc-clone.web.app/"><strong>View Demo></strong></a>
     <br />
     <br />
-    <a href="https://tnc-clone.web.app/">View Demo</a>
+    <a href="https://www.tncstore.vn/">View Source website</a>
     ·
     <a href="https://github.com/ledinhanhtan-dev/tnc-client/issues">Report Bug</a>
     ·
