@@ -30,7 +30,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">A clone project inspired by TNC Store</h3>
+  <h3 align="center">An E-commerce clone project inspired by TNC Store</h3>
 
   <p align="center">
     An awesome README template to jumpstart your projects!
