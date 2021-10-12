@@ -3,7 +3,11 @@
 <swiper [config]="mainGalleryConfig" class="main" slideClass="main" #topSlider>
   <ng-template swiperSlide *ngFor="let image of product.images">
     <div class="image-wrapper">
-      <a [routerLink]="['/brand', product.brand.slug]" class="brand">
+      <a
+        class="brand"
+        *ngIf="product.brand.image"
+        [routerLink]="['/brand', product.brand.slug]"
+      >
         <img [src]="product.brand.image" />
       </a>
       <img [src]="image" [alt]="product.name" class="image" />

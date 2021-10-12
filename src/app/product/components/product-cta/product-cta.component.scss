@@ -3,7 +3,6 @@
 :host {
   gap: 2rem;
   margin-top: 1rem;
-  max-height: 44px;
   display: flex;
 
   @include respond($tablet) {

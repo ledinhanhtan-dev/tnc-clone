@@ -18,102 +18,105 @@ const PC_CAT: Category = {
   imagePath: environment.apiUrl + 'image/category/category-pc.png',
   items: [
     { title: 'PRO GAMING PC', routerLink: '/category/gaming-pc' },
-    { title: 'PRO WORKSTATION', routerLink: '#' },
-    { title: 'PRO PRODUCTIVITY', routerLink: '#' },
-    { title: 'PRO CREATOR', routerLink: '#' },
-    { title: 'PRO AUDIO', routerLink: '#' },
-    { title: 'PRO VR', routerLink: '#' },
+    { title: 'PRO WORKSTATION', routerLink: '/category/workstation-pc' },
+    { title: 'PRO PRODUCTIVITY', routerLink: '/category/productivity-pc' },
+    { title: 'PRO CREATOR', routerLink: '/category/creator-pc' },
+    { title: 'PRO AUDIO', routerLink: '/category/pro-audio' },
+    { title: 'PRO VR', routerLink: '/category/pro-vr' },
   ],
 };
 
 const LAPTOP_CAT: Category = {
   title: 'Laptops',
-  routerLink: '#',
+  routerLink: '/category/',
   imagePath: environment.apiUrl + 'image/category/category-laptop.png',
   items: [
-    { title: 'Gaming Laptop', routerLink: '#' },
-    { title: 'Laptop Văn Phòng', routerLink: '#' },
+    { title: 'Gaming Laptop', routerLink: '/category/gaming-laptop' },
+    { title: 'Laptop Văn Phòng', routerLink: '/category/office-laptop' },
   ],
 };
 
 const HARDWARE_CAT: Category = {
   title: 'Link kiện máy tính',
-  routerLink: '#',
+  routerLink: '/category/',
   imagePath: environment.apiUrl + 'image/category/category-hardware.png',
   items: [
-    { title: 'CPU - Bộ vi xử lý', routerLink: '#' },
-    { title: 'Case - Vỏ máy tính', routerLink: '#' },
-    { title: 'Mainboard - Bo mạch chủ', routerLink: '#' },
-    { title: 'Ram - Bộ nhớ trong', routerLink: '#' },
-    { title: 'Ổ cứng SSD', routerLink: '#' },
-    { title: 'Ổ cứng HDD', routerLink: '#' },
-    { title: 'VGA - Card màn hình', routerLink: '#' },
-    { title: 'PSU - Nguồn máy tính', routerLink: '#' },
-    { title: 'Combo Linh Kiện', routerLink: '#' },
+    { title: 'CPU - Bộ vi xử lý', routerLink: '/category/cpu' },
+    { title: 'Case - Vỏ máy tính', routerLink: '/category/case' },
+    { title: 'Mainboard - Bo mạch chủ', routerLink: '/category/mainboard' },
+    { title: 'Ram - Bộ nhớ trong', routerLink: '/category/ram' },
+    { title: 'Ổ cứng SSD', routerLink: '/category/ssd' },
+    { title: 'Ổ cứng HDD', routerLink: '/category/hdd' },
+    { title: 'VGA - Card màn hình', routerLink: '/category/vga' },
+    { title: 'PSU - Nguồn máy tính', routerLink: '/category/psu' },
+    { title: 'Combo Linh Kiện', routerLink: '/category/combo' },
   ],
 };
 
 const MONITOR_CAT: Category = {
   title: 'Màn hình máy tính',
-  routerLink: '#',
+  routerLink: '/category/',
   imagePath: environment.apiUrl + 'image/category/category-monitor.png',
   items: [
-    { title: 'Màn Hình Gaming', routerLink: '#' },
-    { title: 'Màn Hình Đồ Họa', routerLink: '#' },
-    { title: 'Màn Hình Văn Phòng', routerLink: '#' },
+    { title: 'Màn Hình Gaming', routerLink: '/category/gaming-monitor' },
+    { title: 'Màn Hình Đồ Họa', routerLink: '/category/graphics-monitor' },
+    { title: 'Màn Hình Văn Phòng', routerLink: '/category/office-monitor' },
   ],
 };
 
 const GEAR_CAT: Category = {
   title: 'Gaming Gears',
-  routerLink: '#',
+  routerLink: '/category/',
   imagePath: environment.apiUrl + 'image/category/category-gear.png',
   items: [
-    { title: 'Bàn Phím Cơ', routerLink: '#' },
-    { title: 'Bàn Di Chuột', routerLink: '#' },
-    { title: 'Microphone', routerLink: '#' },
-    { title: 'Chuột Gaming', routerLink: '#' },
-    { title: 'Bàn, Ghế Gaming', routerLink: '#' },
-    { title: 'Tai Nghe Gaming', routerLink: '#' },
-    { title: 'Thiết Bị Stream', routerLink: '#' },
+    { title: 'Bàn Phím Cơ', routerLink: '/category/gaming-keyboard' },
+    { title: 'Bàn Di Chuột', routerLink: '/category/mousepad' },
+    { title: 'Microphone', routerLink: '/category/microphone' },
+    { title: 'Chuột Gaming', routerLink: '/category/gaming-mouse' },
+    { title: 'Bàn, Ghế Gaming', routerLink: '/category/gaming-chaird' },
+    { title: 'Tai Nghe Gaming', routerLink: '/category/gaming-headset' },
+    { title: 'Thiết Bị Stream', routerLink: '/category/streaming-device' },
   ],
 };
 
 const ACCESSORY_CAT: Category = {
   title: 'Phụ Kiện - Tản Nhiệt PC',
-  routerLink: '#',
+  routerLink: '/category/',
   imagePath: environment.apiUrl + 'image/category/category-accessory.png',
   items: [
-    { title: 'Tản nhiệt khí cho PC', routerLink: '#' },
-    { title: 'Tản nước All-in-one', routerLink: '#' },
-    { title: 'Quạt Tản Nhiệt PC', routerLink: '#' },
-    { title: 'Dây Nối Dài - Dây Riser', routerLink: '#' },
-    { title: 'Giá đỡ VGA', routerLink: '#' },
+    { title: 'Tản nhiệt khí cho PC', routerLink: '/category/air-cooler' },
+    { title: 'Tản nước All-in-one', routerLink: '/category/liquid-cooler' },
+    { title: 'Quạt Tản Nhiệt PC', routerLink: '/category/cooler-fan' },
+    { title: 'Dây Nối Dài - Dây Riser', routerLink: '/category/riser-cable' },
+    { title: 'Giá đỡ VGA', routerLink: '/category/vga-holder' },
   ],
 };
 
 const OFFICE_CAT: Category = {
   title: 'Thiết Bị Văn Phòng',
-  routerLink: '#',
+  routerLink: '/category/',
   imagePath: environment.apiUrl + 'image/category/category-office.png',
   items: [
-    { title: 'Loa máy tính', routerLink: '#' },
-    { title: 'Phần mềm bản quyền', routerLink: '#' },
-    { title: 'Bàn phím - Chuột', routerLink: '#' },
-    { title: 'Bộ bàn phím chuột không dây', routerLink: '#' },
-    { title: 'Máy in Laser', routerLink: '#' },
-    { title: 'Webcam', routerLink: '#' },
-    { title: 'Bộ chia/USB Hub', routerLink: '#' },
+    { title: 'Loa máy tính', routerLink: '/category/speaker' },
+    { title: 'Phần mềm bản quyền', routerLink: '/category/software' },
+    { title: 'Bàn phím - Chuột', routerLink: '/category/office-mouse' },
+    {
+      title: 'Bộ bàn phím chuột không dây',
+      routerLink: '/category/wireless-mouse',
+    },
+    { title: 'Máy in Laser', routerLink: '/category/laser-printer' },
+    { title: 'Webcam', routerLink: '/category/webcam' },
+    { title: 'Bộ chia USB', routerLink: '/category/usb-hub' },
   ],
 };
 
 const NETWORK_CAT: Category = {
   title: 'Thiết Bị Mạng',
-  routerLink: '#',
+  routerLink: '/category/',
   imagePath: environment.apiUrl + 'image/category/category-network.png',
   items: [
-    { title: 'Router Wifi', routerLink: '#' },
-    { title: 'Card Wifi', routerLink: '#' },
+    { title: 'Router Wifi', routerLink: '/category/router-wifi' },
+    { title: 'Card Wifi', routerLink: '/category/card-wifi' },
   ],
 };
 

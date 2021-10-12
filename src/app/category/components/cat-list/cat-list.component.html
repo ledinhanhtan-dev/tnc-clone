@@ -9,7 +9,7 @@
 <div class="grid">
   <app-product-card
     [product]="product"
-    *ngFor="let product of category.products"
+    *ngFor="let product of category.products.slice(0, 3)"
   ></app-product-card>
 </div>
 
@@ -19,5 +19,12 @@
     alt="Khuyến mãi Giảm giá"
   />
 </a>
+
+<div class="grid">
+  <app-product-card
+    [product]="product"
+    *ngFor="let product of category.products.slice(3)"
+  ></app-product-card>
+</div>
 
 <app-cat-pagination></app-cat-pagination>

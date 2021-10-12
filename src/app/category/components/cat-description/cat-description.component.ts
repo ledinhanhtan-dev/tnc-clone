@@ -14,7 +14,9 @@ export class CatDescriptionComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.category);
+  }
 
   toggleActive() {
     this.active = !this.active;
