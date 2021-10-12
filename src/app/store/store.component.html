@@ -3,7 +3,7 @@
     <img [src]="store.banner" [alt]="store.name" />
   </div>
 
-  <app-block title="Sản phẩm nổi bật">
+  <app-block title="Sản phẩm nổi bật" *ngIf="store.featuredProducts.length > 0">
     <app-featured-products
       [products]="store.featuredProducts"
     ></app-featured-products>

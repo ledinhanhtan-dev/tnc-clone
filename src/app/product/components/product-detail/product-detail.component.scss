@@ -1,8 +1,9 @@
 @import '/src/styles/variables';
 
 :host {
-  display: block;
   height: 100%;
+  flex-grow: 1;
+  display: block;
 }
 
 .name {
