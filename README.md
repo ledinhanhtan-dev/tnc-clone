@@ -81,17 +81,15 @@
 
 Here is my first app using Angular as front-end to build. It's a simple clone version of the [TNC Store](https://www.tncstore.vn/) e-commerce site.
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+This is a challenging project for me, especially the functionality of an e-commerce website such as sorting categories, add/remove item from cart and connect to the database using REST API.
+
+Still, this project has a lot uncovered features and also required a structured database to continue to expand!
 
 Stack included:
 
 - Angular as front-end
 - NodeJS (NestJS framework) as back-end
 - PostgreSQL as database
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -111,7 +109,7 @@ Frameworks/libraries used to bootstrap the project.
 
 🚀 The app is available at [https://tnc-clone.web.app](https://tnc-clone.web.app)
 
-(Note: open the app for the first time could take some time due to free hosting plane on Heroku)
+(Note: open the app for the first time could take some time due to free hosting plan on Heroku)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -122,8 +120,6 @@ Frameworks/libraries used to bootstrap the project.
 Here are some secreenshot of the app
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
