@@ -33,7 +33,7 @@
   <h3 align="center">An e-commerce clone project inspired by TNC Store</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Stack: MEAN
     <br />
     <a href="https://tnc-clone.web.app/"><strong>View Demo</strong></a>
     <br />
@@ -78,9 +78,9 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://tnc-clone.web.app/)
 
-Practice makes perfect!
+🚀 Practice makes perfect!
 
-Here is my first app using Angular as front-end to build. It's a simple clone version of the [TNC Store](https://www.tncstore.vn/) e-commerce website.
+Here is my first app using Angular as front-end to build. It's a simple clone version of the [TNC Store](https://www.tncstore.vn/) e-commerce site.
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -98,12 +98,11 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Frameworks/libraries used to bootstrap the project.
 
 - [Angular](https://angular.io/)
 - [SwiperJS](https://swiperjs.com/)
 - [NestJS](https://nestjs.com/)
-- [TypeORM](https://typeorm.io/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -166,7 +165,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Le Dinh Anh Tan - [@your_twitter](https://twitter.com/your_username) - ledinhanhtan.dev@gmail.com
+Le Dinh Anh Tan - ledinhanhtan.dev@gmail.com
 
 Project Link: [https://github.com/ledinhanhtan-dev/tnc-client](https://github.com/ledinhanhtan-dev/tnc-client)
 
@@ -179,8 +178,8 @@ Project Link: [https://github.com/ledinhanhtan-dev/tnc-client](https://github.co
 Languages and frameworks/libraries used in this project
 
 - [TypeScript](https://www.typescriptlang.org)
-- [Sass](https://sass-lang.com)
 - [Angular](https://angular.io)
+- [Sass](https://sass-lang.com)
 - [SwiperJS](https://swiperjs.com)
 - [NestJS](https://nestjs.com)
 - [TypeOrm](https://typeorm.io)
