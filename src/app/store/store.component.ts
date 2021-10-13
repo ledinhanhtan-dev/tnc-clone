@@ -18,7 +18,6 @@ export class StoreComponent implements OnInit {
   ngOnInit(): void {
     this.storeSub = this.route.data.subscribe(data => {
       this.store = data[0];
-      console.log(this.store);
       this.title.setTitle(this.store.name);
     });
   }
