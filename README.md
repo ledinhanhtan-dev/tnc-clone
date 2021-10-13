@@ -65,7 +65,7 @@
 
 Here is my first app using Angular as front-end to build. It's a simple clone version of the [TNC Store](https://www.tncstore.vn/) e-commerce site.
 
-This is a challenging project for me, especially the functionality of an e-commerce website such as sorting categories, add/remove item from cart and connect to the database using REST API.
+This is a challenging project, especially the functionality of an e-commerce website such as sorting categories, add/remove item from cart and connect to the database using REST API.
 
 Still, this project has a lot uncovered features and also required a structured database to continue to expand!
 
