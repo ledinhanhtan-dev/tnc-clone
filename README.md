@@ -110,7 +110,7 @@ Frameworks/libraries used to bootstrap the project.
 
 ## Getting Started
 
-The app is available at [https://tnc-clone.web.app](https://tnc-clone.web.app)
+🚀 The app is available at [https://tnc-clone.web.app](https://tnc-clone.web.app)
 
 (Note: open the app for the first time could take some time due to free hosting plane on Heroku)
 
