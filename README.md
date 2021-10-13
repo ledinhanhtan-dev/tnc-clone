@@ -78,13 +78,17 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://tnc-clone.web.app/)
 
+Practice makes perfect!
+
+Here is my first app using Angular as front-end to build. It's a simple clone version of the [TNC Store](https://www.tncstore.vn/) e-commerce website.
+
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
-Here's why:
+Stack included:
 
-- Your time should be focused on creating something amazing. A project that solves a problem and helps others
-- You shouldn't be doing the same tasks over and over like creating a README from scratch
-- You should implement DRY principles to the rest of your life :smile:
+- Angular as front-end
+- NodeJS (NestJS framework) as back-end
+- PostgreSQL as database
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
@@ -107,8 +111,9 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The app is available at [https://tnc-clone.web.app](https://tnc-clone.web.app)
+
+(Note: open the app for the first time could take some time due to free hosting plane on Heroku)
 
 ### Prerequisites
 
@@ -141,6 +146,8 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
+Here are some secreenshot of the app
+
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
@@ -169,11 +176,11 @@ Project Link: [https://github.com/ledinhanhtan-dev/tnc-client](https://github.co
 
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Languages and frameworks/libraries used in this project
 
-- [Angular](https://angular.io)
 - [TypeScript](https://www.typescriptlang.org)
 - [Sass](https://sass-lang.com)
+- [Angular](https://angular.io)
 - [SwiperJS](https://swiperjs.com)
 - [NestJS](https://nestjs.com)
 - [TypeOrm](https://typeorm.io)
