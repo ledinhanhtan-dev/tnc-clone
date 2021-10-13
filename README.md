@@ -33,7 +33,6 @@
   <h3 align="center">An e-commerce clone project inspired by TNC Store</h3>
 
   <p align="center">
-    Stack used: MEAN
     <br />
     <a href="https://tnc-clone.web.app/"><strong>View Demo</strong></a>
     <br />
