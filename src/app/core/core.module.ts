@@ -8,8 +8,9 @@ import { SharedModule } from '@shared/shared.module';
 import { CookieService } from 'ngx-cookie-service';
 import { RouterModule } from '@angular/router';
 import { components } from './components';
+import { ToastComponent } from './components/toast/toast.component';
 @NgModule({
-  declarations: [components],
+  declarations: [components, ToastComponent],
   imports: [CommonModule, SharedModule, HttpClientModule, RouterModule],
   exports: [HeaderComponent, FooterComponent, PageNotFoundComponent],
   providers: [CookieService],
