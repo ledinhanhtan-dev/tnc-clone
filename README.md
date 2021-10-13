@@ -79,7 +79,7 @@ Stack included:
 
 ### Built With
 
-Frameworks/libraries used to bootstrap the project.
+Frameworks/libraries used to bootstrap the project
 
 - [Angular](https://angular.io/)
 - [SwiperJS](https://swiperjs.com/)
@@ -101,7 +101,7 @@ Frameworks/libraries used to bootstrap the project.
 
 ## Usage
 
-Here are some secreenshot of the app
+Here are some secreenshots of the app
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
@@ -111,7 +111,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
