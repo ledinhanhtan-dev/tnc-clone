@@ -135,9 +135,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Le Dinh Anh Tan - ledinhanhtan.dev@gmail.com
+📧 Le Dinh Anh Tan - ledinhanhtan.dev@gmail.com
 
-Project Link: [https://github.com/ledinhanhtan-dev/tnc-client](https://github.com/ledinhanhtan-dev/tnc-client)
+📌 Project Link: [https://github.com/ledinhanhtan-dev/tnc-client](https://github.com/ledinhanhtan-dev/tnc-client)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
