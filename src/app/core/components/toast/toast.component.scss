@@ -1,0 +1,93 @@
+@import '/src/styles/variables';
+
+:host {
+  left: 50%;
+  top: 70px;
+  z-index: 10000;
+  border-radius: 5px;
+  padding: 1rem 1.75rem;
+  background-color: $color-white;
+  color: $color-accent-blue;
+  box-shadow: 0px 3px 8px rgba($color-primary, 0.2);
+  transform: translateX(-50%);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  display: none;
+
+  &.show {
+    display: flex;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 4px;
+    content: '';
+    position: absolute;
+    background-color: $color-accent-blue;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+  }
+
+  animation: fade-out 2000ms ease forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+app-icon {
+  color: inherit;
+  margin-right: 1rem;
+}
+
+p {
+  font-weight: 500;
+  color: $color-primary;
+  min-width: max-content;
+}
+
+:host.success {
+  color: $color-accent-blue;
+  &::before {
+    background-color: $color-accent-blue;
+  }
+}
+
+:host.warn {
+  color: $color-accent-orange;
+  &::before {
+    background-color: $color-accent-orange;
+  }
+}
+
+:host.error {
+  color: $color-red;
+  &::before {
+    background-color: $color-red;
+  }
+}
+
+:host.loading {
+  color: $color-primary;
+  &::before {
+    background-color: $color-primary;
+  }
+}
+
+:host.info {
+  color: $color-primary;
+  &::before {
+    background-color: $color-primary;
+  }
+}

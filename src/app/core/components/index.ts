@@ -12,6 +12,7 @@ import { HeaderMainComponent } from './header/header-main/header-main.component'
 import { HeaderCartComponent } from './header/header-cart/header-cart.component';
 import { HeaderItemComponent } from './header/header-item/header-item.component';
 import { HeaderComponent } from './header/header.component';
+import { ToastComponent } from './toast/toast.component';
 
 export const components: any[] = [
   HeaderComponent,
@@ -21,6 +22,7 @@ export const components: any[] = [
   HeaderSearchComponent,
   HeaderCartComponent,
   HeaderItemComponent,
+  ToastComponent,
 
   MegaMenuComponent,
   MegaMenuMobileComponent,

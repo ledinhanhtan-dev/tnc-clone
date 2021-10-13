@@ -1,6 +1,7 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from '@cart/services/cart.service';
+import { ToastService } from '@core/services/toast.service';
 import { ProductService } from 'app/product/services/product.service';
 
 @Component({
@@ -19,6 +20,7 @@ export class ProductCtaComponent implements OnInit {
   constructor(
     private router: Router,
     private cartService: CartService,
+    private toastService: ToastService,
     private productService: ProductService
   ) {}
 
@@ -28,6 +30,7 @@ export class ProductCtaComponent implements OnInit {
     const quantity = this.productService.quantity$.value;
     this.cartService.addToCart(this.productId, quantity);
 
+    this.toastService.pushAddedToCart();
     this.resetQuantityInput();
   }
 
