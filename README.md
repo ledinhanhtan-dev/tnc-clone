@@ -33,7 +33,7 @@
   <h3 align="center">An e-commerce clone project inspired by TNC Store</h3>
 
   <p align="center">
-    Stack: MEAN
+    Stack used: MEAN
     <br />
     <a href="https://tnc-clone.web.app/"><strong>View Demo</strong></a>
     <br />
@@ -113,15 +113,6 @@ Frameworks/libraries used to bootstrap the project.
 The app is available at [https://tnc-clone.web.app](https://tnc-clone.web.app)
 
 (Note: open the app for the first time could take some time due to free hosting plane on Heroku)
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
 ### Installation
 
