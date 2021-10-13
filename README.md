@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://tnc-clone.web.app/">
-    <img src="https://user-images.githubusercontent.com/88238288/137060262-78ed6756-c53b-434d-9206-20bb41a6cb6e.png" alt="Logo" width="80" height="80">
+    <img src="https://user-images.githubusercontent.com/88238288/137060262-78ed6756-c53b-434d-9206-20bb41a6cb6e.png" alt="Logo" width="194" height="71">
   </a>
 
   <h3 align="center">An e-commerce clone project inspired by TNC Store</h3>
